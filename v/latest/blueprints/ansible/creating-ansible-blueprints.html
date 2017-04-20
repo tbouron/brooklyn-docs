@@ -1,0 +1,987 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creating Blueprints with Ansible - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Creating Blueprints with Ansible</h1>
+                <p>To write a blueprint to use Ansible with Brooklyn it will help to have a degree of familiarity with Ansible itself. In the 
+sections below, when the Brooklyn configuration is described, the underlying Ansible operation is also noted briefly, for 
+clarity for readers who know Ansible.</p>
+
+<p>To manage a node with Ansible, create a blueprint containing a service of type <code>org.apache.brooklyn.entity.cm.ansible.AnsibleEntity</code>
+and define and minimum the <code>playbook</code> value, and one or other of <code>playbook.url</code> or <code>playbook.yaml</code>. You must also define
+the <code>service.name</code> that will be tested in order to determine if the entity is running successfully.</p>
+
+<p>For example:</p>
+
+<pre><code>name: myweb
+location: ...
+services:
+  - type: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+    id: apache
+    name: apache
+    service.name: apache2
+    playbook: apache-playbook
+    playbook.url: http://myhost/projectX/apache-playbook.yaml
+</code></pre>
+
+<p>This example specifies that Brooklyn should use Ansible to download the playbook from the repository on
+“myhost”. The playbook contains the instructions to install the Apache web server. To start the 
+entity, Brooklyn will use Ansible’s “ansible-playbook” command to run the playbook, which will bring up the web server.</p>
+
+<h3 id="lifecycle-of-ansibleentity">Lifecycle of AnsibleEntity</h3>
+
+<p>The start effector applies the playbook and verifies that it has started the software correctly by checking the service
+defined as <code>service.name</code> is running.  This can be customized, see <code>ansible.service.start</code> configuration below.</p>
+
+<p>The stop effector will stop the service <code>service.name</code>.  Again, this can be customized, with <code>ansible.service.stop</code>. </p>
+
+<p>The restart effector will apply stop and then start.</p>
+
+<h3 id="configuration-of-ansibleentity">Configuration of AnsibleEntity</h3>
+
+<p>The <code>playbook</code> configuration key names the top level list of states that will be applied using Ansible.<br />
+ This configuration key is mandatory.</p>
+
+<p>The playbook must be defined using one or other (both together are not permitted) of  <code>playbook.yaml</code> or <code>playbook.url</code>.
+The former allows the playbook content to be defined inline within the blueprint, using the normal YAML format of an 
+Ansible playbook.  The latter obtains the playbook from an external URL.</p>
+
+<p>The <code>ansible.service.start</code> configuration key allows the blueprint author to override the command used by default to 
+verify that the service <code>service.name</code> is running (or to start it, if the playbook did not specify it should run by
+default).  The default value is:</p>
+
+<pre><code>sudo ansible localhost -c local -m service -a "name=&lt;service.name&gt; state=started"
+</code></pre>
+
+<p>Similarly the <code>ansible.service.stop</code> configuration key permits override of the instruction used to get Ansible to stop the
+service, by default</p>
+
+<pre><code>sudo ansible localhost -c local -m service -a "name=&lt;service.name&gt; state=stopped"
+</code></pre>
+
+<p>The <code>ansible.service.checkPort</code> configuration key allows the user to override the mechanism used to check that the 
+service <code>service.name</code> is operating. By default Brooklyn checks that the service process is running. However, if the
+ service is one that listens on a particular port, this configuration key allows the blueprint author to instruct
+ Brooklyn to check that the port is being listened on, using the Ansible <code>wait_for</code> module. The value of the key is 
+ the port number to check.</p>
+
+<p>The <code>ansible.vars</code> configuration key allows the blueprint author to provide entity-specific values for configuration
+variables used in the playbook, so that one playbook can be used by multiple entities, each customized appropriately.
+The value of <code>ansible.vars</code> is an arbitrary block of YAML configuration that will be applied to the playbook using 
+Ansible’s <code>--extra-vars</code> mechanism, as described in the
+Ansible <a href="http://docs.ansible.com/ansible/playbooks_variables.html#passing-variables-on-the-command-line">documentation</a>.
+For example, if the playbook in the example above contained configuration such as:</p>
+
+<pre><code>- hosts: all
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  ...
+</code></pre>
+
+<p>then to change the port that the webserver in the example above runs on, it would be possible to define the following 
+ in the blueprint:</p>
+
+<pre><code>name: myweb
+location: ...
+services:
+  - type: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+    id: apache
+    name: apache
+    service.name: apache2
+    playbook: apache-playbook
+    playbook.url: http://myhost/projectX/apache-playbook.yaml
+    ansible.vars:
+        http_port: 8080
+</code></pre>
+
+<h3 id="ansiblecall-effector">ansibleCall Effector</h3>
+
+<p>The Ansible entity includes a general purpose Ansible effector, <code>ansibleCommand</code>, which permits execution of Ansible 
+commands via <code>ansible</code>.  It contains a two parameters:
+1. <code>module</code> specifies the Ansible module to invoke.  The default is “command”.
+2. <code>args</code> specifies the argument data for the Ansible module.  For example, to download an additional file for the 
+webserver, the command could be invoked with the following arguments. (For convenience this
+example uses the client CLI, “br”, but the effector could be invoked by any applicable means, e.g. via the web UI 
+or REST API.)</p>
+
+<pre><code>$ br app myweb ent apache effector ansibleCommand invoke \
+   -P module=shell -P args='curl http://myhost:8080/additional.html &gt; /var/www/html/additional.html'
+</code></pre>
+
+<h3 id="roles-and-multi-playbook-installations">Roles and Multi-Playbook Installations</h3>
+
+<p>There is no specific configuration in AnsibleEntity for Ansible <a href="http://docs.ansible.com/ansible/playbooks_roles.html">Roles</a>,
+ or to install multiple playbooks. However, the installation of roles or multiple playbooks can be carried out first 
+ by taking advantage of Brooklyn’s SameServerEntity. The installation step can be applied in one child of the same server
+ entity, while the AnsibleEntity can operate under the second child. It will typically be necessary to delay the start
+ of the AnsibleEntity until the first child has carried out whatever preparation is required. The examples below
+ illustrate the concept (with just one playbook, for brevity).</p>
+
+<p>One way to a achieve this, as with any Brooklyn entity, is to use the idiom of making it a child of a BasicApplication 
+ with a start latch waiting on the first child, such as in the following example, which installs the standalone Tomcat example,
+ with its playbook and roles, from the “Ansible Examples” Github site. 
+ (Note, this is designed for installation on Redhat/Centos 6.)
+ The first child in the SameServerEntity downloads
+ and unpacks the Ansible examples. This might also install standalone Ansible roles, or whatever other resources the
+ AnsibleEntity might require.  The second child uses <code>attributeWhenReady</code> to block until the first is ready, before 
+ starting the AnsibleEntity to apply the desired playbook.</p>
+
+<pre><code>name: multi
+location:
+  red1
+services:
+- serviceType: brooklyn.entity.basic.SameServerEntity
+  name: Entities
+  brooklyn.children:
+  
+  - serviceType: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+    id: bootstrap
+    service.name: crond
+    playbook: bootstrap
+    playbook.yaml: |
+        ---
+        - hosts: localhost
+          tasks:
+          - shell: printf "[tomcat-servers]\nlocalhost ansible_connection=local\n" &gt;&gt; /etc/ansible/hosts
+          - file: path=/etc/ansible/playbooks state=directory mode=0755
+          - get_url: url=https://github.com/ansible/ansible-examples/archive/master.zip dest=/tmp/master.zip mode=0440
+          - command: unzip -o -d /etc/ansible/playbooks /tmp/master.zip
+
+  - serviceType: org.apache.brooklyn.entity.stock.BasicApplication
+    start.latch: $brooklyn:entity("bootstrap").attributeWhenReady("service.isUp")
+    brooklyn.children:
+    - type: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+      name: test
+      service.name: tomcat
+      playbook: tomcat
+      playbook.yaml: |
+          ---
+          - hosts: localhost
+          - include: /etc/ansible/playbooks/ansible-examples-master/tomcat-standalone/site.yml
+            vars:
+                http_port: 8080
+                https_port: 8443
+                admin_username: admin
+                admin_password: secret
+</code></pre>
+
+<p>An alternative to the above is to use Ansible itself to do the waiting, as in the variant below, which uses AnsibleEntity
+itself in the first SameServerEntity child, to install the required material.  In the second child, which is simply an
+AnsibleEntity rather than a BasicApplication, Ansible’s <code>wait_for</code> operation is used as the first step in the playbook, 
+to block the remaining steps in its playbook until the first is complete.</p>
+
+<pre><code>name: multi
+location:
+  red1
+services:
+- serviceType: brooklyn.entity.basic.SameServerEntity
+  name: Entities
+  brooklyn.children:
+  
+  - serviceType: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+    id: bootstrap
+    service.name: crond
+    playbook: bootstrap
+    playbook.yaml: |
+        ---
+        - hosts: localhost
+          tasks:
+          - command: rm -f /tmp/bootstrap.done
+          - shell: printf "[tomcat-servers]\nlocalhost ansible_connection=local\n" &gt;&gt; /etc/ansible/hosts
+          - file: path=/etc/ansible/playbooks state=directory mode=0755
+          - get_url: url=https://github.com/ansible/ansible-examples/archive/master.zip dest=/tmp/master.zip mode=0440
+          - command: unzip -o -d /etc/ansible/playbooks /tmp/master.zip
+          - file: path=/tmp/bootstrap.done state=touch
+
+  - serviceType: org.apache.brooklyn.entity.cm.ansible.AnsibleEntity
+    name: test
+    service.name: tomcat
+    playbook: tomcat
+    playbook.yaml: |
+        ---
+        - tasks:
+          - wait_for: path=/tmp/bootstrap.done
+          include: /etc/ansible/playbooks/ansible-examples-master/tomcat-standalone/site.yml
+          vars:
+            http_port: 8080
+            https_port: 8443
+            admin_username: admin
+            admin_password: secret
+</code></pre>
+
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/v/latest/blueprints/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Writing Blueprints
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/blueprints/ansible/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Ansible in YAML Blueprints
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/ansible/about-ansible.html" class="list-group-item">About Ansible
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/ansible/creating-ansible-blueprints.html" class="list-group-item active">Creating Blueprints with Ansible
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/blueprints/ansible/creating-ansible-blueprints.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

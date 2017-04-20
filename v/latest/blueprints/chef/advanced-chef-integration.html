@@ -1,0 +1,830 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Chef Integration - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Advanced Chef Integration</h1>
+                <h3 id="adding-sensors-and-effectors">Adding Sensors and Effectors</h3>
+
+<p>Custom sensors and effectors can be added using an <code>entity.initializer</code> section in the YAML blueprint.</p>
+
+<p>One common pattern is to have sensors which extract information from Ohai.
+Another common pattern is to install a monitoring agent as part of the run list,
+configured to talk to a monitoring store, and then to add a sensor feed which reads data from that store.</p>
+
+<p>On the effector side, you can add SSH-based effectors in the usual way.
+You can also describe additional chef converge targets following the pattern set down in
+<code>ChefLifecycleEffectorTasks</code>, making use of conveniences in <code>ChefSoloTasks</code> and <code>ChefServerTasks</code>,
+or provide effectors which invoke network API’s of the systems under management
+(for example to supply the common <code>executeScript</code> effector as on the standard <code>MySqlNode</code>). </p>
+
+<h3 id="next-steps-simpifying-sensors-and-effectors-transferring-files-and-configuring-ports">Next Steps: Simpifying sensors and effectors, transferring files, and configuring ports</h3>
+
+<p>The Brooklyn-Chef integration is work in progress, with a few open issues we’d still like to add.
+Much of the thinking for this is set forth in the <a href="https://docs.google.com/a/cloudsoftcorp.com/document/d/18ZwzmncbJgJeQjnSvMapTWg6N526cvGMz5jaqdkxMf8">Google document</a>
+indicated earlier.  If you’d like to work with us to implement these, please let us know.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>A general schema for the supported YAML is below: </p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">chef:cookbook_name</span>
+  <span class="l-Scalar-Plain">cookbook_urls</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">cookbook_name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">url://for/cookbook.tgz</span>
+    <span class="l-Scalar-Plain">dependency1</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">url://for/dependency1.tgz</span>
+  <span class="l-Scalar-Plain">launch_run_list</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span> <span class="s">&quot;cookbook_name::start&quot;</span> <span class="p-Indicator">]</span>
+  <span class="l-Scalar-Plain">launch_attributes</span><span class="p-Indicator">:</span> <span class="c1"># map of arguments to set in the chef node</span>
+  <span class="l-Scalar-Plain">service_name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cookbook_service</span>
+  <span class="l-Scalar-Plain">pid_file</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/var/run/cookbook.pid</span></code></pre></div>
+
+<p>If you are interested in exploring the Java code for creating blueprints,
+start with the <code>TypedToyMySqlEntiyChef</code> class, which essentially does what this tutorial has shown;
+and then move on to the <code>DynamicToyMySqlEntiyChef</code> which starts to look at more sophisticated constructs.
+(Familiarity with BASH and basic Java blueprints may be useful at that stage.)</p>
+
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/v/latest/blueprints/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Writing Blueprints
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/blueprints/chef/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Chef in YAML Blueprints
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/chef/about-chef.html" class="list-group-item">About Chef
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/chef/creating-blueprints.html" class="list-group-item">Creating Blueprints from Chef
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/chef/writing-chef.html" class="list-group-item">Writing Chef for Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/chef/advanced-chef-integration.html" class="list-group-item active">Advanced Chef Integration
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/blueprints/chef/advanced-chef-integration.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

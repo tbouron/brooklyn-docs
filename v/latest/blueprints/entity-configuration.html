@@ -1,0 +1,1416 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Entity Configuration - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Entity Configuration</h1>
+                <p>Within a blueprint or catalog item, entities can be configured. The rules for setting this 
+configuration, including when composing and extending existing entities, is described in this 
+section. </p>
+
+<h3 id="basic-configuration">Basic Configuration</h3>
+
+<p>Within a YAML file, entity configuration should be supplied within a <code>brooklyn.config</code> map. It is 
+also possible to supply configuration at the top-level of the entity. However, that approach is
+discouraged as it can sometimes be ambiguous (e.g. if the config key is called “name” or “type”), 
+and also it does not work in all contexts such as for an enricher’s configuration.</p>
+
+<p>A simple example is shown below:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.TomcatServer</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">webapp.enabledProtocols</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http</span>
+    <span class="l-Scalar-Plain">http.port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">9080</span>
+    <span class="l-Scalar-Plain">wars.root</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://search.maven.org/remotecontent?filepath=org/apache/brooklyn/example/brooklyn-example-hello-world-webapp/0.9.0/brooklyn-example-hello-world-webapp-0.9.0.war</span></code></pre></div>
+
+<p>If no config value is supplied, the default for that config key will be used. For example, 
+<code>http.port</code> would default to 8080 if not explicitly supplied.</p>
+
+<p>Some config keys also have a short-form (e.g. <code>httpPort</code> instead of <code>http.port</code> would also work 
+in the YAML example above). However, that approach is discouraged as it does not work in all contexts
+such as for inheriting configuration from a parent entity.</p>
+
+<h3 id="configuration-in-a-catalog-item">Configuration in a Catalog Item</h3>
+
+<p>When defining an entity in the catalog, it can include configuration values like any other 
+blueprint (i.e. inside the <code>brooklyn.config</code> block).</p>
+
+<p>It can also explicitly declare config keys, using the <code>brooklyn.parameters</code> block. The example 
+below illustrates the principle:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">brooklyn.catalog</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-example</span>
+    <span class="l-Scalar-Plain">itemType</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity</span>
+    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Entity Config Example</span>
+    <span class="l-Scalar-Plain">item</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.software.base.VanillaSoftwareProcess</span>
+      <span class="l-Scalar-Plain">brooklyn.parameters</span><span class="p-Indicator">:</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">custom.message</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">string</span>
+        <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Message to be displayed</span>
+        <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Hello</span>
+      <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">shell.env</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">MESSAGE</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:config(&quot;custom.message&quot;)</span>
+        <span class="l-Scalar-Plain">launch.command</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
+          <span class="no">echo &quot;My example launch command: $MESSAGE&quot;</span>
+        <span class="l-Scalar-Plain">checkRunning.command</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
+          <span class="no">echo &quot;My example checkRunning command: $MESSAGE&quot;</span></code></pre></div>
+
+<p>Once added to the catalog, it can be used with the simple blueprint below (substituting the location
+of your choice). Because no configuration has been overridden, this will use the default value
+for <code>custom.message</code>, and will use the given values for <code>launch.command</code> and <code>checkRunning.command</code>:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">aws-ec2:us-east-1</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-example</span></code></pre></div>
+
+<p>For details of how to write and add catalog items, see <a href="/brooklyn-docs/v/latest/blueprints/catalog/">Catalog</a>. </p>
+
+<h4 id="config-key-constraints">Config Key Constraints</h4>
+
+<p>The config keys in the <code>brooklyn.parameters</code> can also have constraints defined, for what values
+are valid. If more than one constraint is defined, then they must all be satisfied. The constraints 
+can be any of:</p>
+
+<ul>
+  <li><code>required</code>: deployment will fail if no value is supplied for this config key.</li>
+  <li><code>regex: ...</code>: the value will be compared against the given regular expression.</li>
+  <li>A predicate, declared using the DSL <code>$brooklyn:object</code>.  </li>
+</ul>
+
+<p>This is illustrated in the example below:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">brooklyn.catalog</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-constraint-example</span>
+    <span class="l-Scalar-Plain">itemType</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity</span>
+    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Entity Config Example</span>
+    <span class="l-Scalar-Plain">item</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicEntity</span>
+      <span class="l-Scalar-Plain">brooklyn.parameters</span><span class="p-Indicator">:</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">compulsoryExample</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">string</span>
+        <span class="l-Scalar-Plain">constraints</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">required</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">addressExample</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">string</span>
+        <span class="l-Scalar-Plain">constraints</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">regex</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">numberExample</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">double</span>
+        <span class="l-Scalar-Plain">constraints</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">$brooklyn:object</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.util.math.MathPredicates</span>
+            <span class="l-Scalar-Plain">factoryMethod.name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">greaterThan</span>
+            <span class="l-Scalar-Plain">factoryMethod.args</span><span class="p-Indicator">:</span>
+            <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">0.0</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">$brooklyn:object</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.util.math.MathPredicates</span>
+            <span class="l-Scalar-Plain">factoryMethod.name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">lessThan</span>
+            <span class="l-Scalar-Plain">factoryMethod.args</span><span class="p-Indicator">:</span>
+            <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">256.0</span></code></pre></div>
+
+<p>An example usage of this toy example, once added to the catalog, is shown below:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-constraint-example</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">compulsoryExample</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">foo</span>
+    <span class="l-Scalar-Plain">addressExample</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1.1.1.1</span>
+    <span class="l-Scalar-Plain">numberExample</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2.0</span></code></pre></div>
+
+<h3 id="inheriting-configuration">Inheriting Configuration</h3>
+
+<p>Configuration can be inherited from a super-type, and from a parent entity in the runtime 
+management hierarchy. This applies to entities and locations. In a future release, this will be
+extended to also apply to policies and enrichers.</p>
+
+<p>When a blueprint author defines a config key, they can explicitly specify the rules for inheritance 
+(both for super/sub-types, and for the runtime management hiearchy). This gives great flexibilty,
+but should be used with care so as not to surprise users of the blueprint.</p>
+
+<p>The default behaviour is outlined below, along with examples and details of how to explilcitly 
+define the desired behaviour.</p>
+
+<h4 id="normal-configuration-precedence">Normal Configuration Precedence</h4>
+
+<p>There are several places that a configuration value can come from. If different values are 
+specified in multiple places, then the order of precedence is as listed below:</p>
+
+<ol>
+  <li>Configuration on the entity itself</li>
+  <li>Inherited configuration from the super-type</li>
+  <li>Inherited configuration from the runtime type hierarchy</li>
+  <li>The config key’s default value</li>
+</ol>
+
+<h4 id="inheriting-configuration-from-super-type">Inheriting Configuration from Super-type</h4>
+
+<p>When using an entity from the catalog, its configuration values can be overridden. For example,
+consider the <code>entity-config-example</code> added to the catalog in the section 
+<a href="#configuration-in-a-catalog-item">Configuration in a Catalog Item</a>.
+We can override these values. If not overridden, then the existing values from the super-type will be used:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">aws-ec2:us-east-1</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-example</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">custom.message</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Goodbye</span>
+    <span class="l-Scalar-Plain">launch.command</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
+      <span class="no">echo &quot;Sub-type launch command: $MESSAGE&quot;</span></code></pre></div>
+
+<p>In this example, the <code>custom.message</code> overrides the default defined on the config key.
+The <code>launch.command</code> overrides the original command. The other config (e.g. <code>checkRunning.command</code>)
+is inherited unchanged.</p>
+
+<p>It will write out: <code>Sub-type launch command: Goodbye</code>.</p>
+
+<h4 id="inheriting-configuration-from-a-parent-in-the-runtime-management-hieararchy">Inheriting Configuration from a Parent in the Runtime Management Hieararchy</h4>
+
+<p>Configuration passed to an entity is inherited by all child entities, unless explicitly overridden.</p>
+
+<p>In the example below, the <code>wars.root</code> config key is inherited by all TomcatServer entities created
+under the cluster, so they will use that war:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.group.DynamicCluster</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">wars.root</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://search.maven.org/remotecontent?filepath=org/apache/brooklyn/example/brooklyn-example-hello-world-webapp/0.9.0/brooklyn-example-hello-world-webapp-0.9.0.war</span>
+    <span class="l-Scalar-Plain">dynamiccluster.memberspec</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">$brooklyn:entitySpec</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.TomcatServer</span></code></pre></div>
+
+<p>In the above example, it would be better to have specified the <code>wars.root</code> configuration in the 
+<code>TomcatServer</code> entity spec, rather than at the top level. This would make it clearer for the reader
+what is actually being configured.</p>
+
+<p>The technique of inherited config can simplify some blueprints, but care should be taken. 
+For more complex (composite) blueprints, this can be difficult to use safely; it relies on 
+knowledge of the internals of the child components. For example, the inherited config 
+may impact multiple sub-components, rather than just the specific entity to be changed.
+This is particularly true when using complex items from the catalog, and when using common config 
+values (e.g. <code>install.version</code>).</p>
+
+<p>An alternative approach is to declare the expected configuration options at the top level of the
+catalog item, and then (within the catalog item) explicitly inject those values into the correct
+sub-components. Users of this catalog item would set only those exposed config options, rather 
+than trying to inject config directly into the nested entities.</p>
+
+<h4 id="dsl-evaluation-of-inherited-config">DSL Evaluation of Inherited Config</h4>
+
+<p>When writing blueprints that rely on inheritance from the runtime management hierarchy, it is 
+important to  understand how config keys that use DSL will be evaluated. In particular, when 
+evaluating a DSL expression, it will be done in the context of the entity declaring the config 
+value (rather than on the entity using the config value).</p>
+
+<p>For example, consider the config value <code>$brooklyn:attributeWhenReady("host.name")</code>
+declared on entity X, and inherited by child entity Y. If entity Y uses this config value, 
+it will get the “host.name” attribute of entity X.</p>
+
+<p>Below is another (contrived!) example of this DSL evaluation. When evaluating <code>refExampleConfig</code>,
+it retrievies the value of <code>exampleConfig</code> which is the DSL expression, and evaluates this in the 
+context of the parent entity that declares it. Therefore <code>$brooklyn:config("ownConfig")</code> returns 
+the parent’s <code>ownConfig</code> value, and the final result for <code>refExampleConfig</code> is set to “parentValue”:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">ownConfig</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">parentValue</span>
+    <span class="l-Scalar-Plain">exampleConfig</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:config(&quot;ownConfig&quot;)</span>
+  
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicEntity</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">ownConfig</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">childValue</span>
+      <span class="l-Scalar-Plain">refExampleConfig</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:config(&quot;exampleConfig&quot;)</span></code></pre></div>
+
+<p><em>However, the web-console also shows other misleading (incorrect!) config values for the child 
+entity. It shows the inherited config value of <code>exampleConfig</code> as “childValue” (because the
+REST api did not evaluate the DSL in the correct context, when retrieving the value! 
+See https://issues.apache.org/jira/browse/BROOKLYN-455.</em></p>
+
+<h4 id="merging-configuration-values">Merging Configuration Values</h4>
+
+<p>For some configuration values, the most logical behaviour is to merge the configuration value
+with that in the super-type. This depends on the type and meaning of the config key, and is thus 
+an option when defining the config key.</p>
+
+<p>Currently it is only supported for merging config keys of type Map.</p>
+
+<p>Some common config keys will default to merging the values from the super-type. These config keys<br />
+include those below. The value is merged with that of its super-type (but will not be merged with 
+the value on a parent entity):</p>
+
+<ul>
+  <li><code>shell.env</code>: a map of environment variables to pass to the runtime shell</li>
+  <li><code>files.preinstall</code>: a mapping of files, to be copied before install, to destination name relative to installDir</li>
+  <li><code>templates.preinstall</code>: a mapping of templates, to be filled in and copied before pre-install, to destination name relative to installDir </li>
+  <li><code>files.install</code>: a mapping of files, to be copied before install, to destination name relative to installDir </li>
+  <li><code>templates.install</code>: a mapping of templates, to be filled in and copied before install, to destination name relative to installDir </li>
+  <li><code>files.runtime</code>: a mapping of files, to be copied before customisation, to destination name relative to runDir </li>
+  <li><code>templates.runtime</code>: a mapping of templates, to be filled in and copied before customisation, to destination name relative to runDir </li>
+  <li><code>provisioning.properties</code>: custom properties to be passed in when provisioning a new machine</li>
+</ul>
+
+<p>A simple example of merging <code>shell.env</code> is shown below (building on the <code>entity-config-example</code> in 
+the section <a href="#configuration-in-a-catalog-item">Configuration in a Catalog Item</a>).
+The environment variables will include the <code>MESSAGE</code> 
+set in the super-type and the <code>MESSAGE2</code> set here:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">aws-ec2:us-east-1</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-example</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">shell.env</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">MESSAGE2</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Goodbye</span>
+    <span class="l-Scalar-Plain">launch.command</span><span class="p-Indicator">:</span> <span class="p-Indicator">|</span>
+      <span class="no">echo &quot;Different example launch command: $MESSAGE and $MESSAGE2&quot;</span></code></pre></div>
+
+<p>To explicitly remove a value from the super-type’s map (rather than adding to it), a blank entry
+can be defined. </p>
+
+<h4 id="entity-provisioningproperties-overriding-and-merging">Entity provisioning.properties: Overriding and Merging</h4>
+
+<p>An entity (which extends <code>SoftwareProcess</code>) can define a map of <code>provisioning.properties</code>. If 
+the entity then provisions a location, it passes this map of properties to the location for
+obtaining the machine. These properties will override and augment the configuration on the location
+itself.</p>
+
+<p>When deploying to a jclouds location, one can specify <code>templateOptions</code> (of type map). Rather than
+overriding, these will be merged with any templateOptions defined on the location.</p>
+
+<p>In the example below, the VM will be provisioned with minimum 2G ram and minimum 2 cores. It will 
+also use the merged template options value of 
+<code>{placementGroup: myPlacementGroup, securityGroupIds: sg-000c3a6a}</code>:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">aws-ec2:us-east-1</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">minRam</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2G</span>
+    <span class="l-Scalar-Plain">templateOptions</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">placementGroup</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">myPlacementGroup</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.machine.MachineEntity</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">provisioning.properties</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">minCores</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2</span>
+      <span class="l-Scalar-Plain">templateOptions</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">securityGroupIds</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">sg-000c3a6a</span></code></pre></div>
+
+<p>The merging of <code>templateOptions</code> is shallow (i.e. maps within the <code>templateOptions</code> are not merged). 
+In the example below, the <code>userMetadata</code> value within <code>templateOptions</code> will be overridden by the 
+entity’s value, rather than the maps being merged; the value used when provisioning will be 
+<code>{key2: val2}</code>:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">aws-ec2:us-east-1</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">templateOptions</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">userMetadata</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">key1</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">val1</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.machine.MachineEntity</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">provisioning.properties</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">userMetadata</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">key2</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">val2</span></code></pre></div>
+
+<h4 id="re-inherited-versus-not-re-inherited">Re-inherited Versus not Re-inherited</h4>
+
+<p>For some configuration values, the most logical behaviour is for an entity to “consume” the config
+key’s value, and thus not pass it down to children in the runtime type hierarchy. This is called
+“not re-inherited”.</p>
+
+<p>Some common config keys that will not re-inherited include:</p>
+
+<ul>
+  <li><code>install.command</code> (and the <code>pre.install.command</code> and <code>post.install.command</code>) </li>
+  <li><code>customize.command</code> (and the <code>pre.customize.command</code> and <code>post.customize.command</code>)</li>
+  <li><code>launch.command</code> (and the ``pre.launch.command<code> and </code>post.launch.command`)</li>
+  <li><code>checkRunning.command</code></li>
+  <li><code>stop.command</code></li>
+  <li>The similar commands for <code>VanillaWindowsProcess</code> powershell.</li>
+  <li>The file and template install config keys (e.g. <code>files.preinstall</code>, <code>templates.preinstall</code>, etc)</li>
+</ul>
+
+<p>An example is shown below. Here, the “logstash-child” is a sub-type of <code>VanillaSoftwareProcess</code>,
+and is co-located on the same VM as Tomcat. We don’t want the Tomcat’s configuration, such as 
+<code>install.command</code>, to be inherited by the logstash child. If it was inherited, the logstash-child
+entity might re-execute the Tomcat’s install command! Instead, the <code>install.command</code> config is
+“consumed” by the Tomcat instance and is not re-inherited:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.Tomcat8Server</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">children.startable.mode</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">background_late</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">logstash-child</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">logstash.elasticsearch.host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:entity(&quot;es&quot;).attributeWhenReady(&quot;urls.http.withBrackets&quot;)</span>
+<span class="nn">...</span></code></pre></div>
+
+<p>“Not re-inherited” differs from “never inherited”. The example below illustrates the difference, 
+though this use is discouraged (it is mostly for backwards compatibility). The <code>post.install.command</code>
+is not consumed by the <code>BasicApplication</code>, so will be inherited by the <code>Tomcat8Server</code> which will
+consume it. The config value will therefore not be inherited by the <code>logstash-child</code>.</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">post.install.command</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">echo &quot;My post.install command&quot;</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.Tomcat8Server</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">children.startable.mode</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">background_late</span>
+    <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">logstash-child</span>
+      <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">logstash.elasticsearch.host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:entity(&quot;es&quot;).attributeWhenReady(&quot;urls.http.withBrackets&quot;)</span>
+<span class="nn">...</span></code></pre></div>
+
+<h4 id="never-inherited">Never Inherited</h4>
+
+<p>For some configuration values, the most logical behaviour is for the value to never be inherited
+in the runtime management hiearchy.</p>
+
+<p>Some common config keys that will never inherited include:</p>
+
+<ul>
+  <li>
+    <p><code>defaultDisplayName</code>: this is the name to use for the entity, if an explicit name is not supplied.
+This is particularly useful when adding an entity in a catalog item (so if the user does not give
+a name, it will get a sensible default). It would not be intuitive for all the children of that
+entity to also get that default name.</p>
+  </li>
+  <li>
+    <p><code>id</code>: the id of an entity (as supplied in the YAML, to allow references to that entity) is not 
+inherited. It is the id of that specific entity, so must not be shared by all its children.</p>
+  </li>
+</ul>
+
+<h4 id="inheritance-modes-deep-dive">Inheritance Modes: Deep Dive</h4>
+
+<p>The javadoc in the code is useful for anyone who wants to go deep! See
+<code>org.apache.brooklyn.config.BasicConfigInheritance</code> and <code>org.apache.brooklyn.config.ConfigInheritances</code>
+in the repo https://github.com/apache/brooklyn-server.</p>
+
+<p>When defining a new config key, the exact semantics for inheritance can be defined. There are 
+separate options to control config inheritance from the super-type, and config inheritance from the
+parent in the runtime management hierarchy.</p>
+
+<p>The possible modes are:</p>
+
+<ul>
+  <li>
+    <p><code>NEVER_INHERITED</code>: indicates that a key’s value should never be inherited (even if defined on 
+an entity that does not know the key). Most usages will prefer <code>NOT_REINHERITED</code>.</p>
+  </li>
+  <li>
+    <p><code>NOT_REINHERITED</code>: indicates that a config key value (if used) should not be passed down to
+children / sub-types. Unlike <code>NEVER_INHERITED</code>, these values can be passed down if they are not
+used by the entity (i.e. if the entity does not expect it). However, when used by a child,
+it will not be passed down any further. If the inheritor also defines a value the parent’s 
+value is ignored irrespective  (as in <code>OVERWRITE</code>; see <code>NOT_REINHERITED_ELSE_DEEP_MERGE</code> if merging 
+is desired).</p>
+  </li>
+  <li>
+    <p><code>NOT_REINHERITED_ELSE_DEEP_MERGE</code>: as <code>NOT_REINHERITED</code> but in cases where a value is inherited 
+because a parent did not recognize it, if the inheritor also defines a value the two values should 
+be merged.</p>
+  </li>
+  <li>
+    <p><code>OVERWRITE</code>: indicates that if a key has a value at both an ancestor and a descendant, the 
+descendant and his descendants will prefer the value at the descendant.</p>
+  </li>
+  <li>
+    <p><code>DEEP_MERGE</code>: indicates that if a key has a value at both an ancestor and a descendant, the 
+descendant and his descendants should attempt to merge the values. If the values are not mergable,
+behaviour is undefined (and often the descendant’s value will simply overwrite).</p>
+  </li>
+</ul>
+
+<h4 id="explicit-inheritance-modes">Explicit Inheritance Modes</h4>
+
+<p><em>The YAML support for explicitly defining the inheritance mode is still work-in-progress. The options
+documented below will be enhanced in a future version of AMP, to better support the modes described
+above.</em></p>
+
+<p>In a YAML blueprint, within the <code>brooklyn.parameters</code> section for declaring new config keys, one can
+set the mode for <code>inheritance.type</code> and <code>inheritance.parent</code> (i.e. for inheritance from the super-type, and
+inheritance in the runtime management hierarchy). The possible values are:</p>
+
+<ul>
+  <li><code>deep_merge</code>: the inherited and the given value should be merged; maps within the map will also be merged</li>
+  <li><code>always</code>: the inherited value should be used, unless explicitly overridden by the entity</li>
+  <li><code>none</code>: the value should not be inherited; if there is no explicit value on the entity then the default value will be used</li>
+</ul>
+
+<p>Below is a (contrived!) example of inheriting the <code>example.map</code> config key. When using this entity
+in a blueprint, the entity’s config will be merged with that defined in the super-type, and the 
+parent entity’s value will never be inherited:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">brooklyn.catalog</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-inheritance-example</span>
+    <span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="s">&quot;1.1.0-SNAPSHOT&quot;</span>
+    <span class="l-Scalar-Plain">itemType</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity</span>
+    <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Entity Config Inheritance Example</span>
+    <span class="l-Scalar-Plain">item</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.machine.MachineEntity</span>
+      <span class="l-Scalar-Plain">brooklyn.parameters</span><span class="p-Indicator">:</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">example.map</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">java.util.Map</span>
+        <span class="l-Scalar-Plain">inheritance.type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">deep_merge</span>
+        <span class="l-Scalar-Plain">inheritance.parent</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">none</span>
+        <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">MESSAGE_IN_DEFAULT</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">InDefault</span>
+      <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">example.map</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">MESSAGE</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Hello</span></code></pre></div>
+
+<p>The blueprints below demonstrate the various permutations for setting configuration for the
+config <code>example.map</code>. This can be inspected by looking at the entity’s config. The config
+we see for app1 is the inherited <code>{MESSAGE: "Hello"}</code>; in app2 we define additional configuration,
+which will be merged to give <code>{MESSAGE: "Hello", MESSAGE_IN_CHILD: "InChild"}</code>; in app3, the 
+config from the parent is not inherited because there is an explicit inheritance.parent of “none”,
+so it just has the value <code>{MESSAGE: "Hello"}</code>; in app4 again the parent’s config is ignored,
+with the super-type and entity’s config being merged to give  <code>{MESSAGE: "Hello", MESSAGE_IN_CHILD: "InChild"}</code>.</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">aws-ec2:us-east-1</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">app1</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-inheritance-example</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">app2</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-inheritance-example</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">example.map</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">MESSAGE_IN_CHILD</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">InChild</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">app3</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">example.map</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">MESSAGE_IN_PARENT</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">InParent</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-inheritance-example</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.stock.BasicApplication</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">app4</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">example.map</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">MESSAGE_IN_PARENT</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">InParent</span>
+  <span class="l-Scalar-Plain">brooklyn.children</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">entity-config-inheritance-example</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">example.map</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">MESSAGE_IN_CHILD</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">InChild</span></code></pre></div>
+
+<p>A limitations of <code>inheritance.parent</code> is when inheriting values from parent and grandparent 
+entities: a value specified on the parent will override (rather than be merged with) the
+value on the grandparent.</p>
+
+<h4 id="merging-policy-and-enricher-configuration-values">Merging Policy and Enricher Configuration Values</h4>
+
+<p>A current limitation is that sub-type inheritance is not supported for configuration of
+policies and enrichers. The current behaviour is that config is not inherited. The concept of
+inheritance from the runtime management hierarchy does not apply for policies and enrichers
+(they do not have “parents”; they are attached to an entity).</p>
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/blueprints/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Writing Blueprints
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html" class="list-group-item">The Basic Structure
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/entity-configuration.html" class="list-group-item active">Entity Configuration
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/setting-locations.html" class="list-group-item">Setting Locations
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/configuring-vms.html" class="list-group-item">Configuring VMs
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/multiple-services.html" class="list-group-item">Multiple Services and Dependency Injection
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/custom-entities.html" class="list-group-item">Custom Entities
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/catalog/index.html" class="list-group-item">Catalog
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/clusters.html" class="list-group-item">Clusters, Specs, and Composition
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/enrichers.html" class="list-group-item">Enrichers
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/policies.html" class="list-group-item">Policies
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/clusters-and-policies.html" class="list-group-item">Clusters and Policies
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/index.html" class="list-group-item">Java Entities
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/winrm/index.html" class="list-group-item">Windows Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/test/index.html" class="list-group-item">Testing YAML Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/ansible/index.html" class="list-group-item">Ansible in YAML Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/chef/index.html" class="list-group-item">Chef in YAML Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/salt/index.html" class="list-group-item">Salt in YAML Blueprints
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/advanced-example.html" class="list-group-item">YAML Blueprint Advanced Example
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/blueprinting-tips.html" class="list-group-item">Blueprinting Tips
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/yaml-reference.html" class="list-group-item">YAML Blueprint Reference
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/blueprints/entity-configuration.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

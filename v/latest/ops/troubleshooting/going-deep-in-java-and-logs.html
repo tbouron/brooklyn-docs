@@ -1,0 +1,1248 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Troubleshooting: Going Deep in Java and Logs - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Troubleshooting: Going Deep in Java and Logs</h1>
+                <p>This guide takes a deep look at the Java and log messages for some failure scenarios,
+giving common steps used to identify the issues.</p>
+
+<h2 id="script-failure">Script Failure</h2>
+
+<p>Many blueprints run bash scripts as part of the installation. This section highlights how to identify a problem with
+a bash script.</p>
+
+<p>First let’s take a look at the <code>customize()</code> method of the Tomcat server blueprint:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">customize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">newScript</span><span class="o">(</span><span class="n">CUSTOMIZING</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;mkdir -p conf logs webapps temp&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">failOnNonZeroResultCode</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+
+    <span class="n">copyTemplate</span><span class="o">(</span><span class="n">entity</span><span class="o">.</span><span class="na">getConfig</span><span class="o">(</span><span class="n">TomcatServer</span><span class="o">.</span><span class="na">SERVER_XML_RESOURCE</span><span class="o">),</span> <span class="n">Os</span><span class="o">.</span><span class="na">mergePaths</span><span class="o">(</span><span class="n">getRunDir</span><span class="o">(),</span> <span class="s">&quot;conf&quot;</span><span class="o">,</span> <span class="s">&quot;server.xml&quot;</span><span class="o">));</span>
+    <span class="n">copyTemplate</span><span class="o">(</span><span class="n">entity</span><span class="o">.</span><span class="na">getConfig</span><span class="o">(</span><span class="n">TomcatServer</span><span class="o">.</span><span class="na">WEB_XML_RESOURCE</span><span class="o">),</span> <span class="n">Os</span><span class="o">.</span><span class="na">mergePaths</span><span class="o">(</span><span class="n">getRunDir</span><span class="o">(),</span> <span class="s">&quot;conf&quot;</span><span class="o">,</span> <span class="s">&quot;web.xml&quot;</span><span class="o">));</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">isProtocolEnabled</span><span class="o">(</span><span class="s">&quot;HTTPS&quot;</span><span class="o">))</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">keystoreUrl</span> <span class="o">=</span> <span class="n">Preconditions</span><span class="o">.</span><span class="na">checkNotNull</span><span class="o">(</span><span class="n">getSslKeystoreUrl</span><span class="o">(),</span> <span class="s">&quot;keystore URL must be specified if using HTTPS for &quot;</span> <span class="o">+</span> <span class="n">entity</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">destinationSslKeystoreFile</span> <span class="o">=</span> <span class="n">getHttpsSslKeystoreFile</span><span class="o">();</span>
+        <span class="n">InputStream</span> <span class="n">keystoreStream</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="na">getResourceFromUrl</span><span class="o">(</span><span class="n">keystoreUrl</span><span class="o">);</span>
+        <span class="n">getMachine</span><span class="o">().</span><span class="na">copyTo</span><span class="o">(</span><span class="n">keystoreStream</span><span class="o">,</span> <span class="n">destinationSslKeystoreFile</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="n">getEntity</span><span class="o">().</span><span class="na">deployInitialWars</span><span class="o">();</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Here we can see that it’s running a script to create four directories before continuing with the customization. Let’s
+introduce an error by changing <code>mkdir</code> to <code>mkrid</code>:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">newScript</span><span class="o">(</span><span class="n">CUSTOMIZING</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;mkrid -p conf logs webapps temp&quot;</span><span class="o">)</span> <span class="c1">// `mkdir` changed to `mkrid`</span>
+    <span class="o">.</span><span class="na">failOnNonZeroResultCode</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">execute</span><span class="o">();</span></code></pre></div>
+
+<p>Now let’s try deploying this using the following YAML:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Tomcat failure test</span>
+<span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.TomcatServer</span></code></pre></div>
+
+<p>Shortly after deployment, the entity fails with the following error:</p>
+
+<p><code>Failure running task ssh: customizing TomcatServerImpl{id=e1HP2s8x} (HmyPAozV): 
+Execution failed, invalid result 127 for customizing TomcatServerImpl{id=e1HP2s8x}</code></p>
+
+<p><a href="images/script-failure-large.png"><img src="images/script-failure.png" alt="Script failure error in the Brooklyn debug console." /></a></p>
+
+<p>By selecting the <code>Activities</code> tab, we can drill into the task that failed. The list of tasks shown (where the 
+effectors are shown as top-level tasks) are clickable links. Selecting that row will show the details of
+that particular task, including its sub-tasks. We can eventually get to the specific sub-task that failed:</p>
+
+<p><a href="images/failed-task-large.png"><img src="images/failed-task.png" alt="Task failure error in the Brooklyn debug console." /></a></p>
+
+<p>By clicking on the <code>stderr</code> link, we can see the script failed with the following error:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">/tmp/brooklyn-20150721-132251052-l4b9-customizing_TomcatServerImpl_i.sh: line 10: mkrid: command not found</span></code></pre></div>
+
+<p>This tells us <em>what</em> went wrong, but doesn’t tell us <em>where</em>. In order to find that, we’ll need to look at the
+stack trace that was logged when the exception was thrown.</p>
+
+<p>It’s always worth looking at the Detailed Status section as sometimes this will give you the information you need.
+In this case, the stack trace is limited to the thread that was used to execute the task that ran the script:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">Failed after 40ms</span>
+
+<span class="go">STDERR</span>
+<span class="go">/tmp/brooklyn-20150721-132251052-l4b9-customizing_TomcatServerImpl_i.sh: line 10: mkrid: command not found</span>
+
+
+<span class="go">STDOUT</span>
+<span class="go">Executed /tmp/brooklyn-20150721-132251052-l4b9-customizing_TomcatServerImpl_i.sh, result 127: Execution failed, invalid result 127 for customizing TomcatServerImpl{id=e1HP2s8x}</span>
+
+<span class="go">java.lang.IllegalStateException: Execution failed, invalid result 127 for customizing TomcatServerImpl{id=e1HP2s8x}</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper.logWithDetailsAndThrow(ScriptHelper.java:390)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper.executeInternal(ScriptHelper.java:379)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper$8.call(ScriptHelper.java:289)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper$8.call(ScriptHelper.java:287)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.DynamicSequentialTask$DstJob.call(DynamicSequentialTask.java:343)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicExecutionManager$SubmissionCallable.call(BasicExecutionManager.java:469)</span>
+<span class="go">    at java.util.concurrent.FutureTask.run(FutureTask.java:262)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)</span>
+<span class="go">    at java.lang.Thread.run(Thread.java:745)</span></code></pre></div>
+
+<p>In order to find the exception, we’ll need to look in Brooklyn’s debug log file. By default, the debug log file
+is named <code>brooklyn.debug.log</code>. Usually the easiest way to navigate the log file is to use <code>less</code>, e.g.
+<code>less brooklyn.debug.log</code>. We can quickly find find the stack trace by first navigating to the end of the log file
+with <code>Shift-G</code>, then performing a reverse-lookup by typing <code>?Tomcat</code> and pressing <code>Enter</code>. If searching for the 
+blueprint type (in this case Tomcat) simply matches tasks unrelated to the exception, you can also search for 
+the text of the error message, in this case <code>? invalid result 127</code>. You can make the search case-insensitivity by
+typing <code>-i</code> before performing the search. To skip the current match and move to the next one (i.e. ‘up’ as we’re
+performing a reverse-lookup), simply press <code>n</code></p>
+
+<p>In this case, the <code>?Tomcat</code> search takes us directly to the full stack trace (Only the last part of the trace
+is shown here):</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">... at com.google.common.util.concurrent.ForwardingFuture.get(ForwardingFuture.java:63) ~[guava-17.0.jar:na]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicTask.get(BasicTask.java:343) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicTask.getUnchecked(BasicTask.java:352) ~[classes/:na]</span>
+<span class="go">    ... 9 common frames omitted</span>
+<span class="go">Caused by: brooklyn.util.exceptions.PropagatedRuntimeException: </span>
+<span class="go">    at org.apache.brooklyn.util.exceptions.Exceptions.propagate(Exceptions.java:97) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicTask.getUnchecked(BasicTask.java:354) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper.execute(ScriptHelper.java:339) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.webapp.tomcat.TomcatSshDriver.customize(TomcatSshDriver.java:72) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver$8.run(AbstractSoftwareProcessDriver.java:150) ~[classes/:na]</span>
+<span class="go">    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) ~[na:1.7.0_71]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.DynamicSequentialTask$DstJob.call(DynamicSequentialTask.java:343) ~[classes/:na]</span>
+<span class="go">    ... 5 common frames omitted</span>
+<span class="go">Caused by: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Execution failed, invalid result 127 for customizing TomcatServerImpl{id=e1HP2s8x}</span>
+<span class="go">    at java.util.concurrent.FutureTask.report(FutureTask.java:122) [na:1.7.0_71]</span>
+<span class="go">    at java.util.concurrent.FutureTask.get(FutureTask.java:188) [na:1.7.0_71]</span>
+<span class="go">    at com.google.common.util.concurrent.ForwardingFuture.get(ForwardingFuture.java:63) ~[guava-17.0.jar:na]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicTask.get(BasicTask.java:343) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicTask.getUnchecked(BasicTask.java:352) ~[classes/:na]</span>
+<span class="go">    ... 10 common frames omitted</span>
+<span class="go">Caused by: java.lang.IllegalStateException: Execution failed, invalid result 127 for customizing TomcatServerImpl{id=e1HP2s8x}</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper.logWithDetailsAndThrow(ScriptHelper.java:390) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper.executeInternal(ScriptHelper.java:379) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper$8.call(ScriptHelper.java:289) ~[classes/:na]</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.ScriptHelper$8.call(ScriptHelper.java:287) ~[classes/:na]</span>
+<span class="go">    ... 6 common frames omitted</span></code></pre></div>
+
+<p>Brooklyn’s use of tasks and helper classes can make the stack trace a little harder than usual to follow, but a good
+place to start is to look through the stack trace for the node’s implementation or ssh driver classes (usually
+named <code>FooNodeImpl</code> or <code>FooSshDriver</code>). In this case we can see the following:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">at org.apache.brooklyn.entity.webapp.tomcat.TomcatSshDriver.customize(TomcatSshDriver.java:72) ~[classes/:na]</span></code></pre></div>
+
+<p>Combining this with the error message of <code>mkrid: command not found</code> we can see that indeed <code>mkdir</code> has been
+misspelled <code>mkrid</code> on line 72 of <code>TomcatSshDriver.java</code>.</p>
+
+<h2 id="non-script-failure">Non-Script Failure</h2>
+
+<p>The section above gives an example of a failure that occurs when a script is run. In this section we will look at
+a failure in a non-script related part of the code. We’ll use the <code>customize()</code> method of the Tomcat server again,
+but this time, we’ll correct the spelling of ‘mkdir’ and add a line that attempts to copy a nonexistent resource 
+to the remote server:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">newScript</span><span class="o">(</span><span class="n">CUSTOMIZING</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;mkdir -p conf logs webapps temp&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">failOnNonZeroResultCode</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+
+<span class="n">copyTemplate</span><span class="o">(</span><span class="n">entity</span><span class="o">.</span><span class="na">getConfig</span><span class="o">(</span><span class="n">TomcatServer</span><span class="o">.</span><span class="na">SERVER_XML_RESOURCE</span><span class="o">),</span> <span class="n">Os</span><span class="o">.</span><span class="na">mergePaths</span><span class="o">(</span><span class="n">getRunDir</span><span class="o">(),</span> <span class="s">&quot;conf&quot;</span><span class="o">,</span> <span class="s">&quot;server.xml&quot;</span><span class="o">));</span>
+<span class="n">copyTemplate</span><span class="o">(</span><span class="n">entity</span><span class="o">.</span><span class="na">getConfig</span><span class="o">(</span><span class="n">TomcatServer</span><span class="o">.</span><span class="na">WEB_XML_RESOURCE</span><span class="o">),</span> <span class="n">Os</span><span class="o">.</span><span class="na">mergePaths</span><span class="o">(</span><span class="n">getRunDir</span><span class="o">(),</span> <span class="s">&quot;conf&quot;</span><span class="o">,</span> <span class="s">&quot;web.xml&quot;</span><span class="o">));</span>
+<span class="n">copyTemplate</span><span class="o">(</span><span class="s">&quot;classpath://nonexistent.xml&quot;</span><span class="o">,</span> <span class="n">Os</span><span class="o">.</span><span class="na">mergePaths</span><span class="o">(</span><span class="n">getRunDir</span><span class="o">(),</span> <span class="s">&quot;conf&quot;</span><span class="o">,</span> <span class="s">&quot;nonexistent.xml&quot;</span><span class="o">));</span> <span class="c1">// Resource does not exist!</span></code></pre></div>
+
+<p>Let’s deploy this using the same YAML from above. Here’s the resulting error in the Brooklyn debug console:</p>
+
+<p><a href="images/resource-exception-large.png"><img src="images/resource-exception.png" alt="Resource exception in the Brooklyn debug console." /></a></p>
+
+<p>Again, this tells us <em>what</em> the error is, but we need to find <em>where</em> the code is that attempts to copy this file. In
+this case it’s shown in the Detailed Status section, and we don’t need to go to the log file:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">Failed after 221ms: Error getting resource &#39;classpath://nonexistent.xml&#39; for TomcatServerImpl{id=PVZxDKU1}: java.io.IOException: Error accessing classpath://nonexistent.xml: java.io.IOException: nonexistent.xml not found on classpath</span>
+
+<span class="go">java.lang.RuntimeException: Error getting resource &#39;classpath://nonexistent.xml&#39; for TomcatServerImpl{id=PVZxDKU1}: java.io.IOException: Error accessing classpath://nonexistent.xml: java.io.IOException: nonexistent.xml not found on classpath</span>
+<span class="go">    at org.apache.brooklyn.core.util.ResourceUtils.getResourceFromUrl(ResourceUtils.java:297)</span>
+<span class="go">    at org.apache.brooklyn.core.util.ResourceUtils.getResourceAsString(ResourceUtils.java:475)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver.getResourceAsString(AbstractSoftwareProcessDriver.java:447)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver.processTemplate(AbstractSoftwareProcessDriver.java:469)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver.copyTemplate(AbstractSoftwareProcessDriver.java:390)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver.copyTemplate(AbstractSoftwareProcessDriver.java:379)</span>
+<span class="go">    at org.apache.brooklyn.entity.webapp.tomcat.TomcatSshDriver.customize(TomcatSshDriver.java:79)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.AbstractSoftwareProcessDriver$8.run(AbstractSoftwareProcessDriver.java:150)</span>
+<span class="go">    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.DynamicSequentialTask$DstJob.call(DynamicSequentialTask.java:343)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicExecutionManager$SubmissionCallable.call(BasicExecutionManager.java:469)</span>
+<span class="go">    at java.util.concurrent.FutureTask.run(FutureTask.java:262)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)</span>
+<span class="go">    at java.lang.Thread.run(Thread.java:745)</span>
+<span class="go">Caused by: java.io.IOException: Error accessing classpath://nonexistent.xml: java.io.IOException: nonexistent.xml not found on classpath</span>
+<span class="go">    at org.apache.brooklyn.core.util.ResourceUtils.getResourceFromUrl(ResourceUtils.java:233)</span>
+<span class="go">    ... 14 more</span>
+<span class="go">Caused by: java.io.IOException: nonexistent.xml not found on classpath</span>
+<span class="go">    at org.apache.brooklyn.core.util.ResourceUtils.getResourceViaClasspath(ResourceUtils.java:372)</span>
+<span class="go">    at org.apache.brooklyn.core.util.ResourceUtils.getResourceFromUrl(ResourceUtils.java:230)</span>
+<span class="go">    ... 14 more</span></code></pre></div>
+
+<p>Looking for <code>Tomcat</code> in the stack trace, we can see in this case the problem lies at line 79 of <code>TomcatSshDriver.java</code></p>
+
+<h2 id="external-failure">External Failure</h2>
+
+<p>Sometimes an entity will fail outside the direct commands issues by Brooklyn. When installing and launching an entity,
+Brooklyn will check the return code of scripts that were run to ensure that they completed successfully (i.e. the
+return code of the script is zero). It is possible, for example, that a launch script completes successfully, but
+the entity fails to start.</p>
+
+<p>We can simulate this type of failure by launching Tomcat with an invalid configuration file. As seen in the previous
+examples, Brooklyn copies two xml configuration files to the server: <code>server.xml</code> and <code>web.xml</code></p>
+
+<p>The first few non-comment lines of <code>server.xml</code> are as follows (you can see the full file <a href="https://github.com/apache/brooklyn-server/tree/master/software/webapp/src/main/resources/org/apache/brooklyn/entity/webapp/tomcat/server.xml">here</a>):</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;Server</span> <span class="na">port=</span><span class="s">&quot;${driver.shutdownPort?c}&quot;</span> <span class="na">shutdown=</span><span class="s">&quot;SHUTDOWN&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.AprLifecycleListener&quot;</span> <span class="na">SSLEngine=</span><span class="s">&quot;on&quot;</span> <span class="nt">/&gt;</span>
+     <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JasperListener&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>Let’s add an unmatched XML element, which will make this XML file invalid:</p>
+
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;Server</span> <span class="na">port=</span><span class="s">&quot;${driver.shutdownPort?c}&quot;</span> <span class="na">shutdown=</span><span class="s">&quot;SHUTDOWN&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;unmatched-element&gt;</span> <span class="c">&lt;!-- This is invalid XML as we won&#39;t add &lt;/unmatched-element&gt; --&gt;</span>
+     <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.AprLifecycleListener&quot;</span> <span class="na">SSLEngine=</span><span class="s">&quot;on&quot;</span> <span class="nt">/&gt;</span>
+     <span class="nt">&lt;Listener</span> <span class="na">className=</span><span class="s">&quot;org.apache.catalina.core.JasperListener&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>As Brooklyn doesn’t know how these types of resources are used, they’re not validated as they’re copied to the remote machine.
+As far as Brooklyn is concerned, the file will have copied successfully.</p>
+
+<p>Let’s deploy Tomcat again, using the same YAML as before. This time, the deployment runs for a few minutes before failing
+with <code>Timeout waiting for SERVICE_UP</code>:</p>
+
+<p><a href="images/external-error-large.png"><img src="images/external-error.png" alt="External error in the Brooklyn debug console." /></a></p>
+
+<p>If we drill down into the tasks in the <code>Activities</code> tab, we can see that all of the installation and launch tasks
+completed successfully, and stdout of the <code>launch</code> script is as follows:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">Executed /tmp/brooklyn-20150721-153049139-fK2U-launching_TomcatServerImpl_id_.sh, result 0</span></code></pre></div>
+
+<p>The task that failed was the <code>post-start</code> task, and the stack trace from the Detailed Status section is as follows:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">Failed after 5m 1s: Timeout waiting for SERVICE_UP from TomcatServerImpl{id=BUHgQeOs}</span>
+
+<span class="go">java.lang.IllegalStateException: Timeout waiting for SERVICE_UP from TomcatServerImpl{id=BUHgQeOs}</span>
+<span class="go">    at org.apache.brooklyn.core.entity.Entities.waitForServiceUp(Entities.java:1073)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.SoftwareProcessImpl.waitForServiceUp(SoftwareProcessImpl.java:388)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.SoftwareProcessImpl.waitForServiceUp(SoftwareProcessImpl.java:385)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.SoftwareProcessDriverLifecycleEffectorTasks.postStartCustom(SoftwareProcessDriverLifecycleEffectorTasks.java:164)</span>
+<span class="go">    at org.apache.brooklyn.entity.software.base.lifecycle.MachineLifecycleEffectorTasks$7.run(MachineLifecycleEffectorTasks.java:433)</span>
+<span class="go">    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.DynamicSequentialTask$DstJob.call(DynamicSequentialTask.java:343)</span>
+<span class="go">    at org.apache.brooklyn.core.util.task.BasicExecutionManager$SubmissionCallable.call(BasicExecutionManager.java:469)</span>
+<span class="go">    at java.util.concurrent.FutureTask.run(FutureTask.java:262)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)</span>
+<span class="go">    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)</span>
+<span class="go">at java.lang.Thread.run(Thread.java:745)</span></code></pre></div>
+
+<p>This doesn’t really tell us what we need to know, and looking in the <code>brooklyn.debug.log</code> file yields no further
+clues. The key here is the error message <code>Timeout waiting for SERVICE_UP</code>. After running the installation and
+launch scripts, assuming all scripts completed successfully, Brooklyn will periodically check the health of the node
+and will set the node on fire if the health check does not pass within a pre-prescribed period (the default is
+two minutes, and can be configured using the <code>start.timeout</code> config key). The periodic health check also continues
+after the successful launch in order to check continued operation of the node, but in this case it fails to pass
+at all.</p>
+
+<p>The first thing we need to do is to find out how Brooklyn determines the health of the node. The health-check is 
+often implemented in the <code>isRunning()</code> method in the entity’s ssh driver. Tomcat’s implementation of <code>isRunning()</code>
+is as follows:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isRunning</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nf">newScript</span><span class="o">(</span><span class="n">MutableMap</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">USE_PID_FILE</span><span class="o">,</span> <span class="s">&quot;pid.txt&quot;</span><span class="o">),</span> <span class="n">CHECK_RUNNING</span><span class="o">).</span><span class="na">execute</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+
+<p>The <code>newScript</code> method has conveniences for default scripts to check if a process is running based on its PID. In this
+case, it will look for Tomcat’s PID in the <code>pid.txt</code> file and check if the PID is the PID of a running process</p>
+
+<p>It’s worth a quick sanity check at this point to check if the PID file exists, and if the process is running.
+By default, the pid file is located in the run directory of the entity. You can find the location of the entity’s run
+directory by looking at the <code>run.dir</code> sensor. In this case it is <code>/tmp/brooklyn-martin/apps/jIzIHXtP/entities/TomcatServer_BUHgQeOs</code>.
+To find the pid, you simply cat the pid.txt file in this directory:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> cat /tmp/brooklyn-martin/apps/jIzIHXtP/entities/TomcatServer_BUHgQeOs/pid.txt
+<span class="go">73714</span></code></pre></div>
+
+<p>In this case, the PID in the file is 73714. You can then check if the process is running using <code>ps</code>. You can also
+pipe the output to <code>fold</code> so the full launch command is visible:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> ps -p <span class="m">73714</span> <span class="p">|</span> fold -w 120
+<span class="go">PID TTY           TIME CMD</span>
+<span class="go">73714 ??         0:08.03 /Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin/java -Dnop -Djava.util.logg</span>
+<span class="go">ing.manager=org.apache.juli.ClassLoaderLogManager -javaagent:/tmp/brooklyn-martin/apps/jIzIHXtP/entities/TomcatServer_BU</span>
+<span class="go">HgQeOs/brooklyn-jmxmp-agent-shaded-0.8.0-SNAPSHOT.jar -Xms200m -Xmx800m -XX:MaxPermSize=400m -Dcom.sun.management.jmxrem</span>
+<span class="go">ote -Dbrooklyn.jmxmp.rmi-port=1099 -Dbrooklyn.jmxmp.port=31001 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.manage</span>
+<span class="go">ment.jmxremote.authenticate=false -Djava.endorsed.dirs=/tmp/brooklyn-martin/installs/TomcatServer_7.0.56/apache-tomcat-7</span>
+<span class="go">.0.56/endorsed -classpath /tmp/brooklyn-martin/installs/TomcatServer_7.0.56/apache-tomcat-7.0.56/bin/bootstrap.jar:/tmp/</span>
+<span class="go">brooklyn-martin/installs/TomcatServer_7.0.56/apache-tomcat-7.0.56/bin/tomcat-juli.jar -Dcatalina.base=/tmp/brooklyn-mart</span>
+<span class="go">in/apps/jIzIHXtP/entities/TomcatServer_BUHgQeOs -Dcatalina.home=/tmp/brooklyn-martin/installs/TomcatServer_7.0.56/apache</span>
+<span class="go">-tomcat-7.0.56 -Djava.io.tmpdir=/tmp/brooklyn-martin/apps/jIzIHXtP/entities/TomcatServer_BUHgQeOs/temp org.apache.catali</span>
+<span class="go">na.startup.Bootstrap start</span></code></pre></div>
+
+<p>This confirms that the process is running. The next thing we can look at is the <code>service.notUp.indicators</code> sensor. This
+reads as follows:</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&quot;service.process.isRunning&quot;</span><span class="p">:</span><span class="s2">&quot;The software process for this entity does not appear to be running&quot;</span><span class="p">}</span></code></pre></div>
+
+<p>This confirms that the problem is indeed due to the <code>service.process.isRunning</code> sensor. We assumed earlier that this was
+set by the <code>isRunning()</code> method in <code>TomcatSshDriver.java</code>, but this isn’t always the case. The <code>service.process.isRunning</code>
+sensor is wired up by the <code>connectSensors()</code> method in the node’s implementation class, in this case 
+<code>TomcatServerImpl.java</code>. Tomcat’s implementation of <code>connectSensors()</code> is as follows:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">connectSensors</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">connectSensors</span><span class="o">();</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">getDriver</span><span class="o">().</span><span class="na">isJmxEnabled</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">requestProcessorMbeanName</span> <span class="o">=</span> <span class="s">&quot;Catalina:type=GlobalRequestProcessor,name=\&quot;http-*\&quot;&quot;</span><span class="o">;</span>
+
+        <span class="n">Integer</span> <span class="n">port</span> <span class="o">=</span> <span class="n">isHttpsEnabled</span><span class="o">()</span> <span class="o">?</span> <span class="n">getAttribute</span><span class="o">(</span><span class="n">HTTPS_PORT</span><span class="o">)</span> <span class="o">:</span> <span class="n">getAttribute</span><span class="o">(</span><span class="n">HTTP_PORT</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">connectorMbeanName</span> <span class="o">=</span> <span class="n">format</span><span class="o">(</span><span class="s">&quot;Catalina:type=Connector,port=%s&quot;</span><span class="o">,</span> <span class="n">port</span><span class="o">);</span>
+
+        <span class="n">jmxWebFeed</span> <span class="o">=</span> <span class="n">JmxFeed</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">entity</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">period</span><span class="o">(</span><span class="mi">3000</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">pollAttribute</span><span class="o">(</span><span class="k">new</span> <span class="n">JmxAttributePollConfig</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;(</span><span class="n">ERROR_COUNT</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">objectName</span><span class="o">(</span><span class="n">requestProcessorMbeanName</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">attributeName</span><span class="o">(</span><span class="s">&quot;errorCount&quot;</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">pollAttribute</span><span class="o">(</span><span class="k">new</span> <span class="n">JmxAttributePollConfig</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;(</span><span class="n">REQUEST_COUNT</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">objectName</span><span class="o">(</span><span class="n">requestProcessorMbeanName</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">attributeName</span><span class="o">(</span><span class="s">&quot;requestCount&quot;</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">pollAttribute</span><span class="o">(</span><span class="k">new</span> <span class="n">JmxAttributePollConfig</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;(</span><span class="n">TOTAL_PROCESSING_TIME</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">objectName</span><span class="o">(</span><span class="n">requestProcessorMbeanName</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">attributeName</span><span class="o">(</span><span class="s">&quot;processingTime&quot;</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">pollAttribute</span><span class="o">(</span><span class="k">new</span> <span class="n">JmxAttributePollConfig</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">CONNECTOR_STATUS</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">objectName</span><span class="o">(</span><span class="n">connectorMbeanName</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">attributeName</span><span class="o">(</span><span class="s">&quot;stateName&quot;</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">pollAttribute</span><span class="o">(</span><span class="k">new</span> <span class="n">JmxAttributePollConfig</span><span class="o">&lt;</span><span class="n">Boolean</span><span class="o">&gt;(</span><span class="n">SERVICE_PROCESS_IS_RUNNING</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">objectName</span><span class="o">(</span><span class="n">connectorMbeanName</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">attributeName</span><span class="o">(</span><span class="s">&quot;stateName&quot;</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">onSuccess</span><span class="o">(</span><span class="n">Functions</span><span class="o">.</span><span class="na">forPredicate</span><span class="o">(</span><span class="n">Predicates</span><span class="o">.&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="n">equalTo</span><span class="o">(</span><span class="s">&quot;STARTED&quot;</span><span class="o">)))</span>
+                    <span class="o">.</span><span class="na">setOnFailureOrException</span><span class="o">(</span><span class="kc">false</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+
+        <span class="n">jmxAppFeed</span> <span class="o">=</span> <span class="n">JavaAppUtils</span><span class="o">.</span><span class="na">connectMXBeanSensors</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="c1">// if not using JMX</span>
+        <span class="n">LOG</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="s">&quot;Tomcat running without JMX monitoring; limited visibility of service available&quot;</span><span class="o">);</span>
+        <span class="n">connectServiceUpIsRunning</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+
+<p>We can see here that if jmx is not enabled, the method will call <code>connectServiceUpIsRunning()</code> which will use the
+default PID-based method of determining if a process is running. However, as JMX <em>is</em> running, the <code>service.process.isRunning</code>
+sensor (denoted here by the <code>SERVICE_PROCESS_IS_RUNNING</code> variable) is set to true if and only if the
+<code>stateName</code> JMX attribute equals <code>STARTED</code>. We can see from the previous call to <code>.pollAttribute</code> that this
+attribute is also published to the <code>CONNECTOR_STATUS</code> sensor. The <code>CONNECTOR_STATUS</code> sensor is defined as follows:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">AttributeSensor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">CONNECTOR_STATUS</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="n">BasicAttributeSensor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">&quot;webapp.tomcat.connectorStatus&quot;</span><span class="o">,</span> <span class="s">&quot;Catalina connector state name&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>Let’s go back to the Brooklyn debug console and look for the <code>webapp.tomcat.connectorStatus</code>:</p>
+
+<p><a href="images/jmx-sensors-large.png"><img src="images/jmx-sensors.png" alt="Sensors view in the Brooklyn debug console." /></a></p>
+
+<p>As the sensor is not shown, it’s likely that it’s simply null or not set. We can check this by clicking
+the “Show/hide empty records” icon (highlighted in yellow above):</p>
+
+<p><a href="images/jmx-sensors-all-large.png"><img src="images/jmx-sensors-all.png" alt="All sensors view in the Brooklyn debug console." /></a></p>
+
+<p>We know from previous steps that the installation and launch scripts completed, and we know the procecess is running,
+but we can see here that the server is not responding to JMX requests. A good thing to check here would be that the
+JMX port is not being blocked by iptables, firewalls or security groups
+(see the <a href="connectivity.html">troubleshooting connectivity guide</a>). 
+Let’s assume that we’ve checked that and they’re all open. There is still one more thing that Brooklyn can tell us.</p>
+
+<p>Still on the <code>Sensors</code> tab, let’s take a look at the <code>log.location</code> sensor:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">/tmp/brooklyn-martin/apps/c3bmrlC3/entities/TomcatServer_C1TAjYia/logs/catalina.out</span></code></pre></div>
+
+<p>This is the location of Tomcat’s own log file. The location of the log file will differ from process to process
+and when writing a custom entity you will need to check the software’s own documentation. If your blueprint’s
+ssh driver extends <code>JavaSoftwareProcessSshDriver</code>, the value returned by the <code>getLogFileLocation()</code> method will
+automatically be published to the <code>log.location</code> sensor. Otherwise, you can publish the value yourself by calling
+<code>entity.setAttribute(Attributes.LOG_FILE_LOCATION, getLogFileLocation());</code> in your ssh driver</p>
+
+<p><strong>Note:</strong> The log file will be on the server to which you have deployed Tomcat, and not on the Brooklyn server.
+Let’s take a look in the log file:</p>
+
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> less /tmp/brooklyn-martin/apps/c3bmrlC3/entities/TomcatServer_C1TAjYia/logs/catalina.out
+
+<span class="go">Jul 21, 2015 4:12:12 PM org.apache.tomcat.util.digester.Digester fatalError</span>
+<span class="go">SEVERE: Parse Fatal Error at line 143 column 3: The element type &quot;unmatched-element&quot; must be terminated by the matching end-tag &quot;&lt;/unmatched-element&gt;&quot;.</span>
+<span class="go">    org.xml.sax.SAXParseException; systemId: file:/tmp/brooklyn-martin/apps/c3bmrlC3/entities/TomcatServer_C1TAjYia/conf/server.xml; lineNumber: 143; columnNumber: 3; The element type &quot;unmatched-element&quot; must be terminated by the matching end-tag &quot;&lt;/unmatched-element&gt;&quot;.</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1437)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1749)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2973)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)</span>
+<span class="go">    at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)</span>
+<span class="go">    at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1561)</span>
+<span class="go">    at org.apache.catalina.startup.Catalina.load(Catalina.java:615)</span>
+<span class="go">    at org.apache.catalina.startup.Catalina.start(Catalina.java:677)</span>
+<span class="go">    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span>
+<span class="go">    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span>
+<span class="go">    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span>
+<span class="go">    at java.lang.reflect.Method.invoke(Method.java:497)</span>
+<span class="go">    at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:321)</span>
+<span class="go">    at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)</span>
+<span class="go">Jul 21, 2015 4:12:12 PM org.apache.catalina.startup.Catalina load</span>
+<span class="go">WARNING: Catalina.start using conf/server.xml: The element type &quot;unmatched-element&quot; must be terminated by the matching end-tag &quot;&lt;/unmatched-element&gt;&quot;.</span>
+<span class="go">Jul 21, 2015 4:12:12 PM org.apache.catalina.startup.Catalina start</span>
+<span class="go">SEVERE: Cannot start server. Server instance is not configured.</span></code></pre></div>
+
+<p>As expected, we can see here that the <code>unmatched-element</code> element has not been terminated in the <code>server.xml</code> file</p>
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/v/latest/ops/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Reference Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/ops/troubleshooting/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Troubleshooting
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/overview.html" class="list-group-item">Overview
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/web-console-issues.html" class="list-group-item">Web Console Issues
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/deployment.html" class="list-group-item">Deployment
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/connectivity.html" class="list-group-item">Server Connectivity
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/slow-unresponsive.html" class="list-group-item">Brooklyn Slow or Unresponsive
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/increase-entropy.html" class="list-group-item">Increase Entropy
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/increase-system-resource-limits.html" class="list-group-item">Increase System Resource Limits
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/detailed-support-report.html" class="list-group-item">Detailed Support Report
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/softwareprocess.html" class="list-group-item">SoftwareProcess Entities
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/going-deep-in-java-and-logs.html" class="list-group-item active">Going Deep in Java and Logs
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/memory-usage.html" class="list-group-item">Monitoring Memory Usage
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/ops/troubleshooting/going-deep-in-java-and-logs.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

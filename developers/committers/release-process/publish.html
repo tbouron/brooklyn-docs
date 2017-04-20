@@ -1,0 +1,966 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Publish to the public - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Publish to the public</h1>
+                <h2 id="update-the-canonical-git-repository">Update the canonical Git repository</h2>
+
+<p>Make a signed tag for this release:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> m in <span class="k">${</span><span class="nv">MODULES</span><span class="k">}</span><span class="p">;</span> <span class="k">do</span> <span class="o">(</span> <span class="nb">cd</span> <span class="nv">$m</span> <span class="o">&amp;&amp;</span> git tag -s -m <span class="s2">&quot;Tag release ${VERSION_NAME}&quot;</span> rel/apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span> rel/apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span>-rc<span class="k">${</span><span class="nv">RC_NUMBER</span><span class="k">}</span> <span class="o">)</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+
+<p>Now push the release tag:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> m in <span class="k">${</span><span class="nv">MODULES</span><span class="k">}</span><span class="p">;</span> <span class="k">do</span> <span class="o">(</span> <span class="nb">cd</span> <span class="nv">$m</span> <span class="o">&amp;&amp;</span> git push apache-git rel/apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span> <span class="o">)</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+
+<h2 id="publish-the-source-and-binary-distributions-to-the-pre-release-area">Publish the source and binary distributions to the pre-release area</h2>
+
+<p>You will need to have checked out the Apache distribution Subversion repository located at
+https://dist.apache.org/repos/dist/release/brooklyn. Please refer to <a href="prerequisites.html">Prerequisites</a> for
+information.</p>
+
+<p>In your workspace for the <code>dist.apache.org</code> repo, create a directory with the artifact name and version:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span></code></pre></div>
+
+<p>Refer back to the pre-release area Subversion (see <a href="publish-temp.html">Publish to the staging area</a>), and copy all of
+the release candidate artifacts - <code>-src</code> and <code>-bin</code>, <code>.tar.gz</code> and <code>.zip</code>, and all associated <code>.md5</code>, <code>.sha1</code>, <code>.sha256</code>
+and <code>.asc</code> signatures - into this new folder.</p>
+
+<p>Rename all of the files to remove the <code>-rcN</code> designation:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *<span class="p">;</span> <span class="k">do</span> mv <span class="nv">$f</span> <span class="k">${</span><span class="nv">f</span><span class="p">//-rc</span><span class="k">${</span><span class="nv">RC_NUMBER</span><span class="k">}</span><span class="p">/</span><span class="k">}</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+
+<p>The hash files will need patching to refer to the filenames without the <code>-rcN</code> designation:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sed -i.bak <span class="s1">&#39;s/-rc&#39;</span><span class="nv">$RC_NUMBER</span><span class="s1">&#39;-/-/&#39;</span> *.md5 *.sha1 *.sha256
+rm -f *.bak</code></pre></div>
+
+<p>Note that the PGP signatures do not embed the filename so they do not need to be modified</p>
+
+<p>As a final check, re-test the hashes and signatures:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> artifact in <span class="k">$(</span>find * -type f ! <span class="se">\(</span> -name <span class="s1">&#39;*.asc&#39;</span> -o -name <span class="s1">&#39;*.md5&#39;</span> -o -name <span class="s1">&#39;*.sha1&#39;</span> -o -name <span class="s1">&#39;*.sha256&#39;</span> <span class="se">\)</span> <span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+    md5sum -c <span class="k">${</span><span class="nv">artifact</span><span class="k">}</span>.md5 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    shasum -a1 -c <span class="k">${</span><span class="nv">artifact</span><span class="k">}</span>.sha1 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    shasum -a256 -c <span class="k">${</span><span class="nv">artifact</span><span class="k">}</span>.sha256 <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    gpg2 --verify <span class="k">${</span><span class="nv">artifact</span><span class="k">}</span>.asc <span class="k">${</span><span class="nv">artifact</span><span class="k">}</span> <span class="se">\</span>
+      <span class="o">||</span> <span class="o">{</span> <span class="nb">echo</span> <span class="s2">&quot;Invalid signature for $artifact. Aborting!&quot;</span><span class="p">;</span> <span class="nb">break</span><span class="p">;</span> <span class="o">}</span>
+<span class="k">done</span></code></pre></div>
+
+<p>(You may get warnings such as: <code>gpg: WARNING: This key is not certified with a trusted signature!</code> 
+and <code>There is no indication that the signature belongs to the owner.</code> This happens if you have not trusted
+the person’s key. A key-signing party is a good way to extend this web of trust).</p>
+
+<p>Then, add them to Subversion and commit.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">svn add apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span>
+svn commit --message <span class="s2">&quot;Add apache-brooklyn-${VERSION_NAME} to dist/release/brooklyn&quot;</span></code></pre></div>
+
+<h2 id="publish-the-staging-repository-on-apaches-nexus-server">Publish the staging repository on Apache’s Nexus server</h2>
+
+<p><em>Releasing</em> the staging repository causes its contents to be copied to the main Apache Nexus repository. This in turn
+is propagated to Maven Central, meaning all of our users can access the artifacts using a default Maven configuration
+(there’s no need to add a <code>&lt;repository&gt;</code> to their <code>pom.xml</code> or <code>~/.m2/settings.xml</code>).</p>
+
+<p>Go to the Apache Nexus server at <a href="https://repository.apache.org/">https://repository.apache.org/</a> and log in using the
+link in the top right (the credentials are the same as your Git and Jenkins credentials). Go to the “Staging
+Repositories” page, and tick the repository with the name starting <code>orgapachebrooklyn</code>. Click the <strong>Release</strong> button.
+Provide a description which includes the version, e.g. <code>Apache Brooklyn 0.7.0-incubating</code>.</p>
+
+<p>Note there is only one orgapachebrooklyn staging repository at a time; this will be the one created for the release
+candidate with whatever name was used there (e.g. it might include “rc” in the name). If you really want, you can 
+double-check under the “content” that brooklyn-dist has artifacts without rc in the name.</p>
+
+<h2 id="update-the-website">Update the website</h2>
+
+<p><em>Instructions on uploading to the website are beyond the scope of these instructions. Refer to the 
+<a href="https://github.com/apache/brooklyn-docs/tree/master/README.md">appropriate instructions</a>.</em></p>
+
+<h3 id="publish-documentation-for-the-new-release">Publish documentation for the new release</h3>
+
+<p>Go to the release branch and perform a build:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git checkout <span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span>
+mvn clean install -DskipTests</code></pre></div>
+
+<p>Ensure the SVN repo is up-to-date (very painful otherwise!)</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="k">${</span><span class="nv">BROOKLYN_SITE_DIR</span><span class="p">-../brooklyn-site-public</span><span class="k">}</span>
+svn up
+<span class="nb">cd</span> -</code></pre></div>
+
+<p>Generate the permalink docs for the release:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>brooklyn-docs
+./_build/build.sh guide-version --install</code></pre></div>
+
+<p>Now publish _site/v/<em>${VERSION_NAME}</em> to the public website.</p>
+
+<p>Update the “latest” docs to this release:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">./_build/build.sh guide-latest --install</code></pre></div>
+
+<p>Now publish _site/v/latest to the public website:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="k">${</span><span class="nv">BROOKLYN_SITE_DIR</span><span class="p">-../../brooklyn-site-public</span><span class="k">}</span>
+svn add * --force
+<span class="nb">export </span><span class="nv">DELETIONS</span><span class="o">=</span><span class="k">$(</span> svn status <span class="p">|</span> sed -e <span class="s1">&#39;/^!/!d&#39;</span> -e <span class="s1">&#39;s/^!//&#39;</span> <span class="k">)</span>
+<span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;${DELETIONS}&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span> svn rm <span class="k">${</span><span class="nv">DELETIONS</span><span class="k">}</span> <span class="p">;</span> <span class="k">fi</span></code></pre></div>
+
+<h3 id="update-the-main-website-to-link-to-the-new-release">Update the main website to link to the new release</h3>
+
+<p>This should be done on the <code>master</code> branch:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git checkout master</code></pre></div>
+
+<ol>
+  <li>Edit the file <code>brooklyn-docs/_config.yml</code> - change <code>brooklyn-stable-version</code> to be the newly-release version, and
+<code>brooklyn-version</code> to be the current SNAPSHOT version on the master branch.</li>
+  <li>Edit the file <code>brooklyn-docs/website/download/verify.md</code> to add links to the MD5/SHA1/SHA256 hashes and PGP signatures for the
+new version.</li>
+  <li>Edit the file <code>brooklyn-docs/website/meta/versions.md</code> to add the new version.</li>
+  <li>Build the updated site with <code>./_build/build.sh website-root --install</code>.</li>
+  <li>Publish to the public website.</li>
+  <li>Commit your changes to master, e.g. with a message like “Update latest docs to 0.8.0-incubating”</li>
+</ol>
+
+<h2 id="tag-the-release-in-git">Tag the release in git</h2>
+
+<p>Make a signed tag for this release, based on the tag for the release candidate, and then push the tag:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git tag -s -m <span class="s2">&quot;Tag release ${VERSION_NAME}&quot;</span> apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span> apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span>-rc<span class="k">${</span><span class="nv">RC_NUMBER</span><span class="k">}</span>
+git push apache apache-brooklyn-<span class="k">${</span><span class="nv">VERSION_NAME</span><span class="k">}</span></code></pre></div>
+
+<p>Note the tag <code>apache-brooklyn-${VERSION_NAME}-rc${RC_NUMBER}</code> should have been created as part of the
+RC creation - see <a href="make-release-artifacts.html">make-release-artifacts</a>.</p>
+
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/developers/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      Developers
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/developers/committers/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Committer Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/developers/committers/release-process/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Release Process
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/prerequisites.html" class="list-group-item">Release Prerequisites
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/environment-variables.html" class="list-group-item">Environment variables for the release
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/release-version.html" class="list-group-item">Release branch and set version
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/make-release-artifacts.html" class="list-group-item">Make the release artifacts
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/verify-release-artifacts.html" class="list-group-item">Verify the release artifacts
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/publish-temp.html" class="list-group-item">Publish to the staging area
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/vote.html" class="list-group-item">Vote on dev@brooklyn
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/fix-release.html" class="list-group-item">Fix on the release branch
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/publish.html" class="list-group-item active">Publish to the public
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/developers/committers/release-process/announce.html" class="list-group-item">Announce the release
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/website/developers/committers/release-process/publish.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

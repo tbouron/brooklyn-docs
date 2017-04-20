@@ -1,0 +1,22 @@
+<h2 id="site-structure">Site Structure</h2>
+
+<p>The site structure and menus are built by a plug-in in <code>site_structure.rb</code>. This plug-in looks in the <a href="https://jekyllrb.com/docs/frontmatter/" target="_blank">YAML front matter</a> 
+for child pages to build the structure, and breadcrumbs to determine the parent pages to display. </p>
+
+<p>Child pages are a list of objects, stored in the field <code>children</code>. These are defined by string path to a file or a YAML 
+object with a <code>path</code> to another file, or a <code>link</code> to an external URL. In addition a <code>title</code> can be defined 
+for the text content of the HTML menu option. See the example below from 
+<a href="https://github.com/apache/brooklyn-docs/blob/master/guide/index.md" target="_blank">/guide/index.md</a></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">breadcrumbs</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">/website/documentation/index.md</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">index.md</span>
+<span class="l-Scalar-Plain">children</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/start/index.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/misc/download.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/concepts/index.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/blueprints/index.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/java/index.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/ops/index.md</span> <span class="p-Indicator">}</span>
+<span class="p-Indicator">-</span> <span class="p-Indicator">{</span> <span class="nv">path</span><span class="p-Indicator">:</span> <span class="nv">/guide/misc/index.md</span> <span class="p-Indicator">}</span></code></pre></div>
+

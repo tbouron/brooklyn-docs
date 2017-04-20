@@ -1,0 +1,1024 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Common Classes and Entities - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Common Classes and Entities</h1>
+                <!-- TODO old, needs work (refactoring!) and use of java_link -->
+
+<h3 id="entity-class-hierarchy">Entity Class Hierarchy</h3>
+
+<p>By convention in Brooklyn the following words have a particular meaning:</p>
+
+<ul>
+  <li><em>Group</em> - a homogeneous grouping of entities (which need not all be managed by the same parent 
+entity)</li>
+  <li><em>Cluster</em> - a homogeneous collection of entities (all managed by the “cluster” entity)</li>
+  <li><em>Fabric</em> - a multi-location collection of entities, with one per location; often used with a cluster per location</li>
+  <li><em>Application</em> - a top-level entity, which can have one or more child entities.</li>
+</ul>
+
+<p>The following constructs are often used for Java entities:</p>
+
+<ul>
+  <li><em>entity spec</em> defines an entity to be created; used to define a child entity, or often to 
+define the type of entity in a cluster.</li>
+  <li><em>traits</em> (mixins) providing certain capabilities, such as <em>Resizable</em> and <em>Startable</em>.</li>
+  <li><em>Resizable</em> entities can re-sized dynamically, to increase/decrease the number of child entities.
+For example, scaling up or down a cluster. It could similarly be used to vertically scale a VM,
+or to resize a disk.</li>
+  <li><em>Startable</em> indicates the effector to be executed on initial deployment (<code>start()</code>) and on 
+tear down (<code>stop()</code>).</li>
+</ul>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>Configuration keys are typically defined as static named fields on the Entity interface. These
+define the configuration values that can be passed to the entity during construction. For
+example:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ConfigKey</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ROOT_WAR</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConfigKeys</span><span class="o">.</span><span class="na">newStringConfigKey</span><span class="o">(</span>
+        <span class="s">&quot;wars.root&quot;</span><span class="o">,</span>
+        <span class="s">&quot;WAR file to deploy as the ROOT, as URL (supporting file: and classpath: prefixes)&quot;</span><span class="o">);</span></code></pre></div>
+
+<p>One can optionally define a <code>@SetFromFlag("war")</code>. This defines a short-hand for configuring the
+entity. However, it should be used with caution - when using configuration set on a parent entity
+(and thus inherited), the <code>@SetFromFlag</code> short-form names are not checked. The long form defined 
+in the constructor should be meaningful and sufficient. The usage of <code>@SetFromFlag</code> is therefore
+discouraged.</p>
+
+<p>The type <code>AttributeSensorAndConfigKey&lt;?&gt;</code> can be used to indicate that a config key should be resolved,
+and its value set as a sensor on the entity (when <code>ConfigToAttributes.apply(entity)</code> is called).</p>
+
+<p>A special case of this is <code>PortAttributeSensorAndConfigKey</code>. This is resolved to find an available 
+port (by querying the target location). For example, the value <code>8081+</code> means that then next available
+port starting from 8081 will be used.</p>
+
+<h3 id="declaring-sensors">Declaring Sensors</h3>
+
+<p>Sensors are typically defined as static named fields on the Entity interface. These define 
+the events published by the entity, which interested parties can subscribe to. For example:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">AttributeSensor</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">MANAGEMENT_URL</span> <span class="o">=</span> <span class="n">Sensors</span><span class="o">.</span><span class="na">newStringSensor</span><span class="o">(</span>
+        <span class="s">&quot;crate.managementUri&quot;</span><span class="o">,</span>
+        <span class="s">&quot;The address at which the Crate server listens&quot;</span><span class="o">);</span></code></pre></div>
+
+<h3 id="declaring-effectors">Declaring Effectors</h3>
+
+<p>Effectors are the operations that an entity supports. There are multiple ways that an entity can 
+be defined. Examples of each are given below.</p>
+
+<h4 id="effector-annotation">Effector Annotation</h4>
+
+<p>A method on the entity interface can be annotated to indicate it is an effector, and to provide
+metadata about the effector and its parameters.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@org.apache.brooklyn.core.annotation.Effector</span><span class="o">(</span><span class="n">description</span><span class="o">=</span><span class="s">&quot;Retrieve a Gist&quot;</span><span class="o">)</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getGist</span><span class="o">(</span><span class="nd">@EffectorParam</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="n">description</span><span class="o">=</span><span class="s">&quot;Gist id&quot;</span><span class="o">)</span> <span class="n">String</span> <span class="n">id</span><span class="o">);</span></code></pre></div>
+
+<h4 id="static-field-effector-declaration">Static Field Effector Declaration</h4>
+
+<p>A static field can be defined on the entity to define an effector, giving metadata about that effector.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Effector</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">EXECUTE_SCRIPT</span> <span class="o">=</span> <span class="n">Effectors</span><span class="o">.</span><span class="na">effector</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">&quot;executeScript&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">description</span><span class="o">(</span><span class="s">&quot;invokes a script&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">parameter</span><span class="o">(</span><span class="n">ExecuteScriptEffectorBody</span><span class="o">.</span><span class="na">SCRIPT</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">impl</span><span class="o">(</span><span class="k">new</span> <span class="nf">ExecuteScriptEffectorBody</span><span class="o">())</span>
+        <span class="o">.</span><span class="na">build</span><span class="o">();</span></code></pre></div>
+
+<p>In this example, the implementation of the effector is an instance of <code>ExecuteScriptEffectorBody</code>. 
+This implements <code>EffectorBody</code>. It will be invoked whenever the effector is called.</p>
+
+<h4 id="dynamically-added-effectors">Dynamically Added Effectors</h4>
+
+<p>An effector can be added to an entity dynamically - either as part of the entity’s <code>init()</code>
+or as separate initialization code. This allows the implementation of the effector to be shared
+amongst multiple entities, without sub-classing. For example:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Effector</span><span class="o">&lt;</span><span class="n">Void</span><span class="o">&gt;</span> <span class="n">GET_GIST</span> <span class="o">=</span> <span class="n">Effectors</span><span class="o">.</span><span class="na">effector</span><span class="o">(</span><span class="n">Void</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">&quot;createGist&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">description</span><span class="o">(</span><span class="s">&quot;Create a Gist&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">parameter</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="s">&quot;Gist id&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">buildAbstract</span><span class="o">();</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">CreateGistEffectorBody</span> <span class="kd">implements</span> <span class="n">EffectorBody</span><span class="o">&lt;</span><span class="n">Void</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Void</span> <span class="nf">call</span><span class="o">(</span><span class="n">ConfigBag</span> <span class="n">parameters</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// impl</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">getMutableEntityType</span><span class="o">().</span><span class="na">addEffector</span><span class="o">(</span><span class="n">CREATE_GIST</span><span class="o">,</span> <span class="k">new</span> <span class="nf">CreateGistEffectorBody</span><span class="o">());</span>
+<span class="o">}</span></code></pre></div>
+
+<h3 id="effector-invocation">Effector Invocation</h3>
+
+<p>There are several ways to invoke an effector programmatically:</p>
+
+<ul>
+  <li>
+    <p>Where there is an annotated method, simply call the method on the interface.</p>
+  </li>
+  <li>
+    <p>Call the <code>invoke</code> method on the entity, using the static effector declaration. For example:<br />
+<code>entity.invoke(CREATE_GIST, ImmutableMap.of("id", id));</code>.</p>
+  </li>
+  <li>
+    <p>Call the utility method <code>org.apache.brooklyn.core.entity.Entities.invokeEffector</code>. For example:<br />
+<code>Entities.invokeEffector(this, targetEntity, CREATE_GIST, ImmutableMap.of("id", id));</code>.</p>
+  </li>
+</ul>
+
+<p>When an effector is invoked, the call is intercepted to wrap it in a task. In this way, the 
+effector invocation is tracked - it is shown in the Activity view.</p>
+
+<p>When <code>invoke</code> or <code>invokeEffector</code> is used, the call returns a <code>Task</code> object (which extends 
+<code>Future</code>). This allows the caller to understand progress and errors on the task, as well as 
+calling <code>task.get()</code> to retrieve the return value. Be aware that <code>task.get()</code> is a blocking 
+function that will wait until a value is available before returning.</p>
+
+<h3 id="tasks">Tasks</h3>
+
+<p><em>Warning: the task API may be changed in a future release. However, backwards compatibility
+will be maintained where possible.</em></p>
+
+<p>When implementing entities and policies, all work done within Brooklyn is executed as Tasks.
+This makes it trackable and visible to administrators. For the activity list to show a break-down 
+of an effector’s work (in real-time, and also after completion), tasks and sub-tasks must be 
+created.</p>
+
+<p>In common situations, tasks are implicitly created and executed. For example, when implementing
+an effector using the <code>@Effector</code> annotation on a method, the method invocation is automatically
+wrapped as a task. Similarly, when a subscription is passed an event (e.g. when using 
+<code>SensorEventListener.onEvent(SensorEvent&lt;T&gt; event)</code>, that call is done inside a task.</p>
+
+<p>Within a task, it is possible to create and execute sub-tasks. A common way to do this is to 
+use <code>DynamicTasks.queue</code>. If called from within a a “task queuing context” (e.g. from inside an
+effector implementation), it will add the task to be executed. By default, the outer task will not be
+marked as done until its queued sub-tasks are complete.</p>
+
+<p>When creating tasks, the <code>TaskBuilder</code> can be used to create simple tasks or to create compound tasks
+whose sub-tasks are to be executed either sequentially or in parallel. For example:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TaskBuilder</span><span class="o">.&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="n">builder</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">displayName</span><span class="o">(</span><span class="s">&quot;stdout-example&quot;</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="k">new</span> <span class="n">Callable</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;()</span> <span class="o">{</span> <span class="kd">public</span> <span class="n">Integer</span> <span class="nf">call</span><span class="o">()</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;example&quot;</span><span class="o">;</span> <span class="o">}</span> <span class="o">})</span>
+        <span class="o">.</span><span class="na">build</span><span class="o">();</span></code></pre></div>
+
+<p>There are also builder and factory utilities for common types of operation, such as executing SSH 
+commands using <code>SshTasks</code>.</p>
+
+<p>A lower level way to submit tasks within an entity is to call <code>getExecutionContext().submit(...)</code>.
+This automatically tags the task to indicate that its context is the given entity.</p>
+
+<p>An even lower level way to execute tasks (to be ignored except for power-users) is to go straight<br />
+to the <code>getManagementContext().getExecutionManager().submit(...)</code>. This is similar to the standard
+Java <code>Executor</code>, but also supports more metadata about tasks such as descriptions and tags.
+It also supports querying for tasks. There is also support for submitting <code>ScheduledTask</code> 
+instances which run periodically.</p>
+
+<p>The <code>Tasks</code> and <code>BrooklynTaskTags</code> classes supply a number of conveniences including builders to 
+make working with tasks easier.</p>
+
+<h3 id="subscriptions-and-the-subscription-manager">Subscriptions and the Subscription Manager</h3>
+
+<p>Entities, locations, policies and enrichers can subscribe to events. These events could be
+attribute-change events from other entities, or other events explicitly published by the entities.</p>
+
+<p>A subscription is created by calling <code>subscriptions().subscribe(entity, sensorType, sensorEventListener)</code>.
+The <code>sensorEventListener</code> will be called with the event whenever the given entity emits a sensor of
+the given type. If <code>null</code> is used for either the entity or sensor type, this is treated as a 
+wildcard.</p>
+
+<p>It is very common for a policy or enricher to subscribe to events, to kick off actions or to 
+publish other aggregated attributes or events. </p>
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/v/latest/blueprints/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Writing Blueprints
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/blueprints/java/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Java Entities
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/archetype.html" class="list-group-item">Creating from a Maven Archetype
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/defining-and-deploying.html" class="list-group-item">Defining and Deploying
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/bundle-dependencies.html" class="list-group-item">Handling Bundle Dependencies
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/topology-dependencies.html" class="list-group-item">Topology, Dependencies, and Management Policies
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/common-usage.html" class="list-group-item active">Common Classes and Entities
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/feeds.html" class="list-group-item">Feeds
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/entity.html" class="list-group-item">Writing an Entity
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/entities.html" class="list-group-item">Custom Entity Development
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/service-state.html" class="list-group-item">Service State
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/blueprints/java/entitlements.html" class="list-group-item">Entitlements
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/blueprints/java/common-usage.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>

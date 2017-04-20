@@ -1,12 +1,28 @@
----
-title: Apache Brooklyn Manual
-layout: singlePage
-page_mask: started-pdf-exclude
-css_hide_class: started-pdf-exclude
-css_show_class: started-pdf-include
-availablePages: []
----
-{% comment %}<!-- This page builds the single page getting started for the PDF, note that this name must be retained for conversion order -->{% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apache Brooklyn Manual - Apache Brooklyn</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<link href="./style/deps/bootstrap.min.css" rel="stylesheet">
+<link href="./style/deps/octicons/octicons.css" rel="stylesheet">
+<link href="./style/deps/bootstrap-theme.css" rel="stylesheet">
+
+<link href="./style/css/website.css" rel="stylesheet">
+<link rel="stylesheet" href="./style/css/singlePage.css" type="text/css" media="screen" />
+<style>.started-pdf-exclude{ display: none; } .started-pdf-include{ display: inline !important; visibility: visible !important; }</style>
+<script>
+[]
+.forEach
+.call(document.querySelectorAll('a[target="_blank"]'),
+ function(link) {
+  link.removeAttribute('target');
+});
+</script>
+</head>
+
+<body>
+
+
 
 <div id="content_container" class="container">
 	<header>
@@ -15,17 +31,1957 @@ availablePages: []
 	<h1>Contents</h1>
 	
 	<nav><ul>
-		{% assign visited = "" | split: "|" %}
-	    {% for node in site.data.menu  %}
-			{% push site_items node %}
-			{% include singlepage-item.html %}
-	    {% endfor %}
+		
+	    
+			
+			
+
+	    
+			
+			
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/index.md" name="guide/start/index.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Getting Started
+	    
+	  
+	   
+	   <ul>
+	    
+	    
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/running.md" name="guide/start/running.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	   		<a href="#contentsLink-running-apache-brooklyn" id="link-running-apache-brooklyn">Running Apache Brooklyn</a>
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/blueprints.md" name="guide/start/blueprints.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	   		<a href="#contentsLink-deploying-blueprints" id="link-deploying-blueprints">Deploying Blueprints</a>
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/managing.md" name="guide/start/managing.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	   		<a href="#contentsLink-monitoring-and-managing-applications" id="link-monitoring-and-managing-applications">Monitoring and Managing Applications</a>
+	    
+	  
+	   
+	   <ul>
+	    
+	    
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="" name="" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Applications
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="" name="" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Entities
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="" name="" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Sensors
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="" name="" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Effectors
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="" name="" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	    	Activities
+	    
+	  
+	 
+	</li>
+
+	    
+	    
+	   </ul>
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/policies.md" name="guide/start/policies.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	   		<a href="#contentsLink-getting-started---policies" id="link-getting-started---policies">Getting Started - Policies</a>
+	    
+	  
+	 
+	</li>
+
+	    
+	     
+	     
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a id="guide/start/concept-quickstart.md" name="guide/start/concept-quickstart.md" href="javascript:void(0);"></a>
+	
+	<li>
+	 
+	 	 
+	   		<a href="#contentsLink-brooklyn-concepts-quickstart" id="link-brooklyn-concepts-quickstart">Brooklyn Concepts Quickstart</a>
+	    
+	  
+	 
+	</li>
+
+	    
+	    
+	   </ul>
+	  
+	 
+	</li>
+
+	    
+			
+			
+
+	    
+			
+			
+
+	    
+			
+			
+
+	    
+			
+			
+
+	    
 	</ul></nav>
 
-	{% assign visitedb = "" | split: "|" %}
-	{% for node in site.data.menu  %}
-		{% push site_items node %}
-		{% include singlepage-content.html %}
-	{% endfor %}
+	
+	
+		
+		
+
+	
+		
+		
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	   
+	    
+	    
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	<div id="contentsLink-running-apache-brooklyn" class="section-breaker section p-">
+	<span style="width: 100%"><h1>Running Apache Brooklyn</h1><a href="#content-top" class="goToTop">^</a></span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p>This guide will walk you through deploying an example 3-tier web application to a public cloud, and demonstrate the autoscaling capabilities of the Brooklyn platform.</p>
+
+<p>Two methods of deployment are detailed in this tutorial, using virtualisation with Vagrant and an install in your own environment (such as your local machine or in your private/public cloud). </p>
+
+<p>The latter assumes that you have a <a href="https://www.java.com">Java Runtime Environment (JRE)</a> installed (version 7 or later), as Brooklyn is Java under the covers. </p>
+
+<p>To get you up-and-running quickly, the Vagrant option will provision four compute nodes for you to deploy applications to. </p>
+
+<h2 id="internalLink_running-apache-brooklyn_install-apache-brooklyn">Install Apache Brooklyn</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active impl-1-tab"><a data-target="#impl-1, .impl-1-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Vagrant</a></li>
+    <li class="impl-2-tab"><a data-target="#impl-2, .impl-2-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Centos / RHEL 7</a></li>
+    <li class="impl-3-tab"><a data-target="#impl-3, .impl-3-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Ubuntu / Debian</a></li>
+    <li class="impl-4-tab"><a data-target="#impl-4, .impl-4-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">OSX / Linux</a></li>
+    <li class="impl-5-tab"><a data-target="#impl-5, .impl-5-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Windows</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="internalLink_running-apache-brooklyn_impl-1" class="tab-pane fade in active">
+
+    <p><strong class="hidden started-pdf-include">a) Vagrant</strong></p>
+
+    <p><a href="https://www.vagrantup.com/">Vagrant</a> is a software package which automates the process of setting up virtual machines (VM) such as <a href="https://www.virtualbox.org">Oracle VirtualBox</a>. We recommend it as the easiest way of getting started with Apache Brooklyn.</p>
+
+    <p>Firstly, download and install:</p>
+
+    <ul>
+      <li><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></li>
+      <li><a href="https://www.virtualbox.org/wiki/Downloads">Oracle VirtualBox</a></li>
+    </ul>
+
+    <p>Then download the provided Apache Brooklyn vagrant configuration from 
+<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&amp;g=org.apache.brooklyn&amp;a=brooklyn-vagrant&amp;v=0.12.0-SNAPSHOT&amp;c=dist&amp;e=zip">here</a>.
+ This archive contains everything you need to create an environment for use with this guide, providing an Apache Brooklyn instance and some blank VMs.</p>
+
+    <p>Extract the <code>tar.gz</code> archive and navigate into the expanded <code>apache-brooklyn-0.12.0-SNAPSHOT-vagrant</code> folder (note: as this is a -SNAPSHOT version, your filename will be slightly different)</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>tar xvf apache-brooklyn-0.12.0-SNAPSHOT-vagrant.tar.gz
+<span class="nv">$ </span><span class="nb">cd </span>apache-brooklyn-0.12.0-SNAPSHOT-vagrant</code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-2" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">b) Centos / RHEL 7</strong></p>
+
+    <p><strong>Please note, an RPM is not available for snapshot builds</strong></p>
+
+    <p>For Centos 7 and RHEL 7 users, the recommended way to install Apache Brooklyn on RPM-based Linux distributions is by using the RPM package. </p>
+
+    <p>RPM is the de facto standard for packaging software on these Linux distributions and provides a mechanism for installing, upgrading and removing packages such as Apache Brooklyn. The RPM package contains all the necessary files associated with the Apache Brooklyn application. </p>
+
+    <p>This is a snapshot build and no RPM is available, please download <a href="http://brooklyn.apache.org/v/0.10.0/download/index.html">a different version</a>.</p>
+
+    <p>Once downloaded, run the following shell command as root:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>yum install apache-brooklyn-0.12.0-SNAPSHOT-1.rpm</code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-3" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">c) Debian / Ubuntu</strong></p>
+
+    <p>For Ubuntu and Debian users, the recommended way to install Apache Brooklyn is to use the deb file. </p>
+
+    <p>The deb file is the de facto standard for packaging software on these Linux distributions and provides a mechanism for installing, upgrading and removing packages such as Apache Brooklyn. The deb package contains all the necessary files associated with the Apache Brooklyn application. </p>
+
+    <p>Download the Apache Brooklyn <a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&amp;g=org.apache.brooklyn&amp;a=deb-packaging&amp;v=0.12.0-SNAPSHOT&amp;e=deb">deb distribution</a>.</p>
+
+    <p>Once downloaded, run the following shell command:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo dpkg -i apache-brooklyn_0.12.0-SNAPSHOT_noarch.deb</code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-4" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">d) OSX / Linux</strong></p>
+
+    <p>For Linux or OSX please download the Apache Brooklyn <code>tar.gz</code> archive from the <a href="http://brooklyn.apache.org/v/0.10.0/download/index.html">download</a> section.</p>
+
+    <p>Extract the <code>tar.gz</code> archive (note: as this is a -SNAPSHOT version, your filename will be slightly different):</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>tar -zxf apache-brooklyn-dist-0.12.0-SNAPSHOT-timestamp-dist.tar.gz
+<span class="nv">$ </span><span class="nb">cd </span>apache-brooklyn-0.12.0-SNAPSHOT</code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-5" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">e) Windows</strong></p>
+
+    <p>For all versions of Microsoft Windows, please download the Apache Brooklyn zip file from <a href="http://brooklyn.apache.org/v/0.10.0/download/index.html">here</a>. </p>
+
+    <p>Extract this zip file to a directory on your computer such as <code>c:\Program Files\brooklyn</code> where <code>c</code> is the letter of your operating system drive.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<p>By default, no authentication is required and the web-console will listen on all network interfaces.
+For a production system, or if Apache Brooklyn is publicly reachable, it is strongly recommended 
+to configure security. Documentation of configuration options include:</p>
+
+<ul>
+  <li><a href="http://brooklyn.apache.org/v/0.10.0/v/latest/ops/brooklyn_properties.html">Security</a></li>
+  <li><a href="http://brooklyn.apache.org/v/0.10.0/v/latest/ops/persistence/index.html">Persistence</a></li>
+  <li><a href="http://brooklyn.apache.org/v/0.10.0/v/latest/locations/index.html">Cloud credentials</a></li>
+</ul>
+
+<h2 id="internalLink_running-apache-brooklyn_launch-apache-brooklyn">Launch Apache Brooklyn</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active impl-1-tab"><a data-target="#impl-1, .impl-1-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Vagrant</a></li>
+    <li class="impl-2-tab"><a data-target="#impl-2, .impl-2-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Centos / RHEL</a></li>
+    <li class="impl-3-tab"><a data-target="#impl-3, .impl-3-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Ubuntu / Debian</a></li>
+    <li class="impl-4-tab"><a data-target="#impl-4, .impl-4-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">OSX / Linux</a></li>
+    <li class="impl-5-tab"><a data-target="#impl-5, .impl-5-tab" data-toggle="tab" href="#internalLink_running-apache-brooklyn_">Windows</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="internalLink_running-apache-brooklyn_impl-1" class="tab-pane fade in active">
+
+    <p><strong class="hidden started-pdf-include">a) Vagrant</strong></p>
+
+    <p>Now start Apache Brooklyn with the following command:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>vagrant up brooklyn</code></pre>
+    </div>
+
+    <p>You can see if Apache Brooklyn launched OK by viewing the log files with the command</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>vagrant ssh brooklyn --command <span class="s1">&#39;sudo journalctl -n15 -f -u brooklyn&#39;</span></code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-2" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">b) Centos / RHEL 7</strong></p>
+
+    <p>Apache Brooklyn should now have been installed and be running as a system service. It can stopped and started with the standard systemctl commands:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>systemctl start<span class="p">|</span>stop<span class="p">|</span>restart<span class="p">|</span>status brooklyn</code></pre>
+    </div>
+
+    <p>The application should then output its logs to <code>/var/log/brooklyn/apache-brooklyn.debug.log</code> and <code>/var/log/brooklyn/apache-brooklyn.info.log</code>.</p>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-3" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">c) Ubuntu / Debian</strong></p>
+
+    <p>Apache Brooklyn should now have been installed and be running as a system service. It can be stopped and started with the standard service commands:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo service brooklyn start<span class="p">|</span>stop<span class="p">|</span>restart<span class="p">|</span>status</code></pre>
+    </div>
+
+    <p>The application should then output its logs to <code>/var/log/brooklyn/apache-brooklyn.debug.log</code> and <code>/var/log/brooklyn/apache-brooklyn.info.log</code>.</p>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-4" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">d) OSX / Linux</strong></p>
+
+    <p>Now start Apache Brooklyn with the following command:</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bin/brooklyn launch</code></pre>
+    </div>
+
+    <p>The application should then output its log into the console and also <code>apache-brooklyn.debug.log</code> and <code>apache-brooklyn.info.log</code></p>
+
+  </div>
+  <div id="internalLink_running-apache-brooklyn_impl-5" class="tab-pane fade">
+
+    <p><strong class="hidden started-pdf-include">e) Windows</strong></p>
+
+    <p>You can now start Apache Brooklyn by running <code>c:\Program Files\brooklyn\bin\brooklyn.bat</code></p>
+
+    <p>The application should then output its log into the console and also <code>c:\Program Files\brooklyn\apache-brooklyn.debug.log</code> and <code>c:\Program Files\brooklyn\apache-brooklyn.info.log</code></p>
+
+  </div>
+  <p><em>Notice! Before launching Apache Brooklyn, please check the <code>date</code> on the local machine.
+Even several minutes before or after the actual time could cause problems.</em></p>
+</div>
+
+<hr />
+
+<h2 id="internalLink_running-apache-brooklyn_control-apache-brooklyn">Control Apache Brooklyn</h2>
+
+<p>Apache Brooklyn has a web console which can be used to control the application. The Brooklyn log will contain the 
+address of the management interface:</p>
+
+<pre>
+INFO  Started Brooklyn console at http://127.0.0.1:8081/, running classpath://brooklyn.war
+</pre>
+
+<p>By default it can be accessed by opening <a href="http://127.0.0.1:8081">127.0.0.1:8081</a> in your web browser.</p>
+
+<p>The rest of this getting started guide uses the Apache Brooklyn command line interface (CLI) tool, <code>br</code>. 
+This tool is both distributed with Apache Brooklyn or can be downloaded 
+from <a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&amp;g=org.apache.brooklyn&amp;a=brooklyn-client-cli&amp;v=0.12.0-SNAPSHOT&amp;c=bin&amp;e=zip">here</a>.</p>
+
+<p>For details on the CLI, see the <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/ops/cli/index.html">Client CLI Reference</a> page. </p>
+
+<h2 id="internalLink_running-apache-brooklyn_next">Next</h2>
+
+<div class="started-pdf-exclude">
+
+  <p>The first thing we want to do with Brooklyn is <strong><a href="#contentsLink-deploying-blueprints">deploy a blueprint</a></strong>.</p>
+
+</div>
+
+	</div>
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	<div id="contentsLink-deploying-blueprints" class="section-breaker section p-">
+	<span style="width: 100%"><h1>Deploying Blueprints</h1><a href="#content-top" class="goToTop">^</a></span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p>Blueprints are descriptors or patterns which describe how Apache Brooklyn should deploy applications. Blueprints are written in <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> and all of the entities available are defined in the <strong><a href="http://brooklyn.apache.org/v/0.10.0/learnmore/catalog/index.html">Brooklyn Catalog</a></strong>.</p>
+
+<h2 id="internalLink_deploying-blueprints_launching-from-a-blueprint">Launching from a Blueprint</h2>
+
+<p>We’ll start by deploying an application with a simple YAML blueprint containing an <a href="https://tomcat.apache.org/">Apache Tomcat</a> server.</p>
+
+<p>Copy the blueprint below into a text file, “myapp.yaml”, in your workspace (Note, to copy the file you can
+hover your mouse over the right side of the text box below to get a Javascript “copy” button).</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Tomcat</span>
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.TomcatServer</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">tomcatServer</span>
+<span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;your-location-definition-goes-here&gt;</span></code></pre></div>
+
+<h2 id="internalLink_deploying-blueprints_locations">Locations</h2>
+
+<p>Before you can create an application with this configuration, you need to modify the YAML to specify a location. Locations in Apache Brooklyn are server resources which Brooklyn can use to deploy applications. These locations may be servers or cloud providers which provide access to servers. </p>
+
+<p>In order to configure the location in which Apache Brooklyn launches an application, replace the <code>location:</code> element with values for your chosen target environment. Here are some examples of the various location types:</p>
+
+<ul class="nav nav-tabs">
+    <li class="active impl-1-tab"><a data-target="#impl-1, .impl-1-tab" data-toggle="tab" href="#internalLink_deploying-blueprints_">Vagrant</a></li>
+    <li class="impl-2-tab"><a data-target="#impl-2, .impl-2-tab" data-toggle="tab" href="#internalLink_deploying-blueprints_">Clouds</a></li>
+    <li class="impl-3-tab"><a data-target="#impl-3, .impl-3-tab" data-toggle="tab" href="#internalLink_deploying-blueprints_">BYON</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="internalLink_deploying-blueprints_impl-1" class="tab-pane fade in active">
+
+    <p>The Vagrant configuration described in <a href="#contentsLink-running-apache-brooklyn">Running Apache Brooklyn</a>, on the previous page is the recommended way of running this tutorial. This configuration comes with four blank vagrant configurations called byon1 to byon4.</p>
+
+    <p>These can be launched by entering the following command into the terminal in the vagrant configuration directory.</p>
+
+    <div class="highlight">
+      <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>vagrant up byon1 byon2 byon3 byon4</code></pre>
+    </div>
+
+    <p>The location in “myapp.yaml” can now be replaced with the following YAML to launch using these vagrant servers.</p>
+
+    <div class="highlight">
+      <pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">byon</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">vagrant</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">vagrant</span>
+    <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.101</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.102</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.103</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.104</span></code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_deploying-blueprints_impl-2" class="tab-pane fade">
+
+    <p>Apache Brooklyn uses <a href="http://jclouds.apache.org/">Apcahe jclouds</a> to support a range of cloud locations. More information on the range of providers and configurations is available <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/locations/index.html">here</a>.</p>
+
+    <p>As an example, here is a configuration for <a href="http://www.aws.amazon.com">Amazon Web Services (AWS)</a>. Swap the identity and credential with your AWS account details, then replace the location in your “myapp.yaml” with this.</p>
+
+    <div class="highlight">
+      <pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">jclouds:aws-ec2</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">identity</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ABCDEFGHIJKLMNOPQRST</span>
+    <span class="l-Scalar-Plain">credential</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">s3cr3tsq1rr3ls3cr3tsq1rr3ls3cr3tsq1rr3l</span></code></pre>
+    </div>
+
+  </div>
+  <div id="internalLink_deploying-blueprints_impl-3" class="tab-pane fade">
+
+    <p>The Bring Your Own Nodes (BYON) configuration allows Apache Brooklyn to make use of already available servers. These can be specified by a list of IP addresses with a user and password as shown below. More information including the full range of configuration options is available <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/locations/index.html">here</a>. </p>
+
+    <p>Replace the hosts, user and password in the example below with your own server details, then replace the location in your “myapp.yaml” with this.</p>
+
+    <div class="highlight">
+      <pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">byon</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">myuser</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mypassword</span>
+    <span class="c1"># or...</span>
+    <span class="c1">#privateKeyFile: ~/.ssh/my.pem</span>
+    <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">192.168.0.18</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">192.168.0.19</span></code></pre>
+    </div>
+
+  </div>
+</div>
+
+<hr />
+
+<p><strong>Note</strong>: For instructions on setting up a variety of locations or storing credentials/locations in a file on disk rather than in the blueprint, see <strong><a href="http://brooklyn.apache.org/v/0.10.0/v/latest/locations">Locations</a></strong> in the Operations section of the User Guide.</p>
+
+<h2 id="internalLink_deploying-blueprints_deploying-the-application">Deploying the Application</h2>
+
+<p>First, log in to brooklyn with the command line interface (CLI) tool by typing:</p>
+
+<div class="highlight">
+  <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br login http://localhost:8081/</code></pre>
+</div>
+
+<p>To secure the Apache Brooklyn instance, you can add a username and password to Brooklyn’s properties file, as described in the User Guide <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/ops/brooklyn_properties.html">here</a>. 
+If this is configured, the login command will require an additional parameter for the userid and will then prompt for a password.</p>
+
+<p>Now you can create the application with the command below:</p>
+
+<div class="highlight">
+  <pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br deploy myapp.yaml</code></pre>
+</div>
+
+<pre>
+Id:       hTPAF19s   
+Name:     Tomcat   
+Status:   In progress  
+</pre>
+
+<p>Depending on your choice of location it may take some time for the application to start, the next page describes how 
+you can monitor the progress of the application deployment and verify if it was successful.</p>
+
+<h2 id="internalLink_deploying-blueprints_next">Next</h2>
+
+<div class="started-pdf-exclude">
+
+  <p>Having deployed an application, the next step is <strong><a href="#contentsLink-monitoring-and-managing-applications">monitoring and managing</a></strong> it.</p>
+
+</div>
+
+	</div>
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	<div id="contentsLink-monitoring-and-managing-applications" class="section-breaker section p-">
+	<span style="width: 100%"><h1>Monitoring and Managing Applications</h1><a href="#content-top" class="goToTop">^</a></span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p>So far we have gone through Apache Brooklyn’s ability to <em>deploy</em> an application blueprint to a location, but this just 
+the beginning. Next we will outline how to <em>manage</em> the application that has been deployed.</p>
+
+<h2 id="internalLink_monitoring-and-managing-applications_applications">Applications</h2>
+
+<p>Having created the application, we can find a summary of all deployed applications using:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application</code></pre></div>
+
+<pre>
+ Id         Name     Status    Location   
+ hTPAF19s   Tomcat   RUNNING   ajVVAhER
+</pre>
+
+<p><code>application</code> can be shortened to the alias <code>app</code>, for example:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br app</code></pre></div>
+
+<pre>
+ Id         Name     Status    Location   
+ hTPAF19s   Tomcat   RUNNING   ajVVAhER
+</pre>
+
+<p>A full list of abbreviations such as this can be found in the <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/ops/cli/cli-ref-guide.html">CLI reference guide</a>.</p>
+
+<p>In the above example the Id <code>hTPAF19s</code> and the Name <code>Tomcat</code> are shown. You can use either of these handles to monitor and control the application. The Id shown for your application will be different to this but the name should be the same, note that if you are running multiple applications the Name may not be unique.</p>
+
+<h4 id="internalLink_monitoring-and-managing-applications_things-we-might-want-to-do">Things we might want to do</h4>
+
+<div class="panel-group" id="internalLink_monitoring-and-managing-applications_accordion">
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordion" href="#internalLink_monitoring-and-managing-applications_collapseOne"><div class="panel-heading">
+                <h4 class="panel-title">
+                    Get the application details
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+<p>     
+Using the name `Tomcat` we can get the application details:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat</code></pre></div>
+
+<pre>
+  Id:              hTPAF19s   
+  Name:            Tomcat   
+  Status:          RUNNING   
+  ServiceUp:       true   
+  Type:            org.apache.brooklyn.entity.stock.BasicApplication   
+  CatalogItemId:   null   
+  LocationId:      ajVVAhER   
+  LocationName:    FixedListMachineProvisioningLocation:ajVV   
+  LocationSpec:    vagrantbyon   
+  LocationType:    org.apache.brooklyn.location.byon.FixedListMachineProvisioningLocation  
+</pre>        
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordion" href="#internalLink_monitoring-and-managing-applications_collapseTwo"><div class="panel-heading">
+                <h4 class="panel-title">
+                    Explore the hierarchy of all applications
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+<p>              
+We can explore the management hierarchy of all applications, which will show us the entities they are composed of.
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br tree</code></pre></div>
+
+<pre>
+|- Tomcat
++- org.apache.brooklyn.entity.stock.BasicApplication
+  |- tomcatServer
+  +- org.apache.brooklyn.entity.webapp.tomcat.TomcatServer
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordion" href="#internalLink_monitoring-and-managing-applications_collapseThree"><div class="panel-heading">
+                <h4 class="panel-title">
+                    View our application's blueprint
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+<p>
+You can view the blueprint for the application again:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat spec</code></pre></div>
+
+<pre>
+"name: Tomcat\nlocation:\n  mylocation\nservices:\n- serviceType: brooklyn.entity.webapp.tomcat.TomcatServer\n"
+</pre>                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordion" href="#internalLink_monitoring-and-managing-applications_collapseFour"><div class="panel-heading">
+                <h4 class="panel-title">
+                    View our application's configuration
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+<p>
+You can view the configuration of the application:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat config</code></pre></div>
+
+<pre>
+Key                    Value   
+camp.template.id       l67i25CM   
+brooklyn.wrapper_app   true   
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<h2 id="internalLink_monitoring-and-managing-applications_entities">Entities</h2>
+
+<p>An <em>Entity</em> is Apache Brooklyn’s representation of a software package or service which it can control or interact with. All of the entities Apache Brooklyn can use are listed in the <strong><a href="http://brooklyn.apache.org/v/0.10.0/learnmore/catalog/index.html">Brooklyn Catalog</a></strong>. </p>
+
+<p>To list the entities of the application you can use the <code>entity</code> or <code>ent</code> command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity</code></pre></div>
+
+<pre>
+Id         Name                Type   
+Wx7r1C4e   tomcatServer   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer      
+</pre>
+
+<p>This shows one entity is available: <code>tomcatServer</code>. Note that this is the name we gave the entity in the YAML in <a href="#contentsLink-deploying-blueprints">Launching from a Blueprint</a> on the previous page.</p>
+
+<p>You can get summary information for this entity by providing its name (or ID).</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer</code></pre></div>
+
+<pre>
+Id:              Wx7r1C4e   
+Name:            tomcatServer   
+Status:          RUNNING   
+ServiceUp:       true   
+Type:            org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+CatalogItemId:   null   
+</pre>
+
+<p>Also you can see the configuration of this entity with the <code>config</code> command.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer config</code></pre></div>
+
+<pre>
+Key                       Value   
+jmx.agent.mode            JMXMP_AND_RMI   
+brooklyn.wrapper_app      true   
+camp.template.id          yBcQuFZe   
+onbox.base.dir            /home/vagrant/brooklyn-managed-processes   
+onbox.base.dir.resolved   true   
+install.unique_label      TomcatServer_7.0.65   
+</pre>
+
+<h2 id="internalLink_monitoring-and-managing-applications_sensors">Sensors</h2>
+
+<p><em>Sensors</em> are properties which show the state of an <em>entity</em> and provide a real-time picture of an <em>entity</em> within an application.</p>
+
+<p>You can view the sensors available on the application using:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat sensor</code></pre></div>
+
+<pre>
+Name                       Description                                                                             Value   
+service.isUp               Whether the service is active and availability (confirmed and monitored)                true   
+service.notUp.indicators   A map of namespaced indicators that the service is not up                               {}   
+service.problems           A map of namespaced indicators of problems with a service                               {}   
+service.state              Actual lifecycle state of the service                                                   "RUNNING"   
+service.state.expected     Last controlled change to service state, indicating what the expected state should be   "running @ 1450356994928 / Thu Dec 17 12:56:34 GMT 2015"
+</pre>
+
+<p>To explore sensors on a specific entity use the <code>sensor</code> command with an entity specified:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer sensor</code></pre></div>
+
+<pre>
+Name                 Description                                                                                       Value   
+download.addon.urls  URL patterns for downloading named add-ons (will substitute things like ${version} automatically) 
+download.url         URL pattern for downloading the installer (will substitute things like ${version} automatically)  "http://download.nextag.com/apache/tomcat/tomcat-7/v${version}/bin/apache-tomcat-${version}.tar.gz"   
+expandedinstall.dir  Directory for installed artifacts (e.g. expanded dir after unpacking .tgz)                        "/home/vagrant/brooklyn-managed-processes/installs/TomcatServer_7.0.65/apache-tomcat-7.0.65"   
+host.address         Host IP address                                                                                   "10.10.10.101"   
+host.name            Host name                                                                                         "10.10.10.101"   
+host.sshAddress      user@host:port for ssh'ing (or null if inappropriate)                                             "vagrant@10.10.10.101:22"   
+host.subnet.address  Host address as known internally in the subnet where it is running (if different to host.name)    "10.10.10.101"   
+host.subnet.hostname Host name as known internally in the subnet where it is running (if different to host.name)       "10.10.10.101"   
+# etc. etc.
+</pre>
+
+<p>To display the value of a selected sensor, give the command the sensor name as an argument</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer sensor webapp.url</code></pre></div>
+
+<pre>
+"http://10.10.10.101:8080/"
+</pre>
+
+<h2 id="internalLink_monitoring-and-managing-applications_effectors">Effectors</h2>
+
+<p>Effectors are a means by which you can manipulate the entities in an application.  You can list the available effectors for your application using:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat effector</code></pre></div>
+
+<pre>
+Name            Description                                           Parameters   
+restart         Restart the process/service represented by an entity                                                                                                                                      
+start           Start the process/service represented by an entity    locations   
+stop            Stop the process/service represented by an entity                                                                                                                                         
+</pre>
+
+<p>For example, to stop an application, use the <code>stop</code> effector. This will cleanly shutdown all components in the application and return any cloud machines that were being used. 
+Note that the three “lifecycle” related effectors, <code>start</code>, <code>stop</code>, and <code>restart</code>, are common to all applications and software process entities in Brooklyn.</p>
+
+<p>You can list the effectors for a specific entity using the command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer effector</code></pre></div>
+
+<pre>
+Name                              Description                                                                               Parameters   
+deploy                            Deploys the given artifact, from a source URL, to a given deployment filename/context     url,targetName   
+populateServiceNotUpDiagnostics   Populates the attribute service.notUp.diagnostics, with any available health indicators      
+restart                           Restart the process/service represented by an entity                                      restartChildren,restartMachine   
+start                             Start the process/service represented by an entity                                        locations   
+stop                              Stop the process/service represented by an entity                                         stopProcessMode,stopMachineMode   
+undeploy                          Undeploys the given context/artifact                                                      targetName   
+</pre>
+
+<p>To view the details for a specific effector, append it’s name to the command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer effector deploy</code></pre></div>
+
+<pre>
+Name     Description                                                                             Parameters   
+deploy   Deploys the given artifact, from a source URL, to a given deployment filename/context   url,targetName   
+</pre>
+
+<p>These effectors can also be invoked by appending <code>invoke</code> to this command. Some effectors require parameters for their invocation. For example, if we look at the details for <code>deploy</code> above we can see it requires a url and targetName. </p>
+
+<p>These parameters can be supplied using <code>--param parm=value</code> or just <code>-P parm=value</code>. </p>
+
+<p>The commands below deploy the Apache Tomcat <a href="http://tomcat.apache.org/tomcat-6.0-doc/appdev/index.html">hello world example</a> to our Tomcat Server. In these commands, a variable is created for the root URL using the appropriate
+sensor and the index page html is displayed. </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer effector deploy invoke -P <span class="nv">url</span><span class="o">=</span>https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war -P <span class="nv">targetName</span><span class="o">=</span>sample
+<span class="nv">$ webapp</span><span class="o">=</span><span class="k">$(</span>br application Tomcat entity tomcatServer sensor webapp.url <span class="p">|</span> tr -d <span class="s1">&#39;&quot;&#39;</span><span class="k">)</span>
+<span class="nv">$ </span>curl <span class="nv">$webapp</span>/sample/</code></pre></div>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sample "Hello, World" Application&lt;/title&gt;
+&lt;/head&gt;
+...
+</code></pre>
+
+<p><strong>Note</strong> that at present a <code>tr</code> command is required in the second line below to strip quotation characters from the returned sensor value. </p>
+
+<h2 id="internalLink_monitoring-and-managing-applications_activities">Activities</h2>
+
+<p><em>Activities</em> are the actions an application or entity takes within Apache Brooklyn. The <code>activity</code> command allows us to list out these activities. </p>
+
+<p>To view a list of all activities associated with an entity enter:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer activity</code></pre></div>
+
+<pre>
+Id         Task                                       Submitted                      Status      Streams   
+LtD5P1cb   start                                      Thu Dec 17 15:04:43 GMT 2015   Completed   
+l2qo4vTl   provisioning (FixedListMachineProvisi...   Thu Dec 17 15:04:43 GMT 2015   Completed   
+wLD764HE   pre-start                                  Thu Dec 17 15:04:43 GMT 2015   Completed    
+KLTxDkoa   ssh: initializing on-box base dir ./b...   Thu Dec 17 15:04:43 GMT 2015   Completed   env,stderr,stdin,stdout   
+jwwcJWmF   start (processes)                          Thu Dec 17 15:04:43 GMT 2015   Completed        
+...
+</pre>
+
+<p>To view the details of an individual activity, add its ID to the command. In our case this is <code>jwwcJWmF</code></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer activity jwwcJWmF</code></pre></div>
+
+<pre>
+Id:                  jwwcJWmF   
+DisplayName:         start (processes)   
+Description:            
+EntityId:            efUvVWAw   
+EntityDisplayName:   TomcatServer:efUv   
+Submitted:           Thu Dec 17 15:04:43 GMT 2015   
+Started:             Thu Dec 17 15:04:43 GMT 2015   
+Ended:               Thu Dec 17 15:08:59 GMT 2015   
+CurrentStatus:       Completed   
+IsError:             false   
+IsCancelled:         false   
+SubmittedByTask:     LtD5P1cb   
+Streams:                
+DetailedStatus:      "Completed after 4m 16s
+
+No return value (null)"   
+</pre>
+
+<h4 id="internalLink_monitoring-and-managing-applications_things-we-might-want-to-do-1">Things we might want to do</h4>
+
+<div class="panel-group" id="internalLink_monitoring-and-managing-applications_accordionB">
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordionB" href="#internalLink_monitoring-and-managing-applications_collapseOneB"><div class="panel-heading">
+                <h4 class="panel-title">
+                    View Input and Output Streams
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseOneB" class="panel-collapse collapse in">
+                <div class="panel-body">
+<p>
+If an activity has associated input and output streams, these may be viewed by providing the activity scope and
+using the commands, "env", "stdin", "stdout", and "stderr".  For example, for the "initializing on-box base dir"
+activity from the result of the earlier example,
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer act KLTxDkoa stdout</code></pre></div>
+ 
+<pre>
+BASE_DIR_RESULT:/home/vagrant/brooklyn-managed-processes:BASE_DIR_RESULT
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordionB" href="#internalLink_monitoring-and-managing-applications_collapseTwoB"><div class="panel-heading">
+                <h4 class="panel-title">
+                    Monitor the progress of an effector
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseTwoB" class="panel-collapse collapse">
+                <div class="panel-body">
+                        
+<p>       
+To monitor progress on an application as it deploys, for example, one could use a shell loop:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="k">while</span> br application Tomcat entity tomcatServer activity <span class="p">|</span> grep <span class="s1">&#39;In progress&#39;</span> <span class="p">;</span> <span class="k">do</span> 
+  sleep 1<span class="p">;</span> <span class="nb">echo</span> <span class="p">;</span> date<span class="p">;</span> 
+<span class="k">done</span></code></pre></div>
+
+<p>
+This loop will exit when the application has deployed successfully or has failed.  If it fails then the 'stderr' 
+command may provide information about what happened in any activities that have associated streams:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer act KLTxDkoa stderr</code></pre></div>
+                      
+                
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <a data-toggle="collapse" data-parent="#accordionB" href="#internalLink_monitoring-and-managing-applications_collapseThreeB"><div class="panel-heading">
+                <h4 class="panel-title">
+                    Diagnose a failure
+                </h4>
+            </div></a>
+            <div id="internalLink_monitoring-and-managing-applications_collapseThreeB" class="panel-collapse collapse">
+                <div class="panel-body">
+                
+<p>
+If an activity has failed, the "DetailedStatus" value will help us diagnose what went wrong by showing information about the failure.
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application evHUlq0n entity tomcatServer activity lZZ9x662</code></pre></div>
+
+<pre>
+Id:                  lZZ9x662   
+DisplayName:         post-start   
+Description:            
+EntityId:            qZeyoITy   
+EntityDisplayName:   tomcatServer   
+Submitted:           Mon Jan 25 12:54:55 GMT 2016   
+Started:             Mon Jan 25 12:54:55 GMT 2016   
+Ended:               Mon Jan 25 12:59:56 GMT 2016   
+CurrentStatus:       Failed   
+IsError:             true   
+IsCancelled:         false   
+SubmittedByTask:     hWU7Qvgm   
+Streams:                
+DetailedStatus:      "Failed after 5m: Software process entity TomcatServerImpl{id=qZeyoITy} did not pass is-running check within the required 5m limit (5m elapsed)
+
+java.lang.IllegalStateException: Software process entity TomcatServerImpl{id=qZeyoITy} did not pass is-running check within the required 5m limit (5m elapsed)
+	at org.apache.brooklyn.entity.software.base.SoftwareProcessImpl.waitForEntityStart(SoftwareProcessImpl.java:586)
+	at org.apache.brooklyn.entity.software.base.SoftwareProcessImpl.postDriverStart(SoftwareProcessImpl.java:260)
+	at org.apache.brooklyn.entity.software.base.SoftwareProcessDriverLifecycleEffectorTasks.postStartCustom(SoftwareProcessDriverLifecycleEffectorTasks.java:169)
+	at org.apache.brooklyn.entity.software.base.lifecycle.MachineLifecycleEffectorTasks$PostStartTask.run(MachineLifecycleEffectorTasks.java:570)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at org.apache.brooklyn.util.core.task.DynamicSequentialTask$DstJob.call(DynamicSequentialTask.java:342)
+	at org.apache.brooklyn.util.core.task.BasicExecutionManager$SubmissionCallable.call(BasicExecutionManager.java:468)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)"
+</pre>
+<p>
+Adding the "--children" or "-c" parameter will show the activity's child activities, to allow the hierarchical structure 
+of the activities to be investigated:
+</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer activity -c jwwcJWmF</code></pre></div>
+
+<pre>
+Id         Task                         Submitted                      Status   
+UpYRc3fw   copy-pre-install-resources   Thu Dec 17 15:04:43 GMT 2015   Completed   
+ig8sBHQr   pre-install                  Thu Dec 17 15:04:43 GMT 2015   Completed   
+Elp4HaVj   pre-install-command          Thu Dec 17 15:04:43 GMT 2015   Completed   
+YOvNobJk   setup                        Thu Dec 17 15:04:43 GMT 2015   Completed   
+VN3cDKki   copy-install-resources       Thu Dec 17 15:08:43 GMT 2015   Completed   
+xDJXQC0J   install                      Thu Dec 17 15:08:43 GMT 2015   Completed   
+zxMDXUxz   post-install-command         Thu Dec 17 15:08:58 GMT 2015   Completed   
+qnQnw7Oc   customize                    Thu Dec 17 15:08:58 GMT 2015   Completed   
+ug044ArS   copy-runtime-resources       Thu Dec 17 15:08:58 GMT 2015   Completed   
+STavcRc8   pre-launch-command           Thu Dec 17 15:08:58 GMT 2015   Completed   
+HKrYfH6h   launch                       Thu Dec 17 15:08:58 GMT 2015   Completed   
+T1m8VXbq   post-launch-command          Thu Dec 17 15:08:59 GMT 2015   Completed   
+n8eK5USE   post-launch                  Thu Dec 17 15:08:59 GMT 2015   Completed   
+</pre>                
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ## Scopes in CLI commands
+Many commands require a "scope" expression to indicate the target on which they operate. The scope expressions are
+as follows (values in brackets are aliases for the scope):
+
+- ```application``` APP-ID   (app, a)  
+ Selects an application, e.g. "br application myapp"  
+- ```entity```      ENT-ID   (ent, e)  
+ Selects an entity within an application scope, e.g. ```br application myapp entity myserver```  
+- ```effector```    EFF-ID   (eff, f)  
+ Selects an effector of an entity or application, e.g. ```br a myapp e myserver eff xyz```  
+- ```config```      CONF-KEY (conf, con, c)  
+ Selects a configuration key of an entity e.g. ```br a myapp e myserver config jmx.agent.mode```  
+- ```activity```    ACT-ID   (act, v)  
+ Selects an activity of an entity e.g. ```br a myapp e myserver act iHG7sq1```  
+
+For example
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>br application Tomcat entity tomcatServer config</code></pre></div>
+
+runs the ```config``` command with application scope of ```Tomcat``` and entity scope of ```tomcatServer```.
+ -->
+
+<h2 id="internalLink_monitoring-and-managing-applications_next">Next</h2>
+
+<p>We will look next at a slightly more complex example, which will illustrate the capabilities of Brooklyn’s
+<strong><a href="#contentsLink-getting-started---policies">policies</a></strong> mechanism, and how to configure dependencies between application entities.</p>
+
+	</div>
+	 
+	  
+	   
+	    
+	    
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	  
+	 
+
+ 
+	    
+	    
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	<div id="contentsLink-getting-started---policies" class="section-breaker section p-">
+	<span style="width: 100%"><h1>Getting Started - Policies</h1><a href="#content-top" class="goToTop">^</a></span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<h2 id="internalLink_getting-started---policies_a-clustered-example">A Clustered Example</h2>
+
+<p>We’ll now look at a more complex example that better shows the capabilities of Brooklyn, including
+management of a running clustered application.</p>
+
+<p>Below is the annotated blueprint. <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/start/example_yaml/mycluster.yaml">Download the blueprint</a> into a 
+text file, <code>mycluster.yaml</code>, in your workspace. <em>Before</em> you create an application with it, 
+review and/or change the the location where the application will be deployed.</p>
+
+<p>You will need four machines for this example: one for the load-balancer (nginx), and three for the 
+Tomcat cluster (but you can reduce this by changing the <code>maxPoolSize</code> below).</p>
+
+<div class="usermanual-pdf-include started-pdf-include" style="display: none;">
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Tomcat Cluster</span>
+
+<span class="l-Scalar-Plain">location</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">byon</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">vagrant</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">vagrant</span>
+    <span class="l-Scalar-Plain">hosts</span><span class="p-Indicator">:</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.101</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.102</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.103</span>
+      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10.10.10.104</span>
+ 
+<span class="l-Scalar-Plain">services</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.group.DynamicCluster</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Cluster</span>
+  <span class="l-Scalar-Plain">id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cluster</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">cluster.initial.size</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+    <span class="l-Scalar-Plain">dynamiccluster.memberspec</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">$brooklyn:entitySpec</span><span class="p-Indicator">:</span>
+        <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.webapp.tomcat.TomcatServer</span>
+        <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Tomcat Server</span>
+        <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+          <span class="l-Scalar-Plain">wars.root</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://search.maven.org/remotecontent?filepath=org/apache/brooklyn/example/brooklyn-example-hello-world-webapp/0.8.0-incubating/brooklyn-example-hello-world-webapp-0.8.0-incubating.war</span>
+ 
+        <span class="l-Scalar-Plain">brooklyn.policies</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.policy.ha.ServiceRestarter</span>
+          <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">failOnRecurringFailuresInThisDuration</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5m</span>
+        <span class="l-Scalar-Plain">brooklyn.enrichers</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.policy.ha.ServiceFailureDetector</span>
+          <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+            <span class="l-Scalar-Plain">entityFailed.stabilizationDelay</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">30s</span>
+ 
+  <span class="l-Scalar-Plain">brooklyn.policies</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.policy.ha.ServiceReplacer</span>
+ 
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.policy.autoscaling.AutoScalerPolicy</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">metric</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">webapp.reqs.perSec.perNode</span>
+      <span class="l-Scalar-Plain">metricUpperBound</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+      <span class="l-Scalar-Plain">metricLowerBound</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+      <span class="l-Scalar-Plain">resizeUpStabilizationDelay</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2s</span>
+      <span class="l-Scalar-Plain">resizeDownStabilizationDelay</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1m</span>
+      <span class="l-Scalar-Plain">maxPoolSize</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
+
+  <span class="l-Scalar-Plain">brooklyn.enrichers</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.enricher.stock.Aggregator</span>
+    <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">enricher.sourceSensor</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:sensor(&quot;webapp.reqs.perSec.windowed&quot;)</span>
+      <span class="l-Scalar-Plain">enricher.targetSensor</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:sensor(&quot;webapp.reqs.perSec.perNode&quot;)</span>
+      <span class="l-Scalar-Plain">enricher.aggregating.fromMembers</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+      <span class="l-Scalar-Plain">transformation</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">average</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">org.apache.brooklyn.entity.proxy.nginx.NginxController</span>
+  <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Load Balancer (nginx)</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">loadbalancer.serverpool</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">$brooklyn:entity(&quot;cluster&quot;)</span>
+    <span class="l-Scalar-Plain">nginx.sticky</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span></code></pre></div>
+
+</div>
+
+<!-- WARNING: if modifying either mycluster.yaml or the yaml below, be sure to keep them both in-sync -->
+
+<div class="jumobotron annotated_blueprint">
+  <div class="code_scroller">
+    <div class="initial_notice"><div><div>
+      Hover over an element to learn more
+      <div class="ann_light">This message will go away in <span id="internalLink_getting-started---policies_countdown">3s</span></div>
+      <div class="ann_play fa fa-play-circle-o"></div>
+    </div></div></div>
+    <div class="code_viewer">
+  
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Describe your application
+        </div>
+        <div class="long"><p>
+            Start by giving it a name, optionally adding a version and other metadata.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div><span class="ann_highlight">name: Tomcat Cluster</span>
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Define the target location
+        </div>
+        <div class="long"><p>
+          Blueprints are designed for portability.
+          Pick from dozens of clouds in hundreds of datacenters. 
+          Or machines with fixed IP addresses, localhost, 
+          Docker on <a href="http://clocker.io">Clocker</a>, etc.
+        </p><p>
+          Here we target pre-existing Vagrant VMs.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div><span class="ann_highlight">location:</span>
+  byon:
+    user: vagrant
+    password: vagrant
+    hosts:
+      - 10.10.10.101
+      - 10.10.10.102
+      - 10.10.10.103
+      - 10.10.10.104
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Define a cluster
+        </div>
+        <div class="long"><p>
+            Choose your cluster type.
+          </p><p>
+            Customize with config keys, such as the initial size. Define the members of the cluster.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div>services:
+<span class="ann_highlight">- type: org.apache.brooklyn.entity.group.DynamicCluster</span>
+  name: Cluster
+  id: cluster
+  brooklyn.config:
+    cluster.initial.size: 1
+    dynamiccluster.memberspec:
+      $brooklyn:entitySpec:
+        type: org.apache.brooklyn.entity.webapp.tomcat.TomcatServer
+        name: Tomcat Server
+        brooklyn.config:
+          wars.root: http://search.maven.org/remotecontent?filepath=org/apache/brooklyn/example/brooklyn-example-hello-world-webapp/0.8.0-incubating/brooklyn-example-hello-world-webapp-0.8.0-incubating.war
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Tomcat auto-repair policy
+        </div>
+        <div class="long"><p>
+            For each member of the cluster, include an auto-repair policy that restarts the service.
+            </p><p>
+            If it repeatedly fails, the service will be propagate a failure notification.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div>        brooklyn.policies:
+<span class="ann_highlight">        - type: org.apache.brooklyn.policy.ha.ServiceRestarter</span>
+          brooklyn.config:
+            failOnRecurringFailuresInThisDuration: 5m
+        brooklyn.enrichers:
+<span class="ann_highlight">        - type: org.apache.brooklyn.policy.ha.ServiceFailureDetector</span>
+          brooklyn.config:
+            entityFailed.stabilizationDelay: 30s
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Cluster auto-replace policy
+        </div>
+        <div class="long"><p>
+            On the cluster, handle a member's failure by replacing it with a brand new member.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div>  brooklyn.policies:
+<span class="ann_highlight">  - type: org.apache.brooklyn.policy.ha.ServiceReplacer</span>
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Auto-scaling policy
+        </div>
+        <div class="long"><p>
+            Auto-scale the cluster, based on runtime metrics of the cluster.
+            </p><p>
+            For a simplistic demonstration, this uses requests per second.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div><span class="ann_highlight">  - type: org.apache.brooklyn.policy.autoscaling.AutoScalerPolicy</span>
+    brooklyn.config:
+      metric: webapp.reqs.perSec.perNode
+      metricUpperBound: 3
+      metricLowerBound: 1
+      resizeUpStabilizationDelay: 2s
+      resizeDownStabilizationDelay: 1m
+      maxPoolSize: 3
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Aggregate the member's metrics.
+        </div>
+        <div class="long"><p>
+            Add an enricher to aggregate the member's requests per second.
+            </p><p>
+            For a simplistic demonstration, this uses requests per second.
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div>  brooklyn.enrichers:
+<span class="ann_highlight">  - type: org.apache.brooklyn.enricher.stock.Aggregator</span>
+    brooklyn.config:
+      enricher.sourceSensor: $brooklyn:sensor("webapp.reqs.perSec.windowed")
+      enricher.targetSensor: $brooklyn:sensor("webapp.reqs.perSec.perNode")
+      enricher.aggregating.fromMembers: true
+      transformation: average
+</div></div>
+
+<div class="block">
+      <div class="annotations_wrapper1"><div class="annotations_wrapper2"><div class="annotations">
+        <div class="short">
+          Define a load-balancer
+        </div>
+        <div class="long"><p>
+            Add a load balancer entity.
+          </p><p>
+            Configure it to monitor and balance across the cluster of Tomcat servers, which was given:
+          </p><p>
+            id: cluster
+        </p></div>
+      </div><div class="connector"><div>&nbsp;</div></div></div></div>
+<div><span class="ann_highlight">- type: org.apache.brooklyn.entity.proxy.nginx.NginxController</span>
+  name: Load Balancer (nginx)
+  brooklyn.config:
+    loadbalancer.serverpool: $brooklyn:entity("cluster")
+    nginx.sticky: false
+</div></div>
+
+  </div></div>
+</div>
+
+<script language="JavaScript" type="application/javascript">
+
+ 
+
+if (window.$ != null) {
+	$(function() {
+	  maxCodeWidth = Math.max.apply(Math, $(".annotated_blueprint div.block > div:last-child").map(function(){ return this.scrollWidth; }).get());
+	  $(".annotated_blueprint div.block").width(maxCodeWidth);
+	})
+	
+	$(".annotated_blueprint .code_scroller .initial_notice > div").height($(".annotated_blueprint .code_scroller .code_viewer").height());
+	$(".annotated_blueprint .code_scroller .initial_notice > div").width($(".annotated_blueprint .code_scroller").width());
+	$(".annotated_blueprint .code_scroller").hover(function() {
+	  $(".annotated_blueprint .initial_notice").css("display", "none");
+	});
+	$(function() {
+	  setTimeout(function() { $(".annotated_blueprint .initial_notice").hide(400); }, 3000);
+	  setTimeout(function() { $(".annotated_blueprint #countdown").text("2s"); }, 1000);
+	  setTimeout(function() { $(".annotated_blueprint #countdown").text("1s"); }, 2000);
+	});
+	}
+</script>
+
+<h2 id="internalLink_getting-started---policies_the-tomcat-cluster">The Tomcat Cluster</h2>
+
+<p>The <code>DynamicCluster</code> can dynamically increase or decrease the number of members. Resizing the 
+cluster can either be carried out manually via effectors or automatically by attaching an 
+<code>AutoScalerPolicy</code>.</p>
+
+<p>It is configured with a <code>dynamiccluster.memberspec</code>, which defines the type and configurtion of members
+in the cluster. In our example, each is a Tomcat server with a WAR deployed at the root URL.</p>
+
+<p>Deploy the app:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br deploy mycluster.yaml</code></pre></div>
+
+<pre>
+ Id:       nGY58ZZN   
+ Name:     Tomcat Cluster   
+ Status:   In progress   
+</pre>
+
+<p>And wait for the app to be running, viewing its state with:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application</code></pre></div>
+
+<pre>
+ Id         Name             Status    Location   
+ nGY58ZZN   Tomcat Cluster   RUNNING   Mf0CJac6   
+</pre>
+
+<p>You can view the list of entities within the cluster with the command below (which drills into the 
+application named “Tomcat Cluster”, then into its child entity named “Cluster”, and then lists its
+entities):</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity</code></pre></div>
+
+<pre>
+ Id         Name            Type   
+ dYfUvLIw   quarantine      org.apache.brooklyn.entity.group.QuarantineGroup   
+ tOpMeYYr   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+</pre>
+
+<p>The “quarantine” entity is used when Tomcat servers fail to start correctly - this entity is by 
+default added to the quarantine group, where it can later be investigated. This can be disabled using
+the configuration <code>dynamiccluster.quarantineFailedEntities: false</code>.</p>
+
+<h2 id="internalLink_getting-started---policies_tomcat-auto-repair">Tomcat auto-repair</h2>
+
+<p>Each Tomcat entity has a <code>ServiceFailureDetector</code> enricher and a <code>ServiceRestarter</code> policy. </p>
+
+<p>An <em>enricher</em> generates new events or sensor values (metrics) for the entity by modifying or 
+aggregating data from one or more other sensors. A <em>policy</em> coordinates the runtime management of 
+entities by carrying out actions, initiated by specific triggers. Policies are often used to keep 
+the system in a healthy state, such as handling failures and auto-scaling.</p>
+
+<p>The built-in functionality of the Tomcat entity is to use the “service.state” sensor to report 
+its status. It will be “on-fire” when a failure is detected, or “running” when healthy, or one of
+the other lifecycle states such as “starting”, “stopping” or “stopped”. </p>
+
+<p>The <code>ServiceFailureDetector</code> enricher emits an “Entity Failed” event whenever a failure is detected, 
+and similarly an “Entity Recovered” event when recovered. The configuration option 
+<code>serviceOnFireStabilizationDelay</code> will suppress reporting of failure until the entity is detected 
+as failed for the given duration. This is very useful so as not to over-react to temporary failures.</p>
+
+<p>The <code>ServiceRestarter</code> policy attaches to an entity in order to restart the service on failure. If<br />
+there are subsequent failures within a configurable time interval, or if the restart fails, the<br />
+service entity is marked as failed and no futher restarts are attempted.</p>
+
+<p>Try killing the Tomcat process for one of the members in the cluster. The command below will kill
+Tomcat on the vagrant VMs named “byon1” to “byon4”:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> i in byon<span class="o">{</span>1..4<span class="o">}</span><span class="p">;</span> <span class="k">do</span>
+  vagrant ssh <span class="k">${</span><span class="nv">i</span><span class="k">}</span> --command <span class="s1">&#39;ps aux | grep -i tomcat |  grep -v grep | awk &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;{print $2}&#39;</span><span class="se">\&#39;</span><span class="s1">&#39; | xargs kill -9&#39;</span>
+<span class="k">done</span></code></pre></div>
+
+<p>You can view the state of the Tomcat server with the command below (which drills into the<br />
+application named “Tomcat Cluster”, then into its child entity named “Cluster”, and then into the<br />
+first member of the cluster named “Tomcat Server”):</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity <span class="s2">&quot;Tomcat Server&quot;</span></code></pre></div>
+
+<pre>
+ Id:              tOpMeYYr   
+ Name:            Tomcat Server   
+ Status:          ON_FIRE   
+ ServiceUp:       false   
+ Type:            org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+ CatalogItemId:   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer:0.0.0.SNAPSHOT   
+</pre>
+
+<!-- COMMENT:
+You can view its activity, to see the call to restart, using:
+
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity <span class="s2">&quot;Tomcat Server&quot;</span> activity</code></pre></div>
+
+
+TODO Why doesn't the restart() show in the activity view?!
+-->
+
+<p>After the given <code>stabilizationDelay</code>, the Tomcat server will be automatically restarted.</p>
+
+<h2 id="internalLink_getting-started---policies_cluster-auto-replace">Cluster auto-replace</h2>
+
+<p>The cluster has a <code>ServiceReplacer</code> policy. This attaches to a <code>DynamicCluster</code> and replaces a 
+failed member; if this fails, it sets the Cluster state to on-fire.</p>
+
+<p>To simulate a terminal failure of a member, repeatedly kill the process (using the command 
+above).</p>
+
+<p>The Tomcat server should be replaced by a new member of the cluster, and then the old failed member
+removed.</p>
+
+<p>You can view the list of Tomcat servers in the cluster with the command below (which drills into the<br />
+application named “Tomcat Cluster”, then into its child entity named “Cluster”, and then lists the 
+child entities):</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity</code></pre></div>
+
+<pre>
+ Id         Name            Type   
+ dYfUvLIw   quarantine      org.apache.brooklyn.entity.group.QuarantineGroup   
+ tOpMeYYr   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+ mgoRpkKH   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+</pre>
+
+<h2 id="internalLink_getting-started---policies_auto-scaling">Auto-scaling</h2>
+
+<p>The <code>AutoScalerPolicy</code> attaches to a <code>Resizable</code> entity (in this case the <code>DynamicCluster</code>) and 
+dynamically adjusts its size in response to keeping a metric within a given range. It adds/removes 
+members (e.g. Tomcat instances) automatically.</p>
+
+<p>In this example policy, the <code>metricUpperBound</code> for requests per second per server is configured 
+very low at just 3. This makes it simple to trigger auto-scaling. The <code>resizeUpStabilizationDelay</code> 
+of 2 seconds means the load must be sustained for at least that length of time. The<br />
+<code>resizeDownStabilizationDelay</code> of 1 minute means there must be low load for a full one minute 
+before it will scale back down.</p>
+
+<p>Find the URL of the load-balancer - see the <code>NginxController</code> sensor named <code>main.uri</code>.</p>
+
+<p>To generate load, you can use your web-browser by repeatedly refreshing that page. Alternatively,
+you could use a load generator like jmeter, or use a script such as the one shown below 
+(changing URL for the URL of your load-balancer):</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">URL</span><span class="o">=</span>http://10.10.10.101:8000/
+<span class="k">for</span> i in <span class="o">{</span>1..600<span class="o">}</span><span class="p">;</span> <span class="k">do</span>
+  <span class="k">for</span> j in <span class="o">{</span>1..50<span class="o">}</span><span class="p">;</span> <span class="k">do</span> 
+    curl --fail --silent <span class="k">${</span><span class="nv">URL</span><span class="k">}</span> &gt; /dev/null <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Curl failed with exit code $?&quot;</span>
+  <span class="k">done</span>
+  <span class="nb">echo</span> <span class="s2">&quot;Finished batch $i&quot;</span>
+  sleep 1
+<span class="k">done</span></code></pre></div>
+
+<p>While those curl commands run in a separate terminal, you can look at the metrics for the first
+Tomcat server using the command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity <span class="s2">&quot;Tomcat Server&quot;</span> sensor</code></pre></div>
+
+<pre>
+ Name                                            Description                                                                              Value   
+ ...
+ webapp.reqs.perSec.last                         Reqs/sec (last datapoint)                                                                0.9980039920159681
+ webapp.reqs.perSec.windowed                     Reqs/sec (over time window)                                                              0.9326571333555038
+ webapp.reqs.processingTime.fraction.last        Fraction of time spent processing, reported by webserver (percentage, last datapoint)    "0.067%"
+ webapp.reqs.processingTime.fraction.windowed    Fraction of time spent processing, reported by webserver (percentage, over time window)  "0.073%"
+ webapp.reqs.processingTime.max                  Max processing time for any single request, reported by webserver (millis)               ""
+ webapp.reqs.processingTime.total                Total processing time, reported by webserver (millis)                                    "3.12s"
+ webapp.reqs.total                               Request count                                                                            5575
+ webapp.tomcat.connectorStatus                   Catalina connector state name                                                            "STARTED"
+ webapp.url                                      URL                                                                                      "http://10.10.10.103:18082/"
+ ...
+</pre>
+
+<p>You can look at the average requests per second on the cluster with the command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> sensor <span class="s2">&quot;webapp.reqs.perSec.perNode&quot;</span></code></pre></div>
+
+<pre>
+ 25.765557404326124
+</pre>
+
+<p>When this value exceeds 3 for two seconds, the cluster with scale up. You can see the new instance
+using the command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity</code></pre></div>
+
+<pre>
+ Id         Name            Type   
+ dYfUvLIw   quarantine      org.apache.brooklyn.entity.group.QuarantineGroup   
+ mgoRpkKH   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+ xpLeJufy   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+ CpabLxZE   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+</pre>
+
+<p>Cancel the curl commands (or wait for them to finish), and then wait for the one minute 
+<code>resizeDownStabilizationDelay</code>. The cluster will scale back to the minimum one instance.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">br application <span class="s2">&quot;Tomcat Cluster&quot;</span> entity <span class="s2">&quot;Cluster&quot;</span> entity</code></pre></div>
+
+<pre>
+ Id         Name            Type   
+ dYfUvLIw   quarantine      org.apache.brooklyn.entity.group.QuarantineGroup   
+ mgoRpkKH   Tomcat Server   org.apache.brooklyn.entity.webapp.tomcat.TomcatServer   
+</pre>
+
+	</div>
+	 
+	  
+	 
+
+ 
+	    
+	     
+	     
+
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	<div id="contentsLink-brooklyn-concepts-quickstart" class="section-breaker section p-">
+	<span style="width: 100%"><h1>Brooklyn Concepts Quickstart</h1><a href="#content-top" class="goToTop">^</a></span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<p>The following section provides a quick summary of the main Brooklyn concepts you will encounter in Getting Started.  For further discussion of these concepts see <a href="http://brooklyn.apache.org/v/0.10.0/learnmore/theory.html">The Theory Behind Brooklyn</a>, and the detailed descriptions in <a href="http://brooklyn.apache.org/v/0.10.0/v/latest/concepts/index.html">Brooklyn Concepts</a>.</p>
+
+<p><strong><em>Deployment and Management</em></strong> Brooklyn is built for agile deployment of applications across cloud and other targets, and real-time autonomic management. “Autonomic computing” is the concept of components looking after themselves where possible (self-healing, self-optimizing, etc).</p>
+
+<p><strong><em>Blueprints</em></strong>  A blueprint defines an application by specifying its components, such as processes, or combinations of processes across multiple machines and services. The blueprint also specifies the inter-relationships between the configurations of the components.</p>
+
+<p><strong><em>Entities</em></strong> The central concept in a Brooklyn deployment is that of an entity. An entity represents a resource under management (individual machines or software processes) or logical collections of these. Entities are arranged hierarchically. They can have events, operations, and processing logic associated with them, and it is through this mechanism that the active management is delivered.</p>
+
+<p><strong><em>Applications</em></strong> are the top level entities that are the parents of all other entities.</p>
+
+<p><strong><em>Configuration</em></strong> Entities can have arbitrary configuration values, which get inherited by their child entities. You can set global (Brooklyn-wide) properties in (<code>~/.brooklyn/brooklyn.properties</code>).  Common configuration keys have convenient aliases called “flags”.</p>
+
+<p><strong><em>Sensors</em></strong> are the mechanism for entities to expose information for other entities to see.  Sensors from an entity can be subscribed to by other entities to track changes in the entity’s activity. Sensors can be updated, potentially frequently, by the entity or associated tasks.</p>
+
+<p><strong><em>Effectors</em></strong> are the mechanism for entities to expose the operations that can be invoked on it by other entities.  The invoker is able to track the execution of that effector with tasks. </p>
+
+<p><strong><em>Lifecycle</em></strong> The management context of Brooklyn associates a “lifecycle” with Brooklyn entities.  Common operations are start, stop, and restart (whose meaning differs slightly for applications and processes; the details are in the concepts guide linked above).  Starting an application results in the start() operation being performed recursively (typically in parallel) on the application’s children.</p>
+
+<p><strong><em>Tasks</em></strong> Lifecycle and other operations in Brooklyn are tracked as tasks. This allows current and past processing to be observed by operators, and processing to be managed across multiple management nodes.</p>
+
+<p><strong><em>Locations</em></strong> can be defined in order to specify where the processes of an application will run.  Brooklyn supports different cloud providers and pre-prepared machines (including localhost), known as “BYON” (Bring Your Own Nodes).</p>
+
+<p><strong><em>Policies</em></strong> Policies perform the active management enabled by Brooklyn. Entities can have  Policy instances attached to them, which can subscribe to sensors from other entities or run periodically.  When they run they can perform calculations, look up other values, invoke effectors or emit sensor values from the entity with which they are associated.</p>
+
+<p><strong><em>Enrichers</em></strong> These are mechanisms that subscribe to a sensor, or multiple sensors, and output a new sensor. For example, the enricher which sums a sensor across multiple entities (used to get the total requests-per-second for all the web servers in a cluster), and the enricher which calculates a 60-second rolling average.</p>
+
+	</div>
+	 
+	  
+	 
+
+ 
+	    
+	    
+	  
+	 
+
+ 
+	
+		
+		
+
+	
+		
+		
+
+	
+		
+		
+
+	
+		
+		
+
+	
 	
 </div>
+
+</body>
+</html>

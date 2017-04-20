@@ -1,0 +1,1007 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Troubleshooting Deployment - Apache Brooklyn</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/octicons/octicons.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/bootstrap-theme.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/deps/tooltip.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/code.css" rel="stylesheet" />
+<link href="/brooklyn-docs/style/css/website.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body class="page">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a class="brand-apache" href="http://www.apache.org/">
+                    <img src="https://www.apache.org/foundation/press/kit/feather.svg" alt="[Apache]">
+                </a>
+                
+                <a class="brand-brooklyn" href="/brooklyn-docs/"><img src="/brooklyn-docs/img/apache-brooklyn-logo-244px-wide.png" alt="brooklyn"></a>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/learnmore/index.html" data-toggle="dropdown">learn more <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/learnmore/index.html">Learn More</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/blueprint-tour.html">Blueprint Tour
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/features/index.html">Features
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/theory.html">Theory
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/learnmore/catalog/index.html">Browse Catalog
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/v/latest/start/index.html" data-toggle="dropdown">get started <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/v/latest/start/index.html">Get Started</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/running.html">Running Apache Brooklyn
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/blueprints.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/managing.html">Monitoring and Managing Applications
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/policies.html">Policies
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/start/concept-quickstart.html">Brooklyn Concepts Quickstart
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown active">
+                    
+                    <a href="/brooklyn-docs/documentation/index.html" data-toggle="dropdown">documentation <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/documentation/index.html">Documentation</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/index.html">User Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/blueprints/creating-yaml.html">Writing Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/locations/index.html">Deploying Blueprints
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="section">
+                            <a href="/brooklyn-docs/v/latest/ops/index.html">Reference Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="divider"></li>
+                        <li >
+                            <a href="/brooklyn-docs/meta/versions.html">Versions
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/documentation/other-docs.html">Other Resources
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/community/index.html" data-toggle="dropdown">community <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/community/index.html">Community</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/mailing-lists.html">Mailing Lists
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/irc.html">IRC
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/security/index.html">Security Advisories
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/community/how-to-contribute-docs.html">Contributing Documentation
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <a href="/brooklyn-docs/developers/index.html" data-toggle="dropdown">developers <span class="caret"></span></a>
+                    
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/brooklyn-docs/developers/index.html">Developers</a>
+                        </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code/index.html">Get the Code
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/how-to-contribute.html">How to Contribute
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/v/latest/dev/index.html">Developer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/committers/index.html">Committer Guide
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/code-standards.html">Code Standards
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="/brooklyn-docs/developers/links.html">Handy Places
+                                </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="http://github.com/apache/brooklyn">GitHub
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                        <li >
+                            <a href="https://issues.apache.org/jira/browse/BROOKLYN">Bug Tracker (JIRA)
+                                &nbsp;<span class="octicon octicon-link-external"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>test 1</li>
+                                <li>test 1</li>
+                                <li>test 1</li>
+                            </ul>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="dropdown">
+                    
+                    <form class="navbar-form">
+                        <a href="/brooklyn-docs/download/index.html" class="btn btn-default">download</a>
+                    </form>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 content">
+                <div id="page_notes"></div>
+                <h1>Troubleshooting Deployment</h1>
+                <p>This guide describes common problems encountered when deploying applications.</p>
+
+<h2 id="yaml-deployment-errors">YAML deployment errors</h2>
+
+<p>The error <code>Invalid YAML: Plan not in acceptable format: Cannot convert ...</code> means that the text is not 
+valid YAML. Common reasons include that the indentation is incorrect, or that there are non-matching
+brackets.</p>
+
+<p>The error <code>Unrecognized application blueprint format: no services defined</code> means that the <code>services:</code>
+section is missing.</p>
+
+<p>An error like the one shown below means that the given entity type (in this case com.acme.Foo) is not in the catalog or on the classpath:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Deployment plan item Service<span class="o">[</span><span class="nv">name</span><span class="o">=</span>&lt;null&gt;,description<span class="o">=</span>&lt;null&gt;,serviceType<span class="o">=</span>com.acme.Foo,characteristics<span class="o">=[]</span>,customAttributes<span class="o">={}]</span> cannot be matched</code></pre></div>
+
+<p>An error like the one shown below means that the given location (in this case aws-ec3) was unknown:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Illegal parameter <span class="k">for</span> <span class="s1">&#39;location&#39;</span> <span class="o">(</span>aws-ec3<span class="o">)</span><span class="p">;</span> not resolvable: java.util.NoSuchElementException: Unknown location <span class="s1">&#39;aws-ec3&#39;</span>: either this location is not recognised or there is a problem with location resolver configuration</code></pre></div>
+
+<p>This means it does not match any of the named locations in brooklyn.properties, nor any of the clouds enabled in the jclouds support, nor any of the locations added dynamically through the catalog API.</p>
+
+<h2 id="vm-provisioning-failures">VM Provisioning Failures</h2>
+
+<p>There are many stages at which VM provisioning can fail! An error <code>Failure running task provisioning</code> 
+means there was some problem obtaining or connecting to the machine.</p>
+
+<p>An error like <code>... Not authorized to access cloud ...</code> usually means the wrong identity/credential was used.</p>
+
+<p>AWS requires a X-Amz-Date header which contains the date of the Apache Brooklyn AWS client.
+If the date on the server is wrong, for example several minutes behind you will get an 
+Authorization Exception. This is to prevent replay attacks. Please be sure to set the clock 
+correctly on the machine running Apache Brooklyn. To set the time on Linux you can use the ntp 
+client (e.g. <code>sudo ntpdate pool.ntp.org</code>). We advise running the 
+<a href="http://www.tldp.org/LDP/sag/html/basic-ntp-config.html">ntp daemon</a> so that the clock is kept 
+continually in sync.</p>
+
+<p>An error like <code>Unable to match required VM template constraints</code> means that a matching image (e.g. AMI in AWS terminology) could not be found. This 
+could be because an incorrect explicit image id was supplied, or because the match-criteria could not
+be satisfied using the given images available in the given cloud. The first time this error is 
+encountered, a listing of all images in that cloud/region will be written to the debug log.</p>
+
+<p>Failure to form an ssh connection to the newly provisioned VM can be reported in several different ways, 
+depending on the nature of the error. This breaks down into failures at different points:</p>
+
+<ul>
+  <li>Failure to reach the ssh port (e.g. <code>... could not connect to any ip address port 22 on node ...</code>).</li>
+  <li>Failure to do the very initial ssh login (e.g. <code>... Exhausted available authentication methods ...</code>).</li>
+  <li>Failure to ssh using the newly created user.</li>
+</ul>
+
+<p>There are many possible reasons for this ssh failure, which include:</p>
+
+<ul>
+  <li>The VM was “dead on arrival” (DOA) - sometimes a cloud will return an unusable VM. One can work around
+this using the <code>machineCreateAttempts</code> configuration option, to automatically retry with a new VM.</li>
+  <li>Local network restrictions. On some guest wifis, external access to port 22 is forbidden.
+Check by manually trying to reach port 22 on a different machine that you have access it.</li>
+  <li>NAT rules not set up correctly. On some clouds that have only private IPs, Brooklyn can automatically
+create NAT rules to provide access to port 22. If this NAT rule creation fails for some reason,
+then Brooklyn will not be able to reach the VM. If NAT rules are being created for your cloud, then
+check the logs for warnings or errors about the NAT rule creation.</li>
+  <li>ssh credentials incorrectly configured. The Brooklyn configuration is very flexible in how ssh
+credentials can be configured. However, if a more advanced configuration is used incorrectly (e.g. 
+the wrong login user, or invalid ssh keys) then this will fail.</li>
+  <li>Wrong login user. The initial login user to use when first logging into the new VM is inferred from 
+the metadata provided by the cloud provider about that image. This can sometimes be incomplete, so
+the wrong user may be used. This can be explicitly set using the <code>loginUser</code> configuration option.
+An example of this is with some Ubuntu VMs, where the “ubuntu” user should be used. However, on some clouds
+it defaults to trying to ssh as “root”.</li>
+  <li>Bad choice of user. By default, Brooklyn will create a user with the same name as the user running the
+Brooklyn process; the choice of user name is configurable. If this user already exists on the machine, 
+then the user setup will not behave as expected. Subsequent attempts to ssh using this user could then fail.</li>
+  <li>Custom credentials on the VM. Most clouds will automatically set the ssh login details (e.g. in AWS using<br />
+the key-pair, or in CloudStack by auto-generating a password). However, with some custom images the VM
+will have hard-coded credentials that must be used. If Brooklyn’s configuration does not match that,
+then it will fail.</li>
+  <li>Guest customisation by the cloud. On some clouds (e.g. vCloud Air), the VM can be configured to do
+guest customisation immediately after the VM starts. This can include changing the root password.
+If Brooklyn is not configured with the expected changed password, then the VM provisioning may fail
+(depending if Brooklyn connects before or after the password is changed!).</li>
+</ul>
+
+<p>A very useful debug configuration is to set <code>destroyOnFailure</code> to false. This will allow ssh failures to
+be more easily investigated.</p>
+
+<h4 id="javasecuritykeyexception-when-provisioning-vm">java.security.KeyException when Provisioning VM</h4>
+
+<p>The exception <code>java.security.KeyException</code> can be thrown when jclouds is attempting the SSL handshake,
+to make cloud API calls. This can happen if the version of nss is older than 3.16 - the nss package
+includes the ssl library.</p>
+
+<p>To fix this on CentOS, run:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo yum upgrade nss</code></pre></div>
+
+<p>For a discussion of investigating this kind of issue, see this <a href="http://blog.backslasher.net/java-ssl-crash.html">Backslasher blog</a>.</p>
+
+<p>The full stacktrace is shown below:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Caused</span> <span class="nl">by:</span> <span class="n">javax</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLException</span><span class="o">:</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ProviderException</span><span class="o">:</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">KeyException</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">Alerts</span><span class="o">.</span><span class="na">getSSLException</span><span class="o">(</span><span class="n">Alerts</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">208</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">fatal</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1949</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">fatal</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1906</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">handleException</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1889</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">startHandshake</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1410</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">startHandshake</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1387</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">www</span><span class="o">.</span><span class="na">protocol</span><span class="o">.</span><span class="na">https</span><span class="o">.</span><span class="na">HttpsClient</span><span class="o">.</span><span class="na">afterConnect</span><span class="o">(</span><span class="n">HttpsClient</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">559</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">www</span><span class="o">.</span><span class="na">protocol</span><span class="o">.</span><span class="na">https</span><span class="o">.</span><span class="na">AbstractDelegateHttpsURLConnection</span><span class="o">.</span><span class="na">connect</span><span class="o">(</span><span class="n">AbstractDelegateHttpsURLConnection</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">185</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">www</span><span class="o">.</span><span class="na">protocol</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">HttpURLConnection</span><span class="o">.</span><span class="na">getOutputStream0</span><span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1283</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">www</span><span class="o">.</span><span class="na">protocol</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">HttpURLConnection</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">(</span><span class="n">HttpURLConnection</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1258</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">www</span><span class="o">.</span><span class="na">protocol</span><span class="o">.</span><span class="na">https</span><span class="o">.</span><span class="na">HttpsURLConnectionImpl</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">(</span><span class="n">HttpsURLConnectionImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">250</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">jclouds</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">writePayloadToConnection</span><span class="o">(</span><span class="n">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">294</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">jclouds</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">convert</span><span class="o">(</span><span class="n">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">170</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">jclouds</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">convert</span><span class="o">(</span><span class="n">JavaUrlHttpCommandExecutorService</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">64</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">jclouds</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">BaseHttpCommandExecutorService</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">BaseHttpCommandExecutorService</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">95</span><span class="o">)</span>
+	<span class="o">...</span> <span class="mi">64</span> <span class="n">more</span>
+<span class="n">Caused</span> <span class="nl">by:</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ProviderException</span><span class="o">:</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">KeyException</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ec</span><span class="o">.</span><span class="na">ECKeyPairGenerator</span><span class="o">.</span><span class="na">generateKeyPair</span><span class="o">(</span><span class="n">ECKeyPairGenerator</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">147</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">KeyPairGenerator$Delegate</span><span class="o">.</span><span class="na">generateKeyPair</span><span class="o">(</span><span class="n">KeyPairGenerator</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">703</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">ECDHCrypt</span><span class="o">.&lt;</span><span class="n">init</span><span class="o">&gt;(</span><span class="n">ECDHCrypt</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">77</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">ClientHandshaker</span><span class="o">.</span><span class="na">serverKeyExchange</span><span class="o">(</span><span class="n">ClientHandshaker</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">721</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">ClientHandshaker</span><span class="o">.</span><span class="na">processMessage</span><span class="o">(</span><span class="n">ClientHandshaker</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">281</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">Handshaker</span><span class="o">.</span><span class="na">processLoop</span><span class="o">(</span><span class="n">Handshaker</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">979</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">Handshaker</span><span class="o">.</span><span class="na">process_record</span><span class="o">(</span><span class="n">Handshaker</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">914</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">readRecord</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1062</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">performInitialHandshake</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1375</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLSocketImpl</span><span class="o">.</span><span class="na">startHandshake</span><span class="o">(</span><span class="n">SSLSocketImpl</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">1403</span><span class="o">)</span>
+	<span class="o">...</span> <span class="mi">74</span> <span class="n">more</span>
+<span class="n">Caused</span> <span class="nl">by:</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">KeyException</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ec</span><span class="o">.</span><span class="na">ECKeyPairGenerator</span><span class="o">.</span><span class="na">generateECKeyPair</span><span class="o">(</span><span class="n">Native</span> <span class="n">Method</span><span class="o">)</span>
+	<span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">ec</span><span class="o">.</span><span class="na">ECKeyPairGenerator</span><span class="o">.</span><span class="na">generateKeyPair</span><span class="o">(</span><span class="n">ECKeyPairGenerator</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">128</span><span class="o">)</span>
+	<span class="o">...</span> <span class="mi">83</span> <span class="n">more</span></code></pre></div>
+
+<h2 id="timeout-waiting-for-service-up">Timeout Waiting For Service-Up</h2>
+
+<p>A common generic error message is that there was a timeout waiting for service-up.</p>
+
+<p>This just means that the entity did not get to service-up in the pre-defined time period (the default is 
+two minutes, and can be configured using the <code>start.timeout</code> config key; the timer begins after the 
+start tasks are completed).</p>
+
+<p>See the <a href="overview.html">overview</a> for where to find additional information, especially the section on
+“Entity’s Error Status”.</p>
+
+<h2 id="invalid-packet-error">Invalid packet error</h2>
+
+<p>If you receive an error message similar to the one below when provisioning a VM, it means that the wrong username is being used for ssh’ing to the machine. The “invalid packet” is because a response such as “Please login as the ubuntu user rather than root user.” is being sent back.</p>
+
+<p>You can workaround the issue by explicitly setting the user that AMP should use to login to the VM  (typically the OS default user).</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">error acquiring SFTPClient<span class="o">()</span> <span class="o">(</span>out of retries - max 50<span class="o">)</span>
+Invalid packet: indicated length too large
+java.lang.IllegalStateException
+Invalid packet: indicated length too large</code></pre></div>
+
+<p>An example of how to explicitly set the user is shown below (when defining a Location) by using ‘loginUser’: </p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">brooklyn.locations</span><span class="p-Indicator">:</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">jclouds:aws-ec2</span>
+  <span class="l-Scalar-Plain">brooklyn.config</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">displayName</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">aws-us-east-1</span>
+    <span class="l-Scalar-Plain">region</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">us-east-1</span>
+    <span class="l-Scalar-Plain">identity</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;add&gt;</span>
+    <span class="l-Scalar-Plain">credential</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;add&gt;</span>
+    <span class="l-Scalar-Plain">loginUser</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">centos</span></code></pre></div>
+
+
+            </div>
+
+            <aside class="col-md-3">
+                <div class="list-group side-menu" id="side-menu">
+
+
+
+  
+     
+              
+                  <h4 class=" with_following">
+                    <a href="/brooklyn-docs/v/latest/index.html" class="list-group-item breadcrumb breadcrumb0">
+                      User Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding with_following">
+                    <a href="/brooklyn-docs/v/latest/ops/index.html" class="list-group-item breadcrumb breadcrumb1">
+                      Reference Guide
+                      </a></h4>
+              
+                  <h4 class=" with_preceding">
+                    <a href="/brooklyn-docs/v/latest/ops/troubleshooting/index.html" class="list-group-item breadcrumb breadcrumb2">
+                      Troubleshooting
+                      </a></h4>
+              
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/overview.html" class="list-group-item">Overview
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/web-console-issues.html" class="list-group-item">Web Console Issues
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/deployment.html" class="list-group-item active">Deployment
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/connectivity.html" class="list-group-item">Server Connectivity
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/slow-unresponsive.html" class="list-group-item">Brooklyn Slow or Unresponsive
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/increase-entropy.html" class="list-group-item">Increase Entropy
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/increase-system-resource-limits.html" class="list-group-item">Increase System Resource Limits
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/detailed-support-report.html" class="list-group-item">Detailed Support Report
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/softwareprocess.html" class="list-group-item">SoftwareProcess Entities
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/going-deep-in-java-and-logs.html" class="list-group-item">Going Deep in Java and Logs
+                    </a>
+                
+              
+                 
+                
+                  
+                  <a href="/brooklyn-docs/v/latest/ops/troubleshooting/memory-usage.html" class="list-group-item">Monitoring Memory Usage
+                    </a>
+                
+              
+        
+        
+  
+
+        
+</div>
+<div id="width_reference"></div>
+
+
+<script language="JavaScript" type="application/javascript">
+(function($){
+    
+    sidemenu_x_sizer=function(){ $('#side-menu').width($('#side-menu').parent().find('#width_reference').outerWidth()); };
+    $(sidemenu_x_sizer);
+    $(window).resize(sidemenu_x_sizer);
+
+    
+    sidemenu_y_nonfloater=function(){
+      if ($('#side-menu').outerHeight(true) + $('#header').outerHeight(true) + $('#footer').outerHeight(true) > window.innerHeight ||
+          $('#side-menu').width() >= $('#content_container').width()/2) {
+        $('#side-menu').css('position', 'inherit');
+      } else {
+        // restore if screen has grown
+        $('#side-menu').css('position', 'fixed');
+      }
+    };
+    $(sidemenu_y_nonfloater);
+    $(window).resize(sidemenu_y_nonfloater);
+
+    
+
+    var sideMenu = $("#side-menu"),
+        sideItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+        scrollItems = sideItems.map(function(){
+          var item = $(this).attr("section-target");
+          if (item && item.length) { return item; }
+        });
+
+    var highlight_section_last_top = -1;
+    var highlight_section_completed = false;
+
+    var highlight_section = function() {
+       // Get container scroll position
+       var highlight_section_new_top = $(this).scrollTop();
+       if (highlight_section_new_top == highlight_section_last_top) return;
+       var highlight_section_new_bottom = highlight_section_new_top + $(window).height();
+       var scroll_advancing = (highlight_section_new_top > highlight_section_last_top);
+
+       var last_item = null, active_item = $("#side-menu a.section#active");
+
+       var found_top = false;
+       var displayable_items = scrollItems.map(function(itemI){
+         item = $(scrollItems[itemI]);
+         if (item && item.length) {
+           if (highlight_section_last_top == -1 || !highlight_section_completed) {
+             // just opening page - take item matching hash, or otherwise the first item visible
+             if (item.selector === window.location.hash || (item.offset().top > highlight_section_new_top - 20 && !found_top)) {
+               found_top = true;
+               if (item.selector === window.location.hash && item.offset().top < highlight_section_new_top + 60) {
+                 // because of our top header, we need to scroll 64px down from any link
+                 $('html, body').animate({scrollTop: item.offset().top - 64}, 0);
+               }
+               return item;
+             }
+           } else if (scroll_advancing) {
+             // if scrolling advance, pick up a section when title starts before 1/3 height
+             if (item.offset().top < highlight_section_new_top + $(window).height()/3)
+               return item;
+
+             // or if containing div is finished (usu the whole main content)
+             div_containing_item = item.closest("div");
+             if (div_containing_item.offset().top + div_containing_item.height() < highlight_section_new_bottom + 15)
+               return item;
+             // or when next title is visible
+             if (last_item && item.offset().top < highlight_section_new_bottom + 15)
+               return last_item;
+           } else {
+             // if scrolling back, pick up a section as soon as the title is visible,
+             if (item.offset().top < highlight_section_new_top)
+               return item;
+             // or if title is before the 2/3 point
+             // (not sure about this, probably want also to have
+             // "AND the id.top is <= displayable_itemsrent_active_it.top" so we don't jump FORWARD a section
+             // when scrolling BACK, with lots of tiny sections)
+             if ((item.offset().top < highlight_section_new_top + 2*$(window).height()/3)
+                 && (!active_item || !active_item.offset() || active_item.offset().top >= item.offset().top))
+               return item;
+
+           }
+           last_item = item;
+         }
+       });
+       if (!highlight_section_completed && document.readyState === "complete") {
+         highlight_section_completed = true;
+       }
+       if (!displayable_items.length) {
+         $("#side-menu a.section").removeClass("active");
+       } else {
+         displayable_items = displayable_items[displayable_items.length-1];
+         var id = displayable_items && displayable_items.length ? displayable_items[0].id : "";
+       // Set/remove active class
+         new_active = $("#side-menu a.section").filter("[section-target='#"+id+"']");
+         if (new_active.hasClass("active")) {
+           // nothing needed
+         } else {
+           $("#side-menu a.section").removeClass("active");
+           $("#side-menu a.section").filter("[section-target='#"+id+"']").addClass("active");
+         }
+       }
+
+       highlight_section_last_top = highlight_section_new_top;
+    };
+    var highlight_new_section = function() {
+      highlight_section_completed = false;
+      highlight_section_last_top = -1;
+      highlight_section();
+    }
+
+    $(window).scroll(highlight_section);
+    $(highlight_new_section);
+
+    // detect link change - courtesy http://www.bennadel.com/blog/1520-binding-events-to-non-dom-objects-with-jquery.htm
+
+    // Default to the current location.
+    var strLocation = window.location.href;
+    var strHash = window.location.hash;
+    var strPrevLocation = "";
+    var strPrevHash = "";
+
+    // This is how often we will be checkint for
+    // changes on the location.
+    var intIntervalTime = 100;
+
+    // This method removes the pound from the hash.
+    var fnCleanHash = function( strHash ){
+        return(
+            strHash.substring( 1, strHash.length )
+            );
+    }
+
+    // This will be the method that we use to check
+    // changes in the window location.
+    var fnCheckLocation = function(){
+        // Check to see if the location has changed.
+        if (strLocation != window.location.href){
+
+            // Store the new and previous locations.
+            strPrevLocation = strLocation;
+            strPrevHash = strHash;
+            strLocation = window.location.href;
+            strHash = window.location.hash;
+
+            // The location has changed. Trigger a
+            // change event on the location object,
+            // passing in the current and previous
+            // location values.
+            $( window.location ).trigger(
+                "change",
+                {
+                    currentHref: strLocation,
+                    currentHash: fnCleanHash( strHash ),
+                    previousHref: strPrevLocation,
+                    previousHash: fnCleanHash( strPrevHash )
+                }
+                );
+
+        }
+    }
+
+    // Set an interval to check the location changes.
+    setInterval( fnCheckLocation, intIntervalTime );
+
+    // and trigger highlight section on link change
+    $(window.location).bind("change", highlight_new_section);
+})(jQuery);
+
+</script>
+
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <p>Apache Brooklyn is distributed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+        </div>
+        <div class="col-md-3 text-right">
+            <p>
+                <a class="btn btn-sm btn-default" href="https://github.com/apache/brooklyn-docs/edit/master/guide/ops/troubleshooting/deployment.md">Edit This Page</a>
+                <a href="https://brooklyn.apache.org/community/how-to-contribute-docs.html"
+                    data-toggle="tooltip" data-placement="top" title="" data-delay="400" data-original-title="How to Edit Documentation">
+                    <span class="octicon octicon-question octicon-footer"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/jquery.cookie.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/js/zeroclipboard/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="/brooklyn-docs/style/deps/tooltip.js"></script>
+
+<script type="text/javascript">
+    ZeroClipboard.config({ moviePath: '/style/js/zeroclipboard/ZeroClipboard.swf' });
+</script>
+<script src="/brooklyn-docs/style/js/public.js"></script>
+</html>
