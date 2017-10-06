@@ -23,10 +23,10 @@ to make it easy to inspect the changes.
 It may add a new line to any file which does not terminate with one,
 so do not run on binary files.
 
-{% highlight bash %}   
-$ curl {{ site.url_root }}{{ site.path.guide }}/misc/migrate-to-0.8.0-regexes.sed -o /tmp/migrate.sed
+```bash   
+$ curl {{ book.url_root }}{{ book.path.guide }}/misc/migrate-to-0.8.0-regexes.sed -o /tmp/migrate.sed
 $ for x in `find . -type file` ; do sed -E -i .bak -f /tmp/migrate.sed $x ; done
 $ find . -name "*.bak" -delete
-{% endhighlight %}
+```
 
-If you encounter any issues, please [contact us]({{site.path.website}}/community/).
+If you encounter any issues, please [contact us]({{book.path.website}}/community/).
