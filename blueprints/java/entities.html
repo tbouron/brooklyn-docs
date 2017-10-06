@@ -1,0 +1,1825 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Custom Entity Development · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="service-state.html" />
+    
+    
+    <link rel="prev" href="entity.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../start/running.html">
+            
+                <a href="../../start/running.html">
+            
+                    
+                    Running Apache Brooklyn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../start/blueprints.html">
+            
+                <a href="../../start/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../start/managing.html">
+            
+                <a href="../../start/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../start/policies.html">
+            
+                <a href="../../start/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../start/concept-quickstart.html">
+            
+                <a href="../../start/concept-quickstart.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../misc/download.html">
+            
+                <a href="../../misc/download.html">
+            
+                    
+                    Downloads
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Brooklyn Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../concepts/entities.html">
+            
+                <a href="../../concepts/entities.html">
+            
+                    
+                    Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../concepts/application-parent-membership.html">
+            
+                <a href="../../concepts/application-parent-membership.html">
+            
+                    
+                    Application, Parent and Membership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../concepts/configuration-sensor-effectors.html">
+            
+                <a href="../../concepts/configuration-sensor-effectors.html">
+            
+                    
+                    Configuration, Sensors and Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../concepts/lifecycle-managementcontext.html">
+            
+                <a href="../../concepts/lifecycle-managementcontext.html">
+            
+                    
+                    Lifecycle and ManagementContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../concepts/dependent-configuration.html">
+            
+                <a href="../../concepts/dependent-configuration.html">
+            
+                    
+                    Dependent Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../concepts/location.html">
+            
+                <a href="../../concepts/location.html">
+            
+                    
+                    Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../concepts/policies.html">
+            
+                <a href="../../concepts/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../concepts/execution.html">
+            
+                <a href="../../concepts/execution.html">
+            
+                    
+                    Execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../concepts/stop-start-restart-behaviour.html">
+            
+                <a href="../../concepts/stop-start-restart-behaviour.html">
+            
+                    
+                    Stop/start/restart behaviour
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Writing Blueprints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../creating-yaml.html">
+            
+                <a href="../creating-yaml.html">
+            
+                    
+                    Creating YAML Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../entity-configuration.html">
+            
+                <a href="../entity-configuration.html">
+            
+                    
+                    Entity Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../setting-locations.html">
+            
+                <a href="../setting-locations.html">
+            
+                    
+                    Setting Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../configuring-vms.html">
+            
+                <a href="../configuring-vms.html">
+            
+                    
+                    Configuring VMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../multiple-services.html">
+            
+                <a href="../multiple-services.html">
+            
+                    
+                    Multiple Services and Dependency Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../custom-entities.html">
+            
+                <a href="../custom-entities.html">
+            
+                    
+                    Custom Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../catalog/">
+            
+                <a href="../catalog/">
+            
+                    
+                    Catalog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../clusters.html">
+            
+                <a href="../clusters.html">
+            
+                    
+                    Clusters, Specs, and Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../enrichers.html">
+            
+                <a href="../enrichers.html">
+            
+                    
+                    Enrichers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../policies.html">
+            
+                <a href="../policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../effectors.html">
+            
+                <a href="../effectors.html">
+            
+                    
+                    Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../clusters-and-policies.html">
+            
+                <a href="../clusters-and-policies.html">
+            
+                    
+                    Clusters and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Java Entities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.13.1" data-path="archetype.html">
+            
+                <a href="archetype.html">
+            
+                    
+                    Creating from a Maven Archetype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.2" data-path="defining-and-deploying.html">
+            
+                <a href="defining-and-deploying.html">
+            
+                    
+                    Defining and Deploying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.3" data-path="bundle-dependencies.html">
+            
+                <a href="bundle-dependencies.html">
+            
+                    
+                    Handling Bundle Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.4" data-path="topology-dependencies.html">
+            
+                <a href="topology-dependencies.html">
+            
+                    
+                    Topology, Dependencies, and Management Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.5" data-path="common-usage.html">
+            
+                <a href="common-usage.html">
+            
+                    
+                    Common Classes and Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.6" data-path="feeds.html">
+            
+                <a href="feeds.html">
+            
+                    
+                    Feeds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.7" data-path="entity.html">
+            
+                <a href="entity.html">
+            
+                    
+                    Writing an Entity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.13.8" data-path="entities.html">
+            
+                <a href="entities.html">
+            
+                    
+                    Custom Entity Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.9" data-path="service-state.html">
+            
+                <a href="service-state.html">
+            
+                    
+                    Service State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.10" data-path="entitlements.html">
+            
+                <a href="entitlements.html">
+            
+                    
+                    Entitlements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../winrm/">
+            
+                <a href="../winrm/">
+            
+                    
+                    Windows Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    Testing YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../chef/">
+            
+                <a href="../chef/">
+            
+                    
+                    Chef in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../salt/">
+            
+                <a href="../salt/">
+            
+                    
+                    Salt in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../advanced-example.html">
+            
+                <a href="../advanced-example.html">
+            
+                    
+                    YAML Blueprint Advanced Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../blueprinting-tips.html">
+            
+                <a href="../blueprinting-tips.html">
+            
+                    
+                    Blueprinting Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../../blueprint/yaml-reference.md">
+            
+                <span>
+            
+                    
+                    YAML Blueprint Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../locations/">
+            
+                <a href="../../locations/">
+            
+                    
+                    Deploying Blueprint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../locations/">
+            
+                <a href="../../locations/#clouds">
+            
+                    
+                    Clouds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../locations/">
+            
+                <a href="../../locations/#amazon-web-services-aws">
+            
+                    
+                    Amazon Web Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../locations/">
+            
+                <a href="../../locations/#azure-compute-arm">
+            
+                    
+                    Azure Compute ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../locations/">
+            
+                <a href="../../locations/#azure-compute-classic">
+            
+                    
+                    Azure Compute Classic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../locations/">
+            
+                <a href="../../locations/#apache-cloudstack">
+            
+                    
+                    Apache CloudStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../locations/">
+            
+                <a href="../../locations/#google-compute-engine-gce">
+            
+                    
+                    Google Compute Engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../locations/">
+            
+                <a href="../../locations/#ibm-softlayer">
+            
+                    
+                    IBM Softlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../locations/">
+            
+                <a href="../../locations/#openstack">
+            
+                    
+                    OpenStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../locations/">
+            
+                <a href="../../locations/#named-locations">
+            
+                    
+                    Named Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../locations/">
+            
+                <a href="../../locations/#inheritance-and-named-locations">
+            
+                    
+                    Provisioned Machine Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../locations/">
+            
+                <a href="../../locations/#byon">
+            
+                    
+                    BYON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../locations/">
+            
+                <a href="../../locations/#ssh-keys">
+            
+                    
+                    SSH Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../../locations/">
+            
+                <a href="../../locations/#localhost">
+            
+                    
+                    Localhost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../../locations/">
+            
+                <a href="../../locations/#location-customizers">
+            
+                    
+                    Location Customizers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../../locations/">
+            
+                <a href="../../locations/#customizing-cloud-security-groups">
+            
+                    
+                    Customizing Cloud Security Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../../locations/">
+            
+                <a href="../../locations/#specialized-locations">
+            
+                    
+                    Specialized Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Reference Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../ops/production-installation.html">
+            
+                <a href="../../ops/production-installation.html">
+            
+                    
+                    Production Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../ops/starting-stopping-monitoring.html">
+            
+                <a href="../../ops/starting-stopping-monitoring.html">
+            
+                    
+                    Starting, Stopping and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../ops/server-cli-reference.html">
+            
+                <a href="../../ops/server-cli-reference.html">
+            
+                    
+                    Server CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../ops/cli/">
+            
+                <a href="../../ops/cli/">
+            
+                    
+                    Client CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" >
+            
+                <span>
+            
+                    
+                    GUI Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../../ops/gui/running.html">
+            
+                <a href="../../ops/gui/running.html">
+            
+                    
+                    Launching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../../ops/gui/blueprints.html">
+            
+                <a href="../../ops/gui/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../../ops/gui/managing.html">
+            
+                <a href="../../ops/gui/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../../ops/gui/policies.html">
+            
+                <a href="../../ops/gui/policies.html">
+            
+                    
+                    Using Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../ops/rest.html">
+            
+                <a href="../../ops/rest.html">
+            
+                    
+                    REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../ops/configuration/">
+            
+                <a href="../../ops/configuration/">
+            
+                    
+                    Brooklyn Configuration and Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../ops/persistence/">
+            
+                <a href="../../ops/persistence/">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../ops/high-availability/">
+            
+                <a href="../../ops/high-availability/">
+            
+                    
+                    High Availability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../../ops/high-availability/high-availability-supplemental.html">
+            
+                <a href="../../ops/high-availability/high-availability-supplemental.html">
+            
+                    
+                    Configuring HA - an example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../ops/logging.html">
+            
+                <a href="../../ops/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../ops/externalized-configuration.html">
+            
+                <a href="../../ops/externalized-configuration.html">
+            
+                    
+                    Externalized Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../ops/requirements.html">
+            
+                <a href="../../ops/requirements.html">
+            
+                    
+                    Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../ops/upgrade.html">
+            
+                <a href="../../ops/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../../ops/security-guidelines.html">
+            
+                <a href="../../ops/security-guidelines.html">
+            
+                    
+                    Security Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../../ops/troubleshooting/">
+            
+                <a href="../../ops/troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../misc/">
+            
+                <a href="../../misc/">
+            
+                    
+                    Other 0.12.0 Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/developers/code/">
+            
+                    
+                    Get the Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../dev/env/maven-build.html">
+            
+                <a href="../../dev/env/maven-build.html">
+            
+                    
+                    Maven Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../dev/env/ide/">
+            
+                <a href="../../dev/env/ide/">
+            
+                    
+                    IDE Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../dev/code/structure.html">
+            
+                <a href="../../dev/code/structure.html">
+            
+                    
+                    Code Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../dev/code/tests.html">
+            
+                <a href="../../dev/code/tests.html">
+            
+                    
+                    Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../dev/code/licensing.html">
+            
+                <a href="../../dev/code/licensing.html">
+            
+                    
+                    License Considerations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../dev/tips/">
+            
+                <a href="../../dev/tips/">
+            
+                    
+                    Miscellaneous Tips and Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../dev/tips/logging.html">
+            
+                <a href="../../dev/tips/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../dev/tips/debugging-remote-brooklyn.html">
+            
+                <a href="../../dev/tips/debugging-remote-brooklyn.html">
+            
+                    
+                    Brooklyn Remote Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" >
+            
+                <a target="_blank" href="http://github.com/apache/brooklyn">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/v/latest/misc/javadoc">
+            
+                    
+                    Javadoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/meta/versions.html">
+            
+                    
+                    Versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/documentation/other-docs.html">
+            
+                    
+                    Other Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Custom Entity Development</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>This section details how to create new custom application components or groups as brooklyn entities.</p>
+<h2 id="the-entity-lifecycle">The Entity Lifecycle</h2>
+<ul>
+<li>Importance of serialization, ref to How mananagement works</li>
+<li>Parents and Membership (groups)</li>
+</ul>
+<h2 id="what-to-extend----implementation-classes">What to Extend -- Implementation Classes</h2>
+<ul>
+<li><p>entity implementation class hierarchy</p>
+<ul>
+<li><code>SoftwareProcess</code> as the main starting point for base entities (corresponding to software processes),
+and subclasses such as <code>VanillaJavaApp</code></li>
+<li><code>DynamicCluster</code> (multiple instances of the same entity in a location) and 
+<code>DynamicFabric</code> (clusters in multiple location) for automatically creating many instances,
+supplied with an <code>EntityFactory</code> (e.g. <code>BaseEntityFactory</code>) in the <code>factory</code> flag</li>
+<li><code>AbstractGroup</code> for collecting entities which are parented elsewhere in the hierachy</li>
+<li><code>AbstractEntity</code> if nothing else fits</li>
+</ul>
+</li>
+<li><p>traits (mixins, otherwise known as interfaces with statics) to define available config keys, sensors, and effectors;
+  and conveniences e.g. <code>StartableMethods.{start,stop}</code> is useful for entities which implement <code>Startable</code></p>
+</li>
+<li><p>the <code>Entities</code> class provides some generic convenience methods; worth looking at it for any work you do</p>
+</li>
+</ul>
+<p>A common lifecycle pattern is that the <code>start</code> effector (see more on effectors below) is invoked, 
+often delegating either to a driver (for software processes) or children entities (for clusters etc).</p>
+<h2 id="configuration">Configuration</h2>
+<!---
+TODO: why to use config?
+-->
+<ul>
+<li><p>AttributeSensorAndConfigKey fields can be automatically converted for <code>SoftwareProcess</code>. 
+This is done in <code>preStart()</code>. This must be done manually if required for other entities,
+often with <code>ConfigToAttributes.apply(this)</code>.</p>
+</li>
+<li><p>Setting ports is a special challenge, and one which the <code>AttributeSensorAndConfigKey</code> is particularly helpful for,
+cf <code>PortAttributeSensorAndConfigKey</code> (a subclass),
+causing ports automatically get assigned from a range and compared with the target <code>PortSupplied</code> location.</p>
+<p>Syntax is as described in the PortRange interface. For example, &quot;8080-8099,8800+&quot; will try port 8080, try sequentially through 8099, then try from 8800 until all ports are exhausted.</p>
+<p>This is particularly useful on a contended machine (localhost!). Like ordinary configuration, the config is done by the user, and the actual port used is reported back as a sensor on the entity.</p>
+</li>
+<li><p>Validation of config values can be applied by supplying a <code>Predicate</code> to the <code>constraint</code> of a ConfigKey builder.
+Constraints are tested after an entity is initialised and before an entity managed.
+Useful predicates include:</p>
+<ul>
+<li><code>StringPredicates.isNonBlank</code>: require that a String key is neither null nor empty.</li>
+<li><code>ResourcePredicates.urlExists</code>: require that a URL that is loadable by Brooklyn. Use this to
+confirm that necessary resources are available to the entity.</li>
+<li><code>Predicates.in</code>: require one of a fixed set of values.</li>
+<li><code>Predicates.containsPattern</code>: require that a value match a regular expression pattern.</li>
+</ul>
+<p>An important caveat is that only constraints on config keys that are on an entity&apos;s type hierarchy can be
+tested automatically. Brooklyn has no knowledge of the true type of other keys until they are retrieved with a
+<code>config().get(key)</code>.</p>
+</li>
+</ul>
+<h2 id="implementing-sensors">Implementing Sensors</h2>
+<ul>
+<li>e.g. HTTP, JMX</li>
+</ul>
+<p>Sensors at base entities are often retrieved by feeds which poll the entity&apos;s corresponding instance in the real world.
+The <code>SoftwareProcess</code> provides a good example; by subclassing it and overriding the <code>connectSensors()</code> method
+you could wire some example sensors using the following: </p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connectSensors</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">super</span>.connectSensors()
+
+    httpFeed = HttpFeed.builder()
+            .entity(<span class="hljs-keyword">this</span>)
+            .period(<span class="hljs-number">200</span>)
+            .baseUri(mgmtUrl)
+            .poll(<span class="hljs-keyword">new</span> HttpPollConfig&lt;Boolean&gt;(SERVICE_UP)
+                    .onSuccess(HttpValueFunctions.responseCodeEquals(<span class="hljs-number">200</span>))
+                    .onError(Functions.constant(<span class="hljs-keyword">false</span>)))
+            .poll(<span class="hljs-keyword">new</span> HttpPollConfig&lt;Integer&gt;(REQUEST_COUNT)
+                    .onSuccess(HttpValueFunctions.jsonContents(<span class="hljs-string">&quot;requestCount&quot;</span>, Integer.class)))
+            .build();
+}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">disconnectSensors</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">super</span>.disconnectSensors();
+    <span class="hljs-keyword">if</span> (httpFeed != <span class="hljs-keyword">null</span>) httpFeed.stop();
+}
+</code></pre>
+<p>In this example (a simplified version of <code>JBoss7Server</code>), the url returns metrics in JSON. 
+We report the entity as up if we get back an http response code of 200, or down if any other response code or exception.
+We retrieve the request count from the response body, and convert it to an integer.</p>
+<p>Note the first line (<code>super.connectSensors()</code>); as one descends into specific convenience subclasses (such as for Java web-apps), the work done by the parent class&apos;s overridden methods may be relevant, and will want to be invoked or even added to a resulting list.</p>
+<p>For some sensors, and often at compound entities, the values are obtained by monitoring values of other sensors on the same (in the case of a rolling average) or different (in the case of the average of children nodes) entities. This is achieved by policies, described below.</p>
+<h2 id="implementing-effectors">Implementing Effectors</h2>
+<p>The <code>Entity</code> interface defines the sensors and effectors available. The entity class provides 
+wiring for the sensors, and the effector implementations. In simple cases it may be straightforward 
+to capture the behaviour of the effectors in a simple methods.
+For example deploying a WAR to a cluster can be done as follows:</p>
+<p><em>This section is not complete. Feel free to <a href="https://github.com/apache/brooklyn-docs" target="_blank">fork</a> the docs and lend a hand.</em></p>
+<!---
+TODO show an effector which recurses across children
+-->
+<p>For some entities, specifically base entities, the implementation of effectors might need other tools (such as SSH), and may vary by location, so having a single implementation is not appropriate.</p>
+<p>The problem of multiple inheritance (e.g. SSH functionality and entity inheritance) and multiple implementations (e.g. SSH versus Windows) is handled in brooklyn using delegates called <em>drivers</em>. </p>
+<p>In the implementations of <code>JavaWebApp</code> entities, the behaviour which the entity always does is captured in the entity class (for example, breaking deployment of multiple WARs into atomic actions), whereas implementations which is specific to a particular entity and driver (e.g. using scp to copy the WARs to the right place and install them, which of course is different among appservers, or using an HTTP or JMX management API, again where details vary between appservers) is captured in a driver class.</p>
+<p>Routines which are convenient for specific drivers can then be inherited in the driver class hierarchy. For example, when passing JMX environment variables to Java over SSH, <code>JavaSoftwareProcessSshDriver</code> extends <code>AbstractSoftwareProcessSshDriver</code> and parents <code>JBoss7SshDriver</code>.</p>
+<!---
+TODO more drivers such as jmx, etc are planned
+-->
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Unit tests can make use of <code>SimulatedLocation</code> and <code>TestEntity</code>, and can extend <code>BrooklynAppUnitTestSupport</code>.</li>
+<li>Integration tests and use a <code>LocalhostMachineProvisioningLocation</code>, and can also extend <code>BrooklynAppUnitTestSupport</code>.</li>
+</ul>
+<p><a name="SoftwareProcess-lifecycle"></a></p>
+<h2 id="softwareprocess-lifecycle">SoftwareProcess Lifecycle</h2>
+<p><code>SoftwareProcess</code> is the common super-type of most integration components (when implementing in Java).</p>
+<p>See <code>JBoss7Server</code> and <code>MySqlNode</code> for exemplars.</p>
+<p>The methods called in a <code>SoftwareProcess</code> entity&apos;s lifecycle are described below. The most important steps are shown in bold (when writing a new entity, these are the methods most often implemented).</p>
+<ul>
+<li><p>Initial creation (via <code>EntitySpec</code> or YAML):</p>
+<ul>
+<li><strong>no-arg constructor</strong></li>
+<li><strong>init</strong></li>
+<li>add locations</li>
+<li>apply initializers</li>
+<li>add enrichers</li>
+<li>add policies</li>
+<li>add children</li>
+<li>manages entity (so is discoverable by other entities)</li>
+</ul>
+</li>
+<li><p>Start:</p>
+<ul>
+<li>provisions new machine, if the location is a <code>MachineProvisioningLocation</code></li>
+<li>creates new driver<ul>
+<li><strong>calls <code>getDriverInterface</code></strong></li>
+<li>Infers the concrete driver class from the machine-type, 
+e.g. by default it adds &quot;Ssh&quot; before the word &quot;Driver&quot; in &quot;JBoss7Driver&quot;.</li>
+<li>instantiates the driver, <strong>calling the constructor</strong> to pass in the entity itself and the machine location</li>
+</ul>
+</li>
+<li>sets attributes from config (e.g. for ports being used)</li>
+<li>calls <code>entity.preStart()</code></li>
+<li>calls <code>driver.start()</code>, which:<ul>
+<li>runs pre-install command (see config key <code>pre.install.command</code>)</li>
+<li>uploads install resources (see config keys <code>files.install</code> and <code>templates.install</code>)</li>
+<li><strong>calls <code>driver.install()</code></strong></li>
+<li>runs post-install command (see config key <code>post.install.command</code>)</li>
+<li><strong>calls <code>driver.customize()</code></strong></li>
+<li>uploads runtime resources (see config keys <code>files.runtime</code> and <code>templates.runtime</code>)</li>
+<li>runs pre-launch command (see config key <code>pre.launch.command</code>)</li>
+<li><strong>calls <code>driver.launch()</code></strong></li>
+<li>runs post-launch command (see config key <code>post.launch.command</code>)</li>
+<li>calls <code>driver.postLaunch()</code></li>
+</ul>
+</li>
+<li>calls <code>entity.postDriverStart()</code>, which:<ul>
+<li>calls <code>enity.waitForEntityStart()</code> - <strong>waits for <code>driver.isRunning()</code> to report true</strong></li>
+</ul>
+</li>
+<li><strong>calls <code>entity.connectSensors()</code></strong></li>
+<li>calls <code>entity.waitForServicUp()</code></li>
+<li>calls <code>entity.postStart()</code></li>
+</ul>
+</li>
+<li><p>Restart:</p>
+<ul>
+<li>If restarting machine...<ul>
+<li>calls <code>entity.stop()</code>, with <code>stopMachine</code> set to true.</li>
+<li>calls start</li>
+<li>restarts children (if configured to do so)</li>
+</ul>
+</li>
+<li>Else (i.e. not restarting machine)...<ul>
+<li>calls <code>entity.preRestart()</code></li>
+<li>calls <code>driver.restart()</code><ul>
+<li><strong>calls <code>driver.stop()</code></strong></li>
+<li><strong>calls <code>driver.launch()</code></strong></li>
+<li>calls <code>driver.postLaunch()</code></li>
+</ul>
+</li>
+<li>restarts children (if configured to do so)</li>
+<li>calls <code>entity.postDriverStart()</code>, which:<ul>
+<li>calls <code>enity.waitForEntityStart()</code> - <strong>polls <code>driver.isRunning()</code></strong>, waiting for true</li>
+</ul>
+</li>
+<li>calls <code>entity.waitForServicUp()</code></li>
+<li>calls <code>entity.postStart()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Stop:</p>
+<ul>
+<li>calls <code>entity.preStopConfirmCustom()</code> - aborts if exception.</li>
+<li>calls <code>entity.preStop()</code></li>
+<li>stops the process:<ul>
+<li>stops children (if configured to do so)</li>
+<li><strong>calls <code>driver.stop()</code></strong></li>
+</ul>
+</li>
+<li>stops the machine (if configured to do so)</li>
+<li>calls <code>entity.postStop()</code></li>
+</ul>
+</li>
+<li><p>Rebind (i.e. when Brooklyn is restarted):</p>
+<ul>
+<li><strong>no-arg constructor</strong></li>
+<li>reconstitutes entity (e.g. setting config and attributes)</li>
+<li>If entity was running...<ul>
+<li>calls <code>entity.rebind()</code>; if previously started then:<ul>
+<li>creates the driver (same steps as for start)</li>
+<li>calls <code>driver.rebind()</code></li>
+<li><strong>calls <code>entity.connectSensors()</code></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>attaches policies, enrichers and persisted feeds</li>
+<li>manages the entity (so is discoverable by other entities)</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Custom Entity Development","layout":"website-normal","level":"1.5.13.8","depth":3,"next":{"title":"Service State","level":"1.5.13.9","depth":3,"path":"blueprints/java/service-state.md","ref":"blueprints/java/service-state.md","articles":[]},"previous":{"title":"Writing an Entity","level":"1.5.13.7","depth":3,"path":"blueprints/java/entity.md","ref":"blueprints/java/entity.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-highlight","theme-api"],"root":"./guide","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-highlight":{"extensionToLanguage":{"yml":"yaml","yaml":"yaml","bom":"yaml","java":"java"}},"theme-api":{"languages":[{"lang":"vagrant","name":"Vagrant","default":true},{"lang":"centos","name":"CentOS / RHEL 7"},{"lang":"ubuntu","name":"Ubuntu / Debian"},{"lang":"osx","name":"OSX / Linux"},{"lang":"windows","name":"Windows"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"path":{"style":"/style","guide":"/guide","website":"/website","v":"/v"},"pdf-default-versioned-url-subpath":"/v/0.11.0","brooklyn-stable-version":"0.11.0","sass":{"sass_dir":"style/css"},"markdown":"kramdown","brooklyn-version":"0.13.0-SNAPSHOT","url_root":"http://0.0.0.0:4000","root_menu_page":"/website/index.md","encoding":"utf-8","dependency_mode":"local","dependency_urls":{"bootstrap.css":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css","bootstrap.js":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js","jquery.js":"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"},"exclude":["/Gemfile*","/README.md"],"pdf-default-base-url":"http://brooklyn.apache.org","pdf-rewrite-prefixes":{"/guide":"/v/0.11.0","/website":""},"brooklyn-snapshot-git-branch":"master"},"gitbook":"*"},"file":{"path":"blueprints/java/entities.md","mtime":"2017-10-06T11:31:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-06T11:32:19.198Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

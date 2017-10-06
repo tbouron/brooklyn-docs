@@ -1,0 +1,1766 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Maven Build · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ide/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../start/running.html">
+            
+                <a href="../../start/running.html">
+            
+                    
+                    Running Apache Brooklyn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../start/blueprints.html">
+            
+                <a href="../../start/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../start/managing.html">
+            
+                <a href="../../start/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../start/policies.html">
+            
+                <a href="../../start/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../start/concept-quickstart.html">
+            
+                <a href="../../start/concept-quickstart.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../misc/download.html">
+            
+                <a href="../../misc/download.html">
+            
+                    
+                    Downloads
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Brooklyn Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../concepts/entities.html">
+            
+                <a href="../../concepts/entities.html">
+            
+                    
+                    Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../concepts/application-parent-membership.html">
+            
+                <a href="../../concepts/application-parent-membership.html">
+            
+                    
+                    Application, Parent and Membership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../concepts/configuration-sensor-effectors.html">
+            
+                <a href="../../concepts/configuration-sensor-effectors.html">
+            
+                    
+                    Configuration, Sensors and Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../concepts/lifecycle-managementcontext.html">
+            
+                <a href="../../concepts/lifecycle-managementcontext.html">
+            
+                    
+                    Lifecycle and ManagementContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../concepts/dependent-configuration.html">
+            
+                <a href="../../concepts/dependent-configuration.html">
+            
+                    
+                    Dependent Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../concepts/location.html">
+            
+                <a href="../../concepts/location.html">
+            
+                    
+                    Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../concepts/policies.html">
+            
+                <a href="../../concepts/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../concepts/execution.html">
+            
+                <a href="../../concepts/execution.html">
+            
+                    
+                    Execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../concepts/stop-start-restart-behaviour.html">
+            
+                <a href="../../concepts/stop-start-restart-behaviour.html">
+            
+                    
+                    Stop/start/restart behaviour
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../blueprints/">
+            
+                <a href="../../blueprints/">
+            
+                    
+                    Writing Blueprints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../blueprints/creating-yaml.html">
+            
+                <a href="../../blueprints/creating-yaml.html">
+            
+                    
+                    Creating YAML Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../blueprints/entity-configuration.html">
+            
+                <a href="../../blueprints/entity-configuration.html">
+            
+                    
+                    Entity Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../blueprints/setting-locations.html">
+            
+                <a href="../../blueprints/setting-locations.html">
+            
+                    
+                    Setting Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../blueprints/configuring-vms.html">
+            
+                <a href="../../blueprints/configuring-vms.html">
+            
+                    
+                    Configuring VMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../blueprints/multiple-services.html">
+            
+                <a href="../../blueprints/multiple-services.html">
+            
+                    
+                    Multiple Services and Dependency Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../blueprints/custom-entities.html">
+            
+                <a href="../../blueprints/custom-entities.html">
+            
+                    
+                    Custom Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../blueprints/catalog/">
+            
+                <a href="../../blueprints/catalog/">
+            
+                    
+                    Catalog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../blueprints/clusters.html">
+            
+                <a href="../../blueprints/clusters.html">
+            
+                    
+                    Clusters, Specs, and Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../blueprints/enrichers.html">
+            
+                <a href="../../blueprints/enrichers.html">
+            
+                    
+                    Enrichers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../blueprints/policies.html">
+            
+                <a href="../../blueprints/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../blueprints/effectors.html">
+            
+                <a href="../../blueprints/effectors.html">
+            
+                    
+                    Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../blueprints/clusters-and-policies.html">
+            
+                <a href="../../blueprints/clusters-and-policies.html">
+            
+                    
+                    Clusters and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../blueprints/java/">
+            
+                <a href="../../blueprints/java/">
+            
+                    
+                    Java Entities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.13.1" data-path="../../blueprints/java/archetype.html">
+            
+                <a href="../../blueprints/java/archetype.html">
+            
+                    
+                    Creating from a Maven Archetype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.2" data-path="../../blueprints/java/defining-and-deploying.html">
+            
+                <a href="../../blueprints/java/defining-and-deploying.html">
+            
+                    
+                    Defining and Deploying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.3" data-path="../../blueprints/java/bundle-dependencies.html">
+            
+                <a href="../../blueprints/java/bundle-dependencies.html">
+            
+                    
+                    Handling Bundle Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.4" data-path="../../blueprints/java/topology-dependencies.html">
+            
+                <a href="../../blueprints/java/topology-dependencies.html">
+            
+                    
+                    Topology, Dependencies, and Management Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.5" data-path="../../blueprints/java/common-usage.html">
+            
+                <a href="../../blueprints/java/common-usage.html">
+            
+                    
+                    Common Classes and Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.6" data-path="../../blueprints/java/feeds.html">
+            
+                <a href="../../blueprints/java/feeds.html">
+            
+                    
+                    Feeds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.7" data-path="../../blueprints/java/entity.html">
+            
+                <a href="../../blueprints/java/entity.html">
+            
+                    
+                    Writing an Entity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.8" data-path="../../blueprints/java/entities.html">
+            
+                <a href="../../blueprints/java/entities.html">
+            
+                    
+                    Custom Entity Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.9" data-path="../../blueprints/java/service-state.html">
+            
+                <a href="../../blueprints/java/service-state.html">
+            
+                    
+                    Service State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.10" data-path="../../blueprints/java/entitlements.html">
+            
+                <a href="../../blueprints/java/entitlements.html">
+            
+                    
+                    Entitlements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../blueprints/winrm/">
+            
+                <a href="../../blueprints/winrm/">
+            
+                    
+                    Windows Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../blueprints/test/">
+            
+                <a href="../../blueprints/test/">
+            
+                    
+                    Testing YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../../blueprints/ansible/">
+            
+                <a href="../../blueprints/ansible/">
+            
+                    
+                    Ansible in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../../blueprints/chef/">
+            
+                <a href="../../blueprints/chef/">
+            
+                    
+                    Chef in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../../blueprints/salt/">
+            
+                <a href="../../blueprints/salt/">
+            
+                    
+                    Salt in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../../blueprints/advanced-example.html">
+            
+                <a href="../../blueprints/advanced-example.html">
+            
+                    
+                    YAML Blueprint Advanced Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../../blueprints/blueprinting-tips.html">
+            
+                <a href="../../blueprints/blueprinting-tips.html">
+            
+                    
+                    Blueprinting Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../../blueprint/yaml-reference.md">
+            
+                <span>
+            
+                    
+                    YAML Blueprint Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../locations/">
+            
+                <a href="../../locations/">
+            
+                    
+                    Deploying Blueprint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../locations/">
+            
+                <a href="../../locations/#clouds">
+            
+                    
+                    Clouds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../locations/">
+            
+                <a href="../../locations/#amazon-web-services-aws">
+            
+                    
+                    Amazon Web Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../locations/">
+            
+                <a href="../../locations/#azure-compute-arm">
+            
+                    
+                    Azure Compute ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../locations/">
+            
+                <a href="../../locations/#azure-compute-classic">
+            
+                    
+                    Azure Compute Classic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../locations/">
+            
+                <a href="../../locations/#apache-cloudstack">
+            
+                    
+                    Apache CloudStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../locations/">
+            
+                <a href="../../locations/#google-compute-engine-gce">
+            
+                    
+                    Google Compute Engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../locations/">
+            
+                <a href="../../locations/#ibm-softlayer">
+            
+                    
+                    IBM Softlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../locations/">
+            
+                <a href="../../locations/#openstack">
+            
+                    
+                    OpenStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../locations/">
+            
+                <a href="../../locations/#named-locations">
+            
+                    
+                    Named Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../locations/">
+            
+                <a href="../../locations/#inheritance-and-named-locations">
+            
+                    
+                    Provisioned Machine Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../locations/">
+            
+                <a href="../../locations/#byon">
+            
+                    
+                    BYON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../locations/">
+            
+                <a href="../../locations/#ssh-keys">
+            
+                    
+                    SSH Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../../locations/">
+            
+                <a href="../../locations/#localhost">
+            
+                    
+                    Localhost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../../locations/">
+            
+                <a href="../../locations/#location-customizers">
+            
+                    
+                    Location Customizers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../../locations/">
+            
+                <a href="../../locations/#customizing-cloud-security-groups">
+            
+                    
+                    Customizing Cloud Security Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../../locations/">
+            
+                <a href="../../locations/#specialized-locations">
+            
+                    
+                    Specialized Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Reference Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../ops/production-installation.html">
+            
+                <a href="../../ops/production-installation.html">
+            
+                    
+                    Production Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../ops/starting-stopping-monitoring.html">
+            
+                <a href="../../ops/starting-stopping-monitoring.html">
+            
+                    
+                    Starting, Stopping and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../ops/server-cli-reference.html">
+            
+                <a href="../../ops/server-cli-reference.html">
+            
+                    
+                    Server CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../ops/cli/">
+            
+                <a href="../../ops/cli/">
+            
+                    
+                    Client CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" >
+            
+                <span>
+            
+                    
+                    GUI Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../../ops/gui/running.html">
+            
+                <a href="../../ops/gui/running.html">
+            
+                    
+                    Launching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../../ops/gui/blueprints.html">
+            
+                <a href="../../ops/gui/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../../ops/gui/managing.html">
+            
+                <a href="../../ops/gui/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../../ops/gui/policies.html">
+            
+                <a href="../../ops/gui/policies.html">
+            
+                    
+                    Using Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../ops/rest.html">
+            
+                <a href="../../ops/rest.html">
+            
+                    
+                    REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../ops/configuration/">
+            
+                <a href="../../ops/configuration/">
+            
+                    
+                    Brooklyn Configuration and Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../ops/persistence/">
+            
+                <a href="../../ops/persistence/">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../ops/high-availability/">
+            
+                <a href="../../ops/high-availability/">
+            
+                    
+                    High Availability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../../ops/high-availability/high-availability-supplemental.html">
+            
+                <a href="../../ops/high-availability/high-availability-supplemental.html">
+            
+                    
+                    Configuring HA - an example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../ops/logging.html">
+            
+                <a href="../../ops/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../ops/externalized-configuration.html">
+            
+                <a href="../../ops/externalized-configuration.html">
+            
+                    
+                    Externalized Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../ops/requirements.html">
+            
+                <a href="../../ops/requirements.html">
+            
+                    
+                    Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../ops/upgrade.html">
+            
+                <a href="../../ops/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../../ops/security-guidelines.html">
+            
+                <a href="../../ops/security-guidelines.html">
+            
+                    
+                    Security Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../../ops/troubleshooting/">
+            
+                <a href="../../ops/troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../misc/">
+            
+                <a href="../../misc/">
+            
+                    
+                    Other 0.12.0 Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/developers/code/">
+            
+                    
+                    Get the Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="maven-build.html">
+            
+                <a href="maven-build.html">
+            
+                    
+                    Maven Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ide/">
+            
+                <a href="ide/">
+            
+                    
+                    IDE Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../code/structure.html">
+            
+                <a href="../code/structure.html">
+            
+                    
+                    Code Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../code/tests.html">
+            
+                <a href="../code/tests.html">
+            
+                    
+                    Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../code/licensing.html">
+            
+                <a href="../code/licensing.html">
+            
+                    
+                    License Considerations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../tips/">
+            
+                <a href="../tips/">
+            
+                    
+                    Miscellaneous Tips and Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../tips/logging.html">
+            
+                <a href="../tips/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../tips/debugging-remote-brooklyn.html">
+            
+                <a href="../tips/debugging-remote-brooklyn.html">
+            
+                    
+                    Brooklyn Remote Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" >
+            
+                <a target="_blank" href="http://github.com/apache/brooklyn">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/v/latest/misc/javadoc">
+            
+                    
+                    Javadoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/meta/versions.html">
+            
+                    
+                    Versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/documentation/other-docs.html">
+            
+                    
+                    Other Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Maven Build</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="the-basics">The Basics</h2>
+<p>The full build requires the following software to be installed:</p>
+<ul>
+<li>Maven (v3.1+)</li>
+<li>Java (v1.7+, 1.8 recommended)</li>
+<li>Go (v1.6+) [if building the CLI client]</li>
+<li>rpm tools [if building the dist packages for those platforms]</li>
+</ul>
+<p>With these in place, you should be able to build everything with a:</p>
+<pre><code class="lang-bash">% mvn clean install
+</code></pre>
+<p>Alternatively you can build most things with just Java and Maven installed using:</p>
+<pre><code class="lang-bash">mvn clean install -Dno-go-client -Dno-rpm`
+</code></pre>
+<p>Other tips:</p>
+<ul>
+<li><p>Add <code>-DskipTests</code> to skip tests (builds much faster, but not as safe)</p>
+</li>
+<li><p>You may need more JVM memory, e.g. at the command-line (or in <code>.profile</code>):</p>
+<p><code>export MAVEN_OPTS=&quot;-Xmx1024m -Xms512m&quot;</code></p>
+</li>
+<li><p>Run <code>-PIntegration</code> to run integration tests, or <code>-PLive</code> to run live tests
+(<a href="../code/tests.html">tests described here</a>)</p>
+</li>
+<li><p>You may need to install <code>rpm</code> package to build RPM packages: <code>brew install rpm</code> for Mac OS, <code>apt-get install rpm</code> for Ubuntu, <code>yum install rpm</code> for Centos/RHEL.
+On Mac OS you may also need to set <code>%_tmppath /tmp</code> in <code>~/.rpmmacros</code>.</p>
+</li>
+<li><p>If you&apos;re looking at the maven internals, note that many of the settings are inherited from parent projects (see for instance <code>brooklyn-server/parent/pom.xml</code>)</p>
+</li>
+<li><p>For tips on building within various IDEs, look <a href="ide">here</a>.</p>
+</li>
+</ul>
+<h2 id="when-the-rat-bites">When the RAT Bites</h2>
+<p>We use RAT to ensure that all files are compliant to Apache standards.  Most of the time you shouldn&apos;t see it or need to know about it, but if it detects a violation, you&apos;ll get a message such as:</p>
+<pre><code>[ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin:0.10:check (default) on project brooklyn-parent: Too many files with unapproved license: 1 See RAT report in: /Users/alex/Data/cloudsoft/dev/gits/brooklyn/target/rat.txt -&gt; [Help 1]
+</code></pre><p>If there&apos;s a problem, see the file <code>rat.txt</code> in the <code>target</code> directory of the failed project.  (Maven will show you this link in its output.)</p>
+<p>Often the problem is one of the following:</p>
+<ul>
+<li><p>You&apos;ve added a file which requires the license header but doesn&apos;t have it</p>
+<p><strong>Resolution:</strong>  Simply copy the header from another file</p>
+</li>
+<li><p>You&apos;ve got some temporary files which RAT things should have headers</p>
+<p><strong>Resolution:</strong>  Move the files away, add headers, or turn off RAT (see below)</p>
+</li>
+<li><p>The project structure has changed and you have stale files (e.g. in a <code>target</code> directory)</p>
+<p><strong>Resolution:</strong>  Remove the stale files, e.g. with <code>git clean -df</code> (and if needed a <code>find . -name target -prune -exec rm -rf {} \;</code> to delete folders named <code>target</code>)</p>
+</li>
+</ul>
+<p>To disable RAT checking on a build, set <code>rat.ignoreErrors</code>, e.g. <code>mvn -Drat.ignoreErrors=true clean install</code>.  (But note you will need RAT to pass in order for a PR to be accepted!)</p>
+<p>If there is a good reason that a file, pattern, or directory should be permanently ignored, that is easy to add inside the root <code>pom.xml</code>.</p>
+<h2 id="other-handy-hints">Other Handy Hints</h2>
+<ul>
+<li><p>On some <strong>Ubuntu</strong> (e.g. 10.4 LTS) maven v3 is not currently available from the repositories.
+Some instructions for installing at are <a href="http://superuser.com/questions/298062/how-do-i-install-maven-3" target="_blank">at superuser.com</a>.</p>
+</li>
+<li><p>The <strong>mvnf</strong> script 
+(<a href="https://gist.github.com/2241800" target="_blank">get the gist here</a>) 
+simplifies building selected projects, so if you just change something in <code>software-webapp</code> 
+and then want to re-run the examples you can do:</p>
+<p><code>examples/simple-web-cluster% mvnf ../../{software/webapp,usage/all}</code> </p>
+</li>
+</ul>
+<h2 id="appendix-sample-output">Appendix: Sample Output</h2>
+<p>A healthy build will look something like the following,
+including a few warnings (which we have looked into and
+understand to be benign and hard to get rid of them,
+although we&apos;d love to if anyone can help!):</p>
+<pre><code class="lang-bash">% mvn clean install
+[INFO] Scanning <span class="hljs-keyword">for</span> projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Brooklyn REST JavaScript Web GUI
+[INFO] Brooklyn Server Root
+[INFO] Brooklyn Parent Project
+[INFO] Brooklyn Test Support Utilities
+[INFO] Brooklyn Logback Includable Configuration
+[INFO] Brooklyn Common Utilities
+
+...
+
+[WARNING] Ignoring project <span class="hljs-built_in">type</span> war - supportedProjectTypes = [jar]
+
+...
+
+[WARNING] We have a duplicate org/xmlpull/v1/XmlPullParser.class <span class="hljs-keyword">in</span> ~/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+
+...
+
+[INFO] &#x2014; maven-assembly-plugin:2.3:single (build-distribution-dir) @ brooklyn-dist &#x2014;
+[INFO] Reading assembly descriptor: src/main/config/build-distribution-dir.xml
+{% comment %}BROOKLYN_VERSION{% endcomment %}[WARNING] Cannot include project artifact: io.brooklyn:brooklyn-dist:jar:0.13.0-SNAPSHOT; it doesn<span class="hljs-string">&apos;t have an associated file or directory.
+[INFO] Copying files to ~/repos/apache/brooklyn/usage/dist/target/brooklyn-dist
+[WARNING] Assembly file: ~/repos/apache/brooklyn/usage/dist/target/brooklyn-dist is not a regular file (it may be a directory). It cannot be attached to the project build for installation or deployment.
+
+...
+
+[INFO] &#x2014; maven-assembly-plugin:2.3:single (build-distribution-archive) @ brooklyn-dist &#x2014;
+[INFO] Reading assembly descriptor: src/main/config/build-distribution-archive.xml
+{% comment %}BROOKLYN_VERSION{% endcomment %}[WARNING] Cannot include project artifact: io.brooklyn:brooklyn-dist:jar:0.13.0-SNAPSHOT; it doesn&apos;</span>t have an associated file or directory.
+{% comment %}BROOKLYN_VERSION{% endcomment %}[INFO] Building tar: /Users/aled/repos/apache/brooklyn/usage/dist/target/brooklyn-0.13.0-SNAPSHOT-dist.tar.gz
+{% comment %}BROOKLYN_VERSION{% endcomment %}[WARNING] Cannot include project artifact: io.brooklyn:brooklyn-dist:jar:0.13.0-SNAPSHOT; it doesn<span class="hljs-string">&apos;t have an associated file or directory.
+
+...
+
+[WARNING] Don&apos;</span>t override file /Users/aled/repos/apache/brooklyn/usage/archetypes/quickstart/target/<span class="hljs-built_in">test</span>-classes/projects/integration-test-1/project/brooklyn-sample/src/main/resources/sample-icon.png
+
+...
+
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Brooklyn Parent Project ........................... SUCCESS [3.072s]
+[INFO] Brooklyn Utilities to Support Testing (listeners etc)  SUCCESS [3.114s]
+[INFO] Brooklyn Logback Includable Configuration ......... SUCCESS [0.680s]
+[INFO] Brooklyn Common Utilities ......................... SUCCESS [7.263s]
+[INFO] Brooklyn Groovy Utilities ......................... SUCCESS [5.193s]
+[INFO] Brooklyn API ...................................... SUCCESS [2.146s]
+[INFO] Brooklyn Test Support ............................. SUCCESS [2.517s]
+[INFO] CAMP Server Parent Project ........................ SUCCESS [0.075s]
+[INFO] CAMP Base ......................................... SUCCESS [4.079s]
+[INFO] Brooklyn REST Swagger Apidoc Utilities ............ SUCCESS [1.983s]
+[INFO] Brooklyn Logback Configuration .................... SUCCESS [0.625s]
+[INFO] CAMP Server ....................................... SUCCESS [5.446s]
+[INFO] Brooklyn Core ..................................... SUCCESS [1:24.122s]
+[INFO] Brooklyn Policies ................................. SUCCESS [44.425s]
+[INFO] Brooklyn Hazelcast Storage ........................ SUCCESS [7.143s]
+[INFO] Brooklyn Jclouds Location Targets ................. SUCCESS [16.488s]
+[INFO] Brooklyn Secure JMXMP Agent ....................... SUCCESS [8.634s]
+[INFO] Brooklyn JMX RMI Agent ............................ SUCCESS [2.315s]
+[INFO] Brooklyn Software Base ............................ SUCCESS [28.538s]
+[INFO] Brooklyn Network Software Entities ................ SUCCESS [3.896s]
+[INFO] Brooklyn OSGi Software Entities ................... SUCCESS [4.589s]
+[INFO] Brooklyn Web App Software Entities ................ SUCCESS [17.484s]
+[INFO] Brooklyn Messaging Software Entities .............. SUCCESS [7.106s]
+[INFO] Brooklyn Database Software Entities ............... SUCCESS [5.229s]
+[INFO] Brooklyn NoSQL Data Store Software Entities ....... SUCCESS [11.901s]
+[INFO] Brooklyn Monitoring Software Entities ............. SUCCESS [4.027s]
+[INFO] Brooklyn CAMP REST API ............................ SUCCESS [15.285s]
+[INFO] Brooklyn REST API ................................. SUCCESS [4.489s]
+[INFO] Brooklyn REST Server .............................. SUCCESS [30.270s]
+[INFO] Brooklyn REST Client .............................. SUCCESS [7.007s]
+[INFO] Brooklyn REST JavaScript Web GUI .................. SUCCESS [24.397s]
+[INFO] Brooklyn Launcher ................................. SUCCESS [15.923s]
+[INFO] Brooklyn Command Line Interface ................... SUCCESS [9.279s]
+[INFO] Brooklyn All Things ............................... SUCCESS [13.875s]
+[INFO] Brooklyn Distribution ............................. SUCCESS [49.370s]
+[INFO] Brooklyn Quick-Start Project Archetype ............ SUCCESS [12.053s]
+[INFO] Brooklyn Examples Aggregator Project .............. SUCCESS [0.085s]
+[INFO] Brooklyn Examples Support Aggregator Project - Webapps  SUCCESS [0.053s]
+[INFO] hello-world-webapp Maven Webapp ................... SUCCESS [0.751s]
+[INFO] hello-world-sql-webapp Maven Webapp ............... SUCCESS [0.623s]
+[INFO] Brooklyn Simple Web Cluster Example ............... SUCCESS [5.398s]
+[INFO] Brooklyn Global Web Fabric Example ................ SUCCESS [3.176s]
+[INFO] Brooklyn Simple Messaging Publish-Subscribe Example  SUCCESS [3.217s]
+[INFO] Brooklyn NoSQL Cluster Examples ................... SUCCESS [6.790s]
+[INFO] Brooklyn QA ....................................... SUCCESS [7.117s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8:33.983s
+[INFO] Finished at: Mon Jul 21 14:56:46 BST 2014
+[INFO] Final Memory: 66M/554M
+[INFO] ------------------------------------------------------------------------
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"layout":"website-normal","title":"Maven Build","toc":"/guide/toc.json","level":"2.2","depth":1,"next":{"title":"IDE Setup","level":"2.3","depth":1,"path":"dev/env/ide/index.md","ref":"dev/env/ide/index.md","articles":[]},"previous":{"title":"Get the Code","level":"2.1","depth":1,"url":"https://brooklyn.apache.org/developers/code/","ref":"https://brooklyn.apache.org/developers/code/","articles":[]},"dir":"ltr"},"config":{"plugins":["include-highlight","theme-api"],"root":"./guide","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-highlight":{"extensionToLanguage":{"yml":"yaml","yaml":"yaml","bom":"yaml","java":"java"}},"theme-api":{"languages":[{"lang":"vagrant","name":"Vagrant","default":true},{"lang":"centos","name":"CentOS / RHEL 7"},{"lang":"ubuntu","name":"Ubuntu / Debian"},{"lang":"osx","name":"OSX / Linux"},{"lang":"windows","name":"Windows"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"path":{"style":"/style","guide":"/guide","website":"/website","v":"/v"},"pdf-default-versioned-url-subpath":"/v/0.11.0","brooklyn-stable-version":"0.11.0","sass":{"sass_dir":"style/css"},"markdown":"kramdown","brooklyn-version":"0.13.0-SNAPSHOT","url_root":"http://0.0.0.0:4000","root_menu_page":"/website/index.md","encoding":"utf-8","dependency_mode":"local","dependency_urls":{"bootstrap.css":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css","bootstrap.js":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js","jquery.js":"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"},"exclude":["/Gemfile*","/README.md"],"pdf-default-base-url":"http://brooklyn.apache.org","pdf-rewrite-prefixes":{"/guide":"/v/0.11.0","/website":""},"brooklyn-snapshot-git-branch":"master"},"gitbook":"*"},"file":{"path":"dev/env/maven-build.md","mtime":"2017-10-06T11:31:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-06T11:32:19.198Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,3411 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Deploying Blueprint · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../blueprint/yaml-reference.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../start/running.html">
+            
+                <a href="../start/running.html">
+            
+                    
+                    Running Apache Brooklyn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../start/blueprints.html">
+            
+                <a href="../start/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../start/managing.html">
+            
+                <a href="../start/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../start/policies.html">
+            
+                <a href="../start/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../start/concept-quickstart.html">
+            
+                <a href="../start/concept-quickstart.html">
+            
+                    
+                    Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../misc/download.html">
+            
+                <a href="../misc/download.html">
+            
+                    
+                    Downloads
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Brooklyn Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../concepts/entities.html">
+            
+                <a href="../concepts/entities.html">
+            
+                    
+                    Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../concepts/application-parent-membership.html">
+            
+                <a href="../concepts/application-parent-membership.html">
+            
+                    
+                    Application, Parent and Membership
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../concepts/configuration-sensor-effectors.html">
+            
+                <a href="../concepts/configuration-sensor-effectors.html">
+            
+                    
+                    Configuration, Sensors and Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../concepts/lifecycle-managementcontext.html">
+            
+                <a href="../concepts/lifecycle-managementcontext.html">
+            
+                    
+                    Lifecycle and ManagementContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../concepts/dependent-configuration.html">
+            
+                <a href="../concepts/dependent-configuration.html">
+            
+                    
+                    Dependent Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../concepts/location.html">
+            
+                <a href="../concepts/location.html">
+            
+                    
+                    Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../concepts/policies.html">
+            
+                <a href="../concepts/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../concepts/execution.html">
+            
+                <a href="../concepts/execution.html">
+            
+                    
+                    Execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../concepts/stop-start-restart-behaviour.html">
+            
+                <a href="../concepts/stop-start-restart-behaviour.html">
+            
+                    
+                    Stop/start/restart behaviour
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../blueprints/">
+            
+                <a href="../blueprints/">
+            
+                    
+                    Writing Blueprints
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../blueprints/creating-yaml.html">
+            
+                <a href="../blueprints/creating-yaml.html">
+            
+                    
+                    Creating YAML Blueprint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../blueprints/entity-configuration.html">
+            
+                <a href="../blueprints/entity-configuration.html">
+            
+                    
+                    Entity Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../blueprints/setting-locations.html">
+            
+                <a href="../blueprints/setting-locations.html">
+            
+                    
+                    Setting Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../blueprints/configuring-vms.html">
+            
+                <a href="../blueprints/configuring-vms.html">
+            
+                    
+                    Configuring VMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../blueprints/multiple-services.html">
+            
+                <a href="../blueprints/multiple-services.html">
+            
+                    
+                    Multiple Services and Dependency Injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../blueprints/custom-entities.html">
+            
+                <a href="../blueprints/custom-entities.html">
+            
+                    
+                    Custom Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../blueprints/catalog/">
+            
+                <a href="../blueprints/catalog/">
+            
+                    
+                    Catalog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../blueprints/clusters.html">
+            
+                <a href="../blueprints/clusters.html">
+            
+                    
+                    Clusters, Specs, and Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../blueprints/enrichers.html">
+            
+                <a href="../blueprints/enrichers.html">
+            
+                    
+                    Enrichers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../blueprints/policies.html">
+            
+                <a href="../blueprints/policies.html">
+            
+                    
+                    Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../blueprints/effectors.html">
+            
+                <a href="../blueprints/effectors.html">
+            
+                    
+                    Effectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../blueprints/clusters-and-policies.html">
+            
+                <a href="../blueprints/clusters-and-policies.html">
+            
+                    
+                    Clusters and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../blueprints/java/">
+            
+                <a href="../blueprints/java/">
+            
+                    
+                    Java Entities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.13.1" data-path="../blueprints/java/archetype.html">
+            
+                <a href="../blueprints/java/archetype.html">
+            
+                    
+                    Creating from a Maven Archetype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.2" data-path="../blueprints/java/defining-and-deploying.html">
+            
+                <a href="../blueprints/java/defining-and-deploying.html">
+            
+                    
+                    Defining and Deploying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.3" data-path="../blueprints/java/bundle-dependencies.html">
+            
+                <a href="../blueprints/java/bundle-dependencies.html">
+            
+                    
+                    Handling Bundle Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.4" data-path="../blueprints/java/topology-dependencies.html">
+            
+                <a href="../blueprints/java/topology-dependencies.html">
+            
+                    
+                    Topology, Dependencies, and Management Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.5" data-path="../blueprints/java/common-usage.html">
+            
+                <a href="../blueprints/java/common-usage.html">
+            
+                    
+                    Common Classes and Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.6" data-path="../blueprints/java/feeds.html">
+            
+                <a href="../blueprints/java/feeds.html">
+            
+                    
+                    Feeds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.7" data-path="../blueprints/java/entity.html">
+            
+                <a href="../blueprints/java/entity.html">
+            
+                    
+                    Writing an Entity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.8" data-path="../blueprints/java/entities.html">
+            
+                <a href="../blueprints/java/entities.html">
+            
+                    
+                    Custom Entity Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.9" data-path="../blueprints/java/service-state.html">
+            
+                <a href="../blueprints/java/service-state.html">
+            
+                    
+                    Service State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13.10" data-path="../blueprints/java/entitlements.html">
+            
+                <a href="../blueprints/java/entitlements.html">
+            
+                    
+                    Entitlements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../blueprints/winrm/">
+            
+                <a href="../blueprints/winrm/">
+            
+                    
+                    Windows Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../blueprints/test/">
+            
+                <a href="../blueprints/test/">
+            
+                    
+                    Testing YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../blueprints/ansible/">
+            
+                <a href="../blueprints/ansible/">
+            
+                    
+                    Ansible in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../blueprints/chef/">
+            
+                <a href="../blueprints/chef/">
+            
+                    
+                    Chef in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../blueprints/salt/">
+            
+                <a href="../blueprints/salt/">
+            
+                    
+                    Salt in YAML Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../blueprints/advanced-example.html">
+            
+                <a href="../blueprints/advanced-example.html">
+            
+                    
+                    YAML Blueprint Advanced Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../blueprints/blueprinting-tips.html">
+            
+                <a href="../blueprints/blueprinting-tips.html">
+            
+                    
+                    Blueprinting Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../blueprint/yaml-reference.md">
+            
+                <span>
+            
+                    
+                    YAML Blueprint Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Deploying Blueprint
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="./">
+            
+                <a href="./#clouds">
+            
+                    
+                    Clouds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="./">
+            
+                <a href="./#amazon-web-services-aws">
+            
+                    
+                    Amazon Web Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="./">
+            
+                <a href="./#azure-compute-arm">
+            
+                    
+                    Azure Compute ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="./">
+            
+                <a href="./#azure-compute-classic">
+            
+                    
+                    Azure Compute Classic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="./">
+            
+                <a href="./#apache-cloudstack">
+            
+                    
+                    Apache CloudStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="./">
+            
+                <a href="./#google-compute-engine-gce">
+            
+                    
+                    Google Compute Engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="./">
+            
+                <a href="./#ibm-softlayer">
+            
+                    
+                    IBM Softlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="./">
+            
+                <a href="./#openstack">
+            
+                    
+                    OpenStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="./">
+            
+                <a href="./#named-locations">
+            
+                    
+                    Named Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="./">
+            
+                <a href="./#inheritance-and-named-locations">
+            
+                    
+                    Provisioned Machine Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="./">
+            
+                <a href="./#byon">
+            
+                    
+                    BYON
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="./">
+            
+                <a href="./#ssh-keys">
+            
+                    
+                    SSH Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="./">
+            
+                <a href="./#localhost">
+            
+                    
+                    Localhost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="./">
+            
+                <a href="./#location-customizers">
+            
+                    
+                    Location Customizers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="./">
+            
+                <a href="./#customizing-cloud-security-groups">
+            
+                    
+                    Customizing Cloud Security Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="./">
+            
+                <a href="./#specialized-locations">
+            
+                    
+                    Specialized Locations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Reference Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../ops/production-installation.html">
+            
+                <a href="../ops/production-installation.html">
+            
+                    
+                    Production Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../ops/starting-stopping-monitoring.html">
+            
+                <a href="../ops/starting-stopping-monitoring.html">
+            
+                    
+                    Starting, Stopping and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../ops/server-cli-reference.html">
+            
+                <a href="../ops/server-cli-reference.html">
+            
+                    
+                    Server CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../ops/cli/">
+            
+                <a href="../ops/cli/">
+            
+                    
+                    Client CLI Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" >
+            
+                <span>
+            
+                    
+                    GUI Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../ops/gui/running.html">
+            
+                <a href="../ops/gui/running.html">
+            
+                    
+                    Launching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../ops/gui/blueprints.html">
+            
+                <a href="../ops/gui/blueprints.html">
+            
+                    
+                    Deploying Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../ops/gui/managing.html">
+            
+                <a href="../ops/gui/managing.html">
+            
+                    
+                    Monitoring and Managing Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.4" data-path="../ops/gui/policies.html">
+            
+                <a href="../ops/gui/policies.html">
+            
+                    
+                    Using Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../ops/rest.html">
+            
+                <a href="../ops/rest.html">
+            
+                    
+                    REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../ops/configuration/">
+            
+                <a href="../ops/configuration/">
+            
+                    
+                    Brooklyn Configuration and Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../ops/persistence/">
+            
+                <a href="../ops/persistence/">
+            
+                    
+                    Persistence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../ops/high-availability/">
+            
+                <a href="../ops/high-availability/">
+            
+                    
+                    High Availability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../ops/high-availability/high-availability-supplemental.html">
+            
+                <a href="../ops/high-availability/high-availability-supplemental.html">
+            
+                    
+                    Configuring HA - an example
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../ops/logging.html">
+            
+                <a href="../ops/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../ops/externalized-configuration.html">
+            
+                <a href="../ops/externalized-configuration.html">
+            
+                    
+                    Externalized Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../ops/requirements.html">
+            
+                <a href="../ops/requirements.html">
+            
+                    
+                    Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../ops/upgrade.html">
+            
+                <a href="../ops/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="../ops/security-guidelines.html">
+            
+                <a href="../ops/security-guidelines.html">
+            
+                    
+                    Security Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="../ops/troubleshooting/">
+            
+                <a href="../ops/troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    Other 0.12.0 Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/developers/code/">
+            
+                    
+                    Get the Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../dev/env/maven-build.html">
+            
+                <a href="../dev/env/maven-build.html">
+            
+                    
+                    Maven Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../dev/env/ide/">
+            
+                <a href="../dev/env/ide/">
+            
+                    
+                    IDE Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../dev/code/structure.html">
+            
+                <a href="../dev/code/structure.html">
+            
+                    
+                    Code Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../dev/code/tests.html">
+            
+                <a href="../dev/code/tests.html">
+            
+                    
+                    Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../dev/code/licensing.html">
+            
+                <a href="../dev/code/licensing.html">
+            
+                    
+                    License Considerations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../dev/tips/">
+            
+                <a href="../dev/tips/">
+            
+                    
+                    Miscellaneous Tips and Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../dev/tips/logging.html">
+            
+                <a href="../dev/tips/logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../dev/tips/debugging-remote-brooklyn.html">
+            
+                <a href="../dev/tips/debugging-remote-brooklyn.html">
+            
+                    
+                    Brooklyn Remote Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" >
+            
+                <a target="_blank" href="http://github.com/apache/brooklyn">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/v/latest/misc/javadoc">
+            
+                    
+                    Javadoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/meta/versions.html">
+            
+                    
+                    Versions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://brooklyn.apache.org/documentation/other-docs.html">
+            
+                    
+                    Other Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Deploying Blueprint</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Locations are the environments to which Brooklyn deploys applications. Most commonly these 
+are cloud services such as AWS, GCE, and IBM Softlayer. Brooklyn also supports deploying 
+to a pre-provisioned network or to localhost (primarily useful for testing blueprints).</p>
+<p>See also:</p>
+<ul>
+<li>The <a href="../guide/blueprints/setting-locations.html">Locations yaml guide</a></li>
+<li>Use within an entity of the configuration option 
+<a href="../guide/blueprints/entity-configuration.html#entity-provisioningproperties-overriding-and-merging">provisioning.properties</a></li>
+<li>How to add location definitions to the <a href="../guide/blueprints/catalog">Catalog</a>; and </li>
+<li>How to use <a href="../guide/ops/externalized-configuration.html">Externalized Configuration</a>.</li>
+</ul>
+<p>The requirements for how a provisioned machine should behave will depend on the
+entites subsequently deployed there.</p>
+<p>Below are a set of common assumptions, made by many entity implementations, which
+could cause subsequent errors if they do not hold. These relate to the machine&apos;s 
+configuration, rather than additional networking or security that a given Cloud 
+might offer.</p>
+<p>Also see the <a href="../guide/ops/troubleshooting">Troubleshooting</a> docs.</p>
+<h2 id="remote-access">Remote Access</h2>
+<h3 id="ssh-or-winrm-access">SSH or WinRM Access</h3>
+<p>Many entities require ssh&apos;ing (or using WinRM for Windows), to install and configure 
+the software.</p>
+<p>An example of disabling all ssh&apos;ing is shown below:</p>
+<pre><code>location:
+  aws-ec2:us-east-1:
+    identity: XXXXXXXX
+    credential: XXXXXXXX
+    waitForSshable: false
+    pollForFirstReachableAddress: false
+services:
+- type: org.apache.brooklyn.entity.software.base.EmptySoftwareProcess
+  brooklyn.config:
+    onbox.base.dir.skipResolution: true
+    sshMonitoring.enabled: false
+</code></pre><h3 id="parsing-ssh-stdout-no-extra-lines">Parsing SSH stdout: No Extra Lines</h3>
+<p>For entities that execute ssh commands, these sometimes parse the resulting stdout.</p>
+<p>It is strongly recommended that VMs are configured so that no additional stdout is written when executing 
+remote ssh (or WinRM) commands. Such stdout risks interfering with the response parsing in some blueprints.</p>
+<p>For example, if configuring the VM to write out &quot;Last login&quot; information, this should be done for only 
+&quot;interactive&quot; shells (see <a href="http://stackoverflow.com/a/415444/1393883" target="_blank">Stackoverflow</a> for more details).</p>
+<h3 id="passwordless-sudo">Passwordless Sudo</h3>
+<p>Does passwordless sudo work?</p>
+<p>Try executing:</p>
+<pre><code>sudo whoami
+</code></pre><p>See <a href="../guide/locations/index.html#passwordless-sudo">Passwordless Sudo</a>.</p>
+<h2 id="advertised-addresses">Advertised Addresses</h2>
+<h3 id="hostname-resolves-locally">Hostname Resolves Locally</h3>
+<p>Does the hostname known at the box resolve at the box?</p>
+<p>Try executing:</p>
+<pre><code>ping $(hostname)
+</code></pre><p>if not, consider setting <code>generate.hostname: true</code> in the location config, for jclouds-based locations.</p>
+<h3 id="ip-resolves-locally">IP Resolves Locally</h3>
+<p>For the IP address advertised in Brooklyn using the sensor <code>host.addresses.private</code> (or <code>host.subnet.address</code>), 
+can the machine reach that IP?</p>
+<p>Get the sensor value, and then try executing:</p>
+<pre><code>ping ${PRIVATE_IP}
+</code></pre><p>Is there a public IP (advertised using the sensor <code>host.addresses.public</code>, or <code>host.address</code>), and can the 
+machine reach it?</p>
+<p>Get the sensor value, and then try executing:</p>
+<pre><code>ping ${PUBLIC_IP}
+</code></pre><h2 id="networking">Networking</h2>
+<h3 id="public-internet-access">Public Internet Access</h3>
+<p>Can the machine reach the public internet, and does DNS resolve?</p>
+<p>Try executing:</p>
+<pre><code>ping www.example.org
+</code></pre><h3 id="machines-hostname-in-dns">Machine&apos;s Hostname in DNS</h3>
+<p>Is the machine hostname well-known? If ones does a DNS lookup, e.g. from the Brooklyn server, does it resolve and 
+does it return the expected IP (e.g. the same IP as the <code>host.addresses.public</code> sensor)? Try using the hostname
+that the machine reports when you execute <code>hostname</code>.</p>
+<p>Many blueprints do not require this, instead using IP addresses directly. Some blueprints may include registration
+with an appropriate DNS server. Some clouds do this automatically.</p>
+<h3 id="reachability">Reachability</h3>
+<p>When provisioning two machines, can these two machines reach each other on the expected IP(s) and hostname(s)?</p>
+<p>Try using <code>ping</code> from one machine to another using the public or subnet ip or hostname.
+However, note that <code>ping</code> requires access over ICMP, which may be disabled. Alternatively,
+try connecting to a specific TCP port using <code>telnet &lt;address&gt; &lt;port&gt;</code>.</p>
+<h3 id="firewalls">Firewalls</h3>
+<p>What firewall(s) are running on the machine, and are the required ports open?
+On linux, check things like <code>iptables</code>, <code>firewalld</code>, <code>ufw</code> or other commercial
+firewalls. On Windows, check the settings of the 
+<a href="https://en.wikipedia.org/wiki/Windows_Firewall" target="_blank">Windows Firewall</a>.</p>
+<p>Consider using <code>openIptables: true</code>, or even <code>stopIptables: true</code>.</p>
+<h2 id="sufficient-entropy-for-devrandom">Sufficient Entropy for /dev/random</h2>
+<p>Is there sufficient entropy on the machine, for <code>/dev/random</code> to respond quickly?</p>
+<p>Try executing:</p>
+<pre><code>{ cat /dev/random &gt; /tmp/x &amp; } ; sleep 10 ; kill %1 ; { cat /dev/random &gt; /tmp/x &amp; } ; sleep 1 ; kill %1 ; wc /tmp/x | awk &apos;{print $3}&apos;
+</code></pre><p>The result should be more than 1M.</p>
+<p>If not, consider setting <code>installDevUrandom: true</code> for jclouds-based locations.</p>
+<p>See instructions to <a href="../guide/ops/troubleshooting/increase-entropy.html">Increase Entropy</a>.</p>
+<h2 id="file-system">File System</h2>
+<h3 id="permissions-of-tmp">Permissions of /tmp</h3>
+<p>Is <code>/tmp</code> writable?</p>
+<p>Try executing:</p>
+<pre><code>touch /tmp/amp-test-file ; rm /tmp/amp-test-file
+</code></pre><p>Are files in <code>/tmp</code> executable (e.g. some places it has been mounted NO_EXECUTE)?</p>
+<p>Try executing:</p>
+<pre><code>echo date &gt; /tmp/brooklyn-test.sh &amp;&amp; chmod +x /tmp/brooklyn-test.sh &amp;&amp; /tmp/brooklyn-test.sh &amp;&amp; rm /tmp/brooklyn-test.sh
+</code></pre><hr>
+<p>section: Clouds
+section_type: inline</p>
+<h2 id="sectionposition-1">section_position: 1</h2>
+<h3 id="clouds">Clouds</h3>
+<p>For most cloud provisioning tasks, Brooklyn uses
+<a href="http://jclouds.org" target="_blank">Apache jclouds</a>.
+The identifiers for some of the most commonly used jclouds-supported clouds are
+(or <a href="http://jclouds.apache.org/reference/providers/" target="_blank">see the full list</a>):</p>
+<ul>
+<li><code>jclouds:aws-ec2:&lt;region&gt;</code>: Amazon EC2, where <code>:&lt;region&gt;</code> might be <code>us-east-1</code> or <code>eu-west-1</code> (or omitted)</li>
+<li><code>jclouds:softlayer:&lt;region&gt;</code>: IBM Softlayer, where <code>:&lt;region&gt;</code> might be <code>dal05</code> or <code>ams01</code> (or omitted)</li>
+<li><code>jclouds:google-compute-engine</code>: Google Compute Engine</li>
+<li><code>jclouds:openstack-nova:&lt;endpoint&gt;</code>: OpenStack, where <code>:&lt;endpoint&gt;</code> is the access URL (required)</li>
+<li><code>jclouds:cloudstack:&lt;endpoint&gt;</code>: Apache CloudStack, where <code>:&lt;endpoint&gt;</code> is the access URL (required)</li>
+</ul>
+<p>For any of these, of course, Brooklyn needs to be configured with an <code>identity</code> and a <code>credential</code>:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span>
+<span class="hljs-attr">  jclouds:</span>aws-ec2:
+<span class="hljs-attr">    identity:</span> ABCDEFGHIJKLMNOPQRST
+<span class="hljs-attr">    credential:</span> s3cr3tsq1rr3ls3cr3tsq1rr3ls3cr3tsq1rr3l
+</code></pre>
+<p>The above YAML can be embedded directly in blueprints, either at the root or on individual services.
+If you prefer to keep the credentials separate, you can instead store them as a <a href="../guide/blueprints/catalog/index.html#locations-in-catalog">catalog entry</a> or set them in <code>brooklyn.properties</code> 
+in the <code>jclouds.&lt;provider&gt;</code> namespace:</p>
+<pre><code class="lang-bash">brooklyn.location.jclouds.aws-ec2.identity=ABCDEFGHIJKLMNOPQRST  
+brooklyn.location.jclouds.aws-ec2.credential=s3cr3tsq1rr3ls3cr3tsq1rr3ls3cr3tsq1rr3l
+</code></pre>
+<p>And in this case you can reference the location in YAML with <code>location: jclouds:aws-ec2</code>.</p>
+<p>Alternatively, you can use the location wizard tool available within the web console
+to create any cloud location supported by <a href="http://jclouds.org" target="_blank">Apache jclouds</a>.
+This location will be saved as a <a href="../guide/blueprints/catalog/index.html#locations-in-catalog">catalog entry</a> for easy reusability.</p>
+<p>Brooklyn irons out many of the differences between clouds so that blueprints run similarly
+in a wide range of locations, including setting up access and configuring images and machine specs.
+The configuration options are described in more detail below.</p>
+<p>In some cases, cloud providers have special features or unusual requirements. 
+These are outlined in <strong><a href="#more-details-on-specific-clouds">More Details for Specific Clouds</a></strong>.</p>
+<h4 id="os-initial-login-and-setup">OS Initial Login and Setup</h4>
+<p>Once a machine is provisioned, Brooklyn will normally attempt to log in via SSH and configure the machine sensibly.</p>
+<p>The credentials for the initial OS log on are typically discovered from the cloud, 
+but in some environments this is not possible.
+The keys <code>loginUser</code> and either <code>loginUser.password</code> or <code>loginUser.privateKeyFile</code> can be used to force
+Brooklyn to use specific credentials for the initial login to a cloud-provisioned machine.</p>
+<p>(This custom login is particularly useful when using a custom image templates where the cloud-side account 
+management logic is not enabled. For example, a vCloud (vCD) template can have guest customization that will change
+the root password. This setting tells Apache Brooklyn to only use the given password, rather than the initial 
+randomly generated password that vCD returns. Without this property, there is a race for such templates:
+does Brooklyn manage to create the admin user before the guest customization changes the login and reboots,
+or is the password reset first (the latter means Brooklyn can never ssh to the VM). With this property, 
+Brooklyn will always wait for guest customization to complete before it is able to ssh at all. In such
+cases, it is also recommended to use <code>useJcloudsSshInit=false</code>.)</p>
+<p>Following a successful logon, Brooklyn performs the following steps to configure the machine:</p>
+<ol>
+<li><p>creates a new user with the same name as the user <code>brooklyn</code> is running as locally
+(this can be overridden with <code>user</code>, below).</p>
+</li>
+<li><p>install the local user&apos;s <code>~/.ssh/id_rsa.pub</code> as an <code>authorized_keys</code> on the new machine,
+to make it easy for the operator to <code>ssh</code> in
+(override with <code>privateKeyFile</code>; or if there is no <code>id_{r,d}sa{,.pub}</code> an ad hoc keypair will be generated
+for the regular Brooklyn user;
+if there is a passphrase on the key, this must be supplied)  </p>
+</li>
+<li><p>give <code>sudo</code> access to the newly created user (override with <code>grantUserSudo: false</code>)</p>
+</li>
+<li><p>disable direct <code>root</code> login to the machine</p>
+</li>
+</ol>
+<p>These steps can be skipped or customized as described below.</p>
+<h4 id="jclouds-config-keys">jclouds Config Keys</h4>
+<p>The following is a subset of the most commonly used configuration keys used to customize 
+cloud provisioning.
+For more keys and more detail on the keys below, see 
+<a href="https://brooklyn.apache.org/v/latest/misc/javadoc/org/apache/brooklyn/location/jclouds/JcloudsLocationConfig.html" target="_blank">JcloudsLocationConfig</a>.</p>
+<h6 id="vm-creation">VM Creation</h6>
+<ul>
+<li><p>Most providers require exactly one of either <code>region</code> (e.g. <code>us-east-1</code>) or <code>endpoint</code> (the URL, usually for private cloud deployments)</p>
+</li>
+<li><p>Hardware requirements can be specified, including 
+<code>minRam</code>, <code>minCores</code>, <code>minDisk</code> and <code>os64Bit</code>; or as a specific <code>hardwareId</code></p>
+</li>
+<li><p>VM image constraints can be set using <code>osFamily</code> (e.g. <code>Ubuntu</code>, <code>CentOS</code>, <code>Debian</code>, <code>RHEL</code>)
+and <code>osVersionRegex</code>, or specific VM images can be specified using <code>imageId</code> or <code>imageNameRegex</code></p>
+</li>
+<li><p>Specific VM images can be specified using <code>imageId</code> or <code>imageNameRegex</code></p>
+</li>
+<li><p>Specific Security Groups can be specified using <code>securityGroups</code>, as a list of strings (the existing security group names),
+or <code>inboundPorts</code> can be set, as a list of numeric ports (selected clouds only)</p>
+</li>
+<li><p>Where a key pair is registered with a target cloud for logging in to machines,
+Brooklyn can be configured to request this when provisioning VMs by setting <code>keyPair</code> (selected clouds only). 
+Note that if this <code>keyPair</code> does not correspond your default <code>~/.ssh/id_rsa</code>, you must typically 
+also specify the corresponding <code>loginUser.privateKeyFile</code> as a file or URL accessible from Brooklyn.</p>
+</li>
+<li><p>A specific VM name (often the hostname) base to be used can be specified by setting <code>groupId</code>.
+By default, this name is constructed based on the entity which is creating it,
+including the ID of the app and of the entity.
+(As many cloud portals let you filter views, this can help find a specific entity or all machines for a given application.)
+For more sophisticated control over host naming, you can supply a custom 
+<a href="https://brooklyn.apache.org/v/latest/misc/javadoc/org/apache/brooklyn/core/location/cloud/names/CloudMachineNamer.html" target="_blank">CloudMachineNamer</a>,
+for example
+<code>cloudMachineNamer: CustomMachineNamer</code>.
+<a href="https://brooklyn.apache.org/v/latest/misc/javadoc/org/apache/brooklyn/core/location/cloud/names/CustomMachineNamer.html" target="_blank">CustomMachineNamer</a>
+will use the entity&apos;s name or following a template you supply.
+On many clouds, a random suffix will be appended to help guarantee uniqueness;
+this can be removed by setting <code>vmNameSaltLength: 0</code> (selected clouds only).</p>
+<!-- TODO jclouds softlayer includes a 3-char hex suffix -->
+</li>
+<li><p>A DNS domain name where this host should be placed can be specified with <code>domainName</code>
+(in selected clouds only)</p>
+</li>
+<li><p>User metadata can be attached using the syntax <code>userMetadata: { key: value, key2: &quot;value 2&quot; }</code> 
+(or <code>userMetadata=key=value,key2=&quot;value 2&quot;</code> in a properties file)</p>
+</li>
+<li><p>By default, several pieces of user metadata are set to correlate VMs with Brooklyn entities,
+prefixed with <code>brooklyn-</code>.
+This user metadata can be omitted by setting <code>includeBrooklynUserMetadata: false</code>.</p>
+</li>
+<li><p>You can specify the number of attempts Brooklyn should make to create
+machines with <code>machineCreateAttempts</code> (jclouds only). This is useful as an efficient low-level fix
+for those occasions when cloud providers give machines that are dead on arrival.
+You can of course also resolve it at a higher level with a policy such as 
+<a href="https://brooklyn.apache.org/v/latest/misc/javadoc/org/apache/brooklyn/policy/ha/ServiceRestarter.html" target="_blank">ServiceRestarter</a>.</p>
+</li>
+<li><p>If you want to investigate failures, set <code>destroyOnFailure: false</code>
+to keep failed VM&apos;s around. (You&apos;ll have to manually clean them up.)
+The default is false: if a VM fails to start, or is never ssh&apos;able, then the VM will be terminated.</p>
+</li>
+<li><p>You can set <code>useMachinePublicAddressAsPrivateAddress</code> to true to overwrite the VMs private IP with its public IP. This is useful as it can be difficult to get VMs communicating via the private IPs they are assigned in some clouds.  Using this config, blueprints which use private IPs can still be deployed to these clouds.</p>
+<h6 id="os-setup">OS Setup</h6>
+</li>
+<li><p><code>user</code> and <code>password</code> can be used to configure the operating user created on cloud-provisioned machines</p>
+</li>
+<li><p>The <code>loginUser</code> config key (and subkeys) control the initial user to log in as,
+in cases where this cannot be discovered from the cloud provider</p>
+</li>
+<li><p>Private keys can be specified using <code>privateKeyFile</code>; 
+these are not copied to provisioned machines, but are required if using a local public key
+or a pre-defined <code>authorized_keys</code> on the server.
+(For more information on SSH keys, see <a href="#ssh-keys">here</a>.) </p>
+</li>
+<li><p>If there is a passphrase on the key file being used, you must supply it to Brooklyn for it to work, of course!
+<code>privateKeyPassphrase</code> does the trick (as in <code>brooklyn.location.jclouds.privateKeyPassphrase</code>, or other places
+where <code>privateKeyFile</code> is valid).  If you don&apos;t like keys, you can just use a plain old <code>password</code>.</p>
+</li>
+<li><p>Public keys can be specified using <code>publicKeyFile</code>, 
+although these can usually be omitted if they follow the common pattern of being
+the private key file with the suffix <code>.pub</code> appended.
+(It is useful in the case of <code>loginUser.publicKeyFile</code>, where you shouldn&apos;t need,
+or might not even have, the private key of the <code>root</code> user when you log in.)</p>
+</li>
+<li><p>Provide a list of URLs to public keys in <code>extraSshPublicKeyUrls</code>,
+or the data of one key in <code>extraSshPublicKeyData</code>,
+to have additional public keys added to the <code>authorized_keys</code> file for logging in.
+(This is supported in most but not all locations.)</p>
+</li>
+<li><p>Use <code>dontCreateUser</code> to have Brooklyn run as the initial <code>loginUser</code> (usually <code>root</code>),
+without creating any other user.</p>
+</li>
+<li><p>A post-provisioning <code>setup.script</code> can be specified to run an additional script, before making the <code>Location</code> 
+available to entities. This may take the form of a URL of a script or a <a href="https://en.wikipedia.org/wiki/Data_URI_scheme" target="_blank">data URI</a>.
+Note that if using a data URI it is usually a good idea to <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">base64</a> this string to escape problem characters
+in more complex scripts. The base64 encoded script should then be prefixed with <code>data:text/plain;base64,</code> to denote this. 
+For example if you wanted to disable a yum repository called <code>reponame</code> prior to using the machine, you could use the following command:</p>
+<p><code>sudo yum-config-manager --disable reponame</code></p>
+<p>Base64 encoding can be done with a with a tool such as <a href="https://www.base64encode.org/" target="_blank">this</a> or a linux command such as:</p>
+<p><code>echo &quot;sudo yum-config-manager --disable reponame&quot; | base64</code></p>
+<p>With the base64 prefix this would then look like this:</p>
+<p><code>setup.script: data:text/plain;base64,c3VkbyB5dW0tY29uZmlnLW1hbmFnZXIgLS1kaXNhYmxlIHJlcG9uYW1l</code></p>
+<p>The <code>setup.script</code> can also take <a href="http://freemarker.org/" target="_blank">FreeMarker</a> variables in a <code>setup.script.vars</code>
+property. Variables are set in the format <code>key1:value1,key2:value2</code> and used in the form <code>${key1}</code>. So for the above example:</p>
+<p><code>setup.script.vars: repository:reponame</code></p>
+<p>then</p>
+<p><code>setup.script: data:sudo yum-config-manager --disable ${repository}</code></p>
+<p>or encoded in base64:</p>
+<p><code>setup.script: data:text/plain;base64,c3VkbyB5dW0tY29uZmlnLW1hbmFnZXIgLS1kaXNhYmxlICR7cmVwb3NpdG9yeX0=</code></p>
+<p>This enables the name of the repository to be passed in to the script.</p>
+</li>
+<li><p>Use <code>openIptables: true</code> to automatically configure <code>iptables</code>, to open the TCP ports required by
+the software process. One can alternatively use <code>stopIptables: true</code> to entirely stop the
+iptables service.</p>
+</li>
+<li><p>Use Entity configuration flag <code>effector.add.openInboundPorts: true</code> to add an effector for opening ports in a cloud Security Group.
+The config is supported for all SoftwareProcessImpl implementations.</p>
+</li>
+<li><p>Use <code>installDevUrandom: true</code> to fall back to using <code>/dev/urandom</code> rather than <code>/dev/random</code>. This setting
+is useful for cloud VMs where there is not enough random entropy, which can cause <code>/dev/random</code> to be
+extremely slow (causing <code>ssh</code> to be extremely slow to respond).</p>
+</li>
+<li><p>Use <code>useJcloudsSshInit: false</code> to disable the use of the native jclouds support for initial commands executed 
+on the VM (e.g. for creating new users, setting root passwords, etc.). Instead, Brooklyn&apos;s ssh support will
+be used. Timeouts and retries are more configurable within Brooklyn itself. Therefore this option is particularly 
+recommended when the VM startup is unusual (for example, if guest customizations will cause reboots and/or will 
+change login credentials).</p>
+</li>
+<li><p>Use <code>brooklyn.ssh.config.noDeleteAfterExec: true</code> to keep scripts on the server after execution.
+The contents of the scripts and the stdout/stderr of their execution are available in the Brooklyn web console,
+but sometimes it can also be useful to have them on the box.
+This setting prevents scripts executed on the VMs from being deleted on completion.
+Note that some scripts run periodically so this can eventually fill a disk; it should only be used for dev/test. </p>
+</li>
+</ul>
+<h6 id="custom-template-options">Custom Template Options</h6>
+<p>jclouds supports many additional options for configuring how a virtual machine is created and deployed, many of which
+are for cloud-specific features and enhancements. Brooklyn supports some of these, but if what you are looking for is
+not supported directly by Brooklyn, we instead offer a mechanism to set any parameter that is supported by the jclouds
+template options for your cloud.</p>
+<p>Part of the process for creating a virtual machine is the creation of a jclouds <code>TemplateOptions</code> object. jclouds
+providers extends this with extra options for each cloud - so when using the AWS provider, the object will be of
+type <code>AWSEC2TemplateOptions</code>. By <a href="https://jclouds.apache.org/reference/javadoc/2.0.x/org/jclouds/aws/ec2/compute/AWSEC2TemplateOptions.html" target="_blank">examining the source code</a>,
+you can see all of the options available to you.</p>
+<p>The <code>templateOptions</code> config key takes a map. The keys to the map are method names, and Brooklyn will find the method on
+the <code>TemplateOptions</code> instance; it then invokes the method with arguments taken from the map value. If a method takes a
+single parameter, then simply give the argument as the value of the key; if the method takes multiple parameters, the
+value of the key should be an array, containing the argument for each parameter.</p>
+<p>For example, here is a complete blueprint that sets some AWS EC2 specific options:</p>
+<pre><code>location: AWS_eu-west-1
+services:
+- type: org.apache.brooklyn.entity.software.base.EmptySoftwareProcess
+  provisioning.properties:
+    templateOptions:
+      subnetId: subnet-041c8373
+      mapNewVolumeToDeviceName: [&quot;/dev/sda1&quot;, 100, true]
+      securityGroupIds: [&apos;sg-4db68928&apos;]
+</code></pre><p>Here you can see that we set three template options:</p>
+<ul>
+<li><code>subnetId</code> is an example of a single parameter method. Brooklyn will effectively try to run the statement
+<code>templateOptions.subnetId(&quot;subnet-041c88373&quot;);</code></li>
+<li><code>mapNewVolumeToDeviceName</code> is an example of a multiple parameter method, so the value of the key is an array.
+Brooklyn will effectively true to run the statement <code>templateOptions.mapNewVolumeToDeviceName(&quot;/dev/sda1&quot;, 100, true);</code></li>
+<li><code>securityGroupIds</code> demonstrates an ambiguity between the two types; Brooklyn will first try to parse the value as
+a multiple parameter method, but there is no method that matches this parameter. In this case, Brooklyn will next try
+to parse the value as a single parameter method which takes a parameter of type <code>List</code>; such a method does exist so
+the operation will succeed.</li>
+</ul>
+<p>If the method call cannot be matched to the template options available - for example if you are trying to set an AWS EC2
+specific option but your location is an OpenStack cloud - then a warning is logged and the option is ignored.</p>
+<h6 id="cloud-machine-naming">Cloud Machine Naming</h6>
+<p>The name that Apache Brooklyn generates for your virtual machine will, by default, be based on your Apache Brooklyn server name and the IDs of the entities involved. This is the name you see in places such as the AWS console and will look something like:</p>
+<pre><code>brooklyn-o8jql4-machinename-rkix-tomcat-wi-nca6-14b
+</code></pre><p>If you have created a lot of virtual machines, this kind of naming may not be helpful. This can be changed using the following YAML in your location&apos;s <code>brooklyn.config</code>:</p>
+<pre><code>cloudMachineNamer: org.apache.brooklyn.core.location.cloud.names.CustomMachineNamer
+custom.machine.namer.machine: My-Custom-Name-${entity.displayName}
+</code></pre><p>A <a href="http://freemarker.org/" target="_blank">FreeMarker</a> format is used in <code>custom.machine.namer.machine</code> which can take values from places such as the launching entity or location.</p>
+<p>The above example will create a name such as:</p>
+<pre><code>My-Custom-Name-Tomcat
+</code></pre><p>Allowing you to more easily identify your virtual machines.</p>
+<h3 id="more-details-on-specific-clouds">More Details on Specific Clouds</h3>
+<p>Clouds vary in the format of the identity, credential, endpoint, and region.
+Some also have their own idiosyncracies.  More details for configuring some common clouds
+is included below. You may also find these sources helpful:</p>
+<ul>
+<li>The <strong><a href="../guide/start/brooklyn.properties">template brooklyn.properties</a></strong> file
+in the Getting Started guide
+contains numerous examples of configuring specific clouds,
+including the format of credentials and options for sometimes-fiddly private clouds.</li>
+<li>The <strong><a href="https://jclouds.apache.org/guides" target="_blank">jclouds guides</a></strong> describes low-level configuration
+sometimes required for various clouds.</li>
+</ul>
+<hr>
+<p>section: Amazon Web Services (AWS)
+title: Amazon Web Services
+section_type: inline</p>
+<h2 id="sectionposition-2">section_position: 2</h2>
+<h2 id="amazon-web-services-aws">Amazon Web Services (AWS)</h2>
+<h3 id="credentials">Credentials</h3>
+<p>AWS has an &quot;access key&quot; and a &quot;secret key&quot;, which correspond to Brooklyn&apos;s identity and credential
+respectively.</p>
+<p>These keys are the way for any programmatic mechanism to access the AWS API.</p>
+<p>To generate an access key and a secret key, see <a href="http://jclouds.apache.org/guides/aws" target="_blank">jclouds instructions</a>
+and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html" target="_blank">AWS IAM instructions</a>.</p>
+<p>An example of the expected format is shown below:</p>
+<pre><code>location:
+  jclouds:aws-ec2:
+    region: us-east-1
+    identity: ABCDEFGHIJKLMNOPQRST
+    credential: abcdefghijklmnopqrstu+vwxyzabcdefghijklm
+</code></pre><p>Users are strongly recommended to use 
+<a href="../guide/ops/externalized-configuration.html">externalized configuration</a> for better
+credential management, for example using <a href="https://www.vaultproject.io/" target="_blank">Vault</a>.</p>
+<h3 id="common-configuration-options">Common Configuration Options</h3>
+<p>Below are examples of configuration options that use values specific to AWS EC2:</p>
+<ul>
+<li><p>The <code>region</code> is the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html" target="_blank">AWS region code</a>.
+For example, <code>region: us-east-1</code>. You can in-line the region name using the following format: <code>jclouds:aws-ec2:us-east-1</code>.
+A specific availability zone within the region can be specified by including its letter identifier as a suffix. 
+For example, <code>region: us-east-1a</code>.</p>
+</li>
+<li><p>The <code>hardwareId</code> is the <a href="https://aws.amazon.com/ec2/instance-types/" target="_blank">instance type</a>. For example,
+<code>hardwareId: m4.large</code>.</p>
+</li>
+<li><p>The <code>imageId</code> is the region-specific <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html" target="_blank">AMI id</a>.
+For example, <code>imageId: us-east-1/ami-05ebd06c</code>.</p>
+</li>
+<li><p>The <code>securityGroups</code> option takes one or more names of pre-existing 
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html" target="_blank">security groups</a>.
+For example, <code>securityGroups: mygroup1</code> or <code>securityGroups: [ mygroup1, mygroup2 ]</code>.</p>
+</li>
+</ul>
+<h3 id="using-subnets-and-security-groups">Using Subnets and Security Groups</h3>
+<p>Apache Brooklyn can run with AWS VPC and both public and private subnets.
+Simply provide the <code>subnet-a1b2c3d4</code> as the <code>networkName</code> when deploying:</p>
+<pre><code>location:
+  jclouds:aws-ec2:
+    region: us-west-1
+    networkName: subnet-a1b2c3d4   # use your subnet ID
+</code></pre><p>Subnets are typically used in conjunction with security groups.
+Brooklyn does <em>not</em> attempt to open additional ports
+when private subnets or security groups are supplied,
+so the subnet and ports must be configured appropriately for the blueprints being deployed.
+You can configure a default security group with appropriate (or all) ports opened for
+access from the appropriate (or all) CIDRs and security groups,
+or you can define specific <code>securityGroups</code> on the location
+or as <code>provisioning.properties</code> on the entities.</p>
+<p>Make sure that Brooklyn has access to the machines under management.
+This includes SSH, which might be done with a public IP created with inbound access
+on port 22 permitted for a CIDR range including the IP from which Brooklyn contacts it.
+Alternatively you can run Brooklyn on a machine in that same subnet, or
+set up a VPN or jumphost which Brooklyn will use.</p>
+<h3 id="ec2-classic-problems-with-vpc-only-hardware-instance-types">EC2 &quot;Classic&quot; Problems with VPC-only Hardware Instance Types</h3>
+<p>If you have a pre-2014 Amazon account, it is likely configured in some regions to run in &quot;EC2 Classic&quot; mode
+by default, instead of the more modern &quot;VPC&quot; default mode.  This can cause failures when requesting certain hardware
+configurations because many of the more recent hardware &quot;instance types&quot; only run in &quot;VPC&quot; mode.
+For instance when requesting an instance with <code>minRam: 8gb</code>, Brooklyn may opt for an <code>m4.large</code>,
+which is a VPC-only instance type. If you are in a region configured to use &quot;EC2 Classic&quot; mode,
+you may see a message such as this:</p>
+<pre><code>400 VPCResourceNotSpecified: The specified instance type can only be used in a VPC.
+A subnet ID or network interface ID is required to carry out the request.
+</code></pre><p>This is a limitation of &quot;legacy&quot; accounts.  The easiest fixes are either:</p>
+<ul>
+<li>specify an instance type which is supported in classic, such as <code>m3.xlarge</code> (see below)</li>
+<li>move to a different region where VPC is the default
+(<code>eu-central-1</code> should work as it <em>only</em> offers VPC mode,
+irrespective of the age of your AWS account)</li>
+<li>get a new AWS account -- &quot;VPC&quot; will be the default mode
+(Amazon recommend this and if you want to migrate existing deployments
+they provide <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html" target="_blank">detailed instructions</a>)</li>
+</ul>
+<p>To understand the situation, the following resources may be useful:</p>
+<ul>
+<li>Background on VPC vs Classic:  <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html" target="_blank">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html</a></li>
+<li>Good succinct answers to FAQs: <a href="">http://aws.amazon.com/vpc/faqs/#Default_VPCs</a></li>
+<li>Check if a region in your account is &quot;VPC&quot; or &quot;Classic&quot;: <a href="">http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-availability</a></li>
+<li>Regarding instance types:<ul>
+<li>All instance types: <a href="">https://aws.amazon.com/ec2/instance-types</a></li>
+<li>Those which require VPC: <a href="">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types</a></li>
+</ul>
+</li>
+</ul>
+<p>If you want to solve this problem with your existing account,
+you can create a VPC and instruct Brooklyn to use it:</p>
+<ol>
+<li>Use the &quot;Start VPC Wizard&quot; option in <a href="https://console.aws.amazon.com/vpc" target="_blank">the VPC dashboard</a>,
+making sure it is for the right region, and selecting a &quot;Single Public Subnet&quot;.
+(More information is in <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-vpc" target="_blank">these AWS instructions</a>.)</li>
+<li>Once the VPC is created, open the &quot;Subnets&quot; view and modify the &quot;Public subnet&quot;
+so that it will &quot;Auto-assign Public IP&quot;.</li>
+<li>Next click on the &quot;Security Groups&quot; and find the <code>default</code> security group for that VPC.
+Modify its &quot;Inbound Rules&quot; to allow &quot;All traffic&quot; from &quot;Anywhere&quot;.
+(Or for more secure options, see the instructions in the previous section,
+&quot;Using Subnets&quot;.)</li>
+<li>Finally make a note of the subnet ID (e.g. <code>subnet-a1b2c3d4</code>) for use in Brooklyn.</li>
+</ol>
+<p>You can then deploy blueprints to the subnet, allowing VPC hardware instance types,
+by specifying the subnet ID as the <code>networkName</code> in your YAML blueprint.
+This is covered in the previous section, &quot;Using Subnets&quot;.</p>
+<h3 id="tidying-up-after-jclouds">Tidying up after jclouds</h3>
+<p>Security groups are not always deleted by jclouds. This is due to a limitation in AWS (see
+<a href="https://issues.apache.org/jira/browse/JCLOUDS-207" target="_blank">https://issues.apache.org/jira/browse/JCLOUDS-207</a>). In brief, AWS prevents the security group
+from being deleted until there are no VMs using it. However, there is eventual consistency for
+recording which VMs still reference those security groups: after deleting the VM, it can sometimes
+take several minutes before the security group can be deleted. jclouds retries for 3 seconds, but
+does not block for longer.</p>
+<p>Whilst there is eventual consistency for recording which VMs still reference security groups, after deleting a VM, it can sometimes take several minutes before a security group can be deleted</p>
+<p>There is utility written by <a href="http://www.cloudsoft.io/" target="_blank">Cloudsoft</a> for deleting these unused resources:
+<a href="http://blog.abstractvisitorpattern.co.uk/2013/03/tidying-up-after-jclouds.html" target="_blank">http://blog.abstractvisitorpattern.co.uk/2013/03/tidying-up-after-jclouds.html</a>.</p>
+<hr>
+<p>section: Azure Compute ARM
+section_type: inline</p>
+<h2 id="sectionposition-2">section_position: 2</h2>
+<h3 id="azure-compute-arm">Azure Compute ARM</h3>
+<p>Azure Resource Manager (ARM) is a framework for deploying and managing applications across resources and managing groups of resources as single logical units on the Microsoft Azure cloud computing platform.</p>
+<h4 id="setup-the-azure-credentials">Setup the Azure credentials</h4>
+<h5 id="azure-cli-20">Azure CLI 2.0</h5>
+<p>Firstly, install and configure Azure CLI following <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest" target="_blank">these steps</a>.</p>
+<p>You will need to obtain your <em>subscription ID</em> and <em>tenant ID</em> from Azure. To do this using the CLI, first, log in:</p>
+<pre><code>az login
+</code></pre><p>Or, if you are already logged in, request an account listing:</p>
+<pre><code>az account list
+</code></pre><p>In either case, this will return a subscription listing, similar to that shown below.</p>
+<pre><code>[
+  {
+    &quot;cloudName&quot;: &quot;AzureCloud&quot;,
+    &quot;id&quot;: &quot;012e832d-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
+    &quot;isDefault&quot;: true,
+    &quot;name&quot;: &quot;QA Team&quot;,
+    &quot;state&quot;: &quot;Enabled&quot;,
+    &quot;tenantId&quot;: &quot;ba85e8cd-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
+    &quot;user&quot;: {
+      &quot;name&quot;: &quot;qa@example.com&quot;,
+      &quot;type&quot;: &quot;user&quot;
+    }
+  },
+  {
+    &quot;cloudName&quot;: &quot;AzureCloud&quot;,
+    &quot;id&quot;: &quot;341751b0-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
+    &quot;isDefault&quot;: false,
+    &quot;name&quot;: &quot;Developer Team&quot;,
+    &quot;state&quot;: &quot;Enabled&quot;,
+    &quot;tenantId&quot;: &quot;ba85e8cd-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
+    &quot;user&quot;: {
+      &quot;name&quot;: &quot;dev@example.com&quot;,
+      &quot;type&quot;: &quot;user&quot;
+    }
+  }
+]
+</code></pre><p>Choose one of the subscriptions and make a note of its <em>id</em> - henceforth the subscription ID - and the <em>tenantId</em>.</p>
+<p>Next we need to create an <em>application</em> and a <em>service principle</em>, and grant permissions to the service principle. Use these commands:</p>
+<pre><code># Create an AAD application with your information.
+az ad app create --display-name &lt;name&gt; --password &lt;Password&gt; --homepage &lt;home-page&gt; --identifier-uris &lt;identifier-uris&gt;
+
+# For example: az ad app create --display-name &quot;myappname&quot;  --password abcd --homepage &quot;https://myappwebsite&quot; --identifier-uris &quot;https://myappwebsite&quot;
+</code></pre><p>Take a note of the <em>appId</em> shown.</p>
+<pre><code># Create a Service Principal
+az ad sp create --id &lt;Application-id&gt;
+</code></pre><p>Take a note of the <em>objectId</em> shown - this will be the service principal object ID. (Note that any of the <em>servicePrincipalNames</em> can also be used in place of the object ID.)</p>
+<pre><code># Assign roles for this service principal. The &quot;principal&quot; can be the &quot;objectId&quot; or any one of the &quot;servicePrincipalNames&quot; from the previous step
+az role assignment create --assignee &lt;Service-Principal&gt; --role Contributor --scope /subscriptions/&lt;Subscription-ID&gt;/
+</code></pre><p>By this stage you should have the following information:</p>
+<ul>
+<li>A subscription ID</li>
+<li>A tenant ID</li>
+<li>An application ID</li>
+<li>A service principle (either by its object ID, or by any one of its names)</li>
+</ul>
+<p>We can now verify this information that this information can be used to log in to Azure:</p>
+<pre><code>az login --service-principal -u &lt;Application-ID&gt; --password abcd --tenant &lt;Tenant-ID&gt;
+</code></pre><h5 id="azure-cli-10">Azure CLI 1.0</h5>
+<p>Firstly, install and configure Azure CLI following <a href="https://docs.microsoft.com/en-us/azure/cli-install-nodejs" target="_blank">these steps</a>.</p>
+<p>Using the Azure CLI, run the following commands to create a service principal</p>
+<pre><code># Set mode to ARM
+azure config mode arm
+
+# Enter your Microsoft account credentials when prompted
+azure login
+
+# Set current subscription to create a service principal
+azure account set &lt;Subscription-id&gt;
+
+# Create an AAD application with your information.
+azure ad app create --name &lt;name&gt; --password &lt;Password&gt; --home-page &lt;home-page&gt; --identifier-uris &lt;identifier-uris&gt;
+
+# For example: azure ad app create --name &quot;myappname&quot;  --password abcd --home-page &quot;https://myappwebsite&quot; --identifier-uris &quot;https://myappwebsite&quot;
+
+# Output will include a value for `Application Id`, which will be used for the live tests
+
+# Create a Service Principal
+azure ad sp create --applicationId &lt;Application-id&gt;
+
+# Output will include a value for `Object Id`, to be used in the next step 
+</code></pre><p>Run the following commands to assign roles to the service principal</p>
+<pre><code># Assign roles for this service principal
+azure role assignment create --objectId &lt;Object-id&gt; -o Contributor -c /subscriptions/&lt;Subscription-id&gt;/
+</code></pre><p>Look up the the tenant Id</p>
+<pre><code>azure account show -s &lt;Subscription-id&gt; --json
+
+# output will be a JSON which will include the `Tenant id`
+</code></pre><p>Verify service principal</p>
+<pre><code>azure login -u &lt;Application-id&gt; -p &lt;Password&gt; --service-principal --tenant &lt;Tenant-id&gt;
+</code></pre><h4 id="using-the-azure-arm-location">Using the Azure ARM Location</h4>
+<p>Below is an example Azure ARM location in YAML which will launch a Ubuntu instance in south east asia:</p>
+<pre><code>brooklyn.catalog:
+  id: my-azure-arm-location
+  name: &quot;My Azure ARM location&quot;
+  itemType: location
+  item:
+    type: jclouds:azurecompute-arm
+    brooklyn.config:
+      identity: &lt;Application-id&gt;
+      credential: &lt;Password&gt;
+      endpoint: https://management.azure.com/subscriptions/&lt;Subscription-id&gt;
+      oauth.endpoint: https://login.microsoftonline.com/&lt;Tenant-id&gt;/oauth2/token
+
+      jclouds.azurecompute.arm.publishers: OpenLogic
+      region: southeastasia
+      loginUser: brooklyn
+      templateOptions:
+        overrideAuthenticateSudo: true 
+</code></pre><p>Fill the values <code>&lt;Application-id&gt;</code>, <code>&lt;Password&gt;</code>, <code>&lt;Subscription-id&gt;</code> and <code>&lt;Tenant-id&gt;</code> in from the values generated when 
+setting up your credentials. In addition; several keys, not required in other locations need to be specified in order to 
+use the Azure Compute ARM location. These are:</p>
+<pre><code>jclouds.azurecompute.arm.publishers: OpenLogic
+</code></pre><p>The publishers is any item from the list available here: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-cli-ps-findimage" target="_blank">https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-cli-ps-findimage</a></p>
+<pre><code>region: southeastasia    
+</code></pre><p>The region is any region from the list available here: <a href="https://azure.microsoft.com/en-us/regions/" target="_blank">https://azure.microsoft.com/en-us/regions/</a></p>
+<pre><code>loginUser: brooklyn
+</code></pre><p>The loginUser can be anything, as long as it&apos;s specified. </p>
+<pre><code>templateOptions:
+    overrideAuthenticateSudo: true
+</code></pre><p>The <code>overrideAuthenticateSudo: true</code> key tells Apache Brooklyn that default on Azure images do not have passwordless sudo 
+configured by default.</p>
+<h4 id="useful-configuration-options-for-azure-arm">Useful configuration options for Azure ARM</h4>
+<p>You can add these options directly under the <code>brooklyn.config</code> element in the example above:</p>
+<ul>
+<li><code>jclouds.compute.resourcename-prefix</code> and <code>jclouds.compute.resourcename-delimiter</code> - defaults to <code>jclouds</code> and <code>-</code> respectively. If jclouds is choosing the name for a resource (for example, a virtual machine), these properties will alter the way the resource is named.</li>
+</ul>
+<p>You can add these options into the <code>templateOptions</code> element inside the <code>brooklyn.config</code> element in the example above:</p>
+<ul>
+<li><code>resourceGroup</code> - select a Resource Group to deploy resources into. If not given, jclouds will generate a new resource group with a partly-random name.</li>
+</ul>
+<h4 id="using-windows-on-azure-arm">Using Windows on Azure ARM</h4>
+<p>This section contains material how to create a Windows location on Azure ARM. Some of the used parameters are explained in the section above.</p>
+<p>Windows on Azure ARM requires manually created <a href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started" target="_blank">Azure KeyVault</a>
+Azure KeyVaults can be created <a href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2#create-a-key-vault" target="_blank">via Azure cli</a>
+or <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter" target="_blank">Azure portal UI</a>. KeyVault&apos;s secret is a key
+stored in protected .PFX file. It needs to be prepared upfront or created with the <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/add-azurekeyvaultkey?view=azurermps-4.0.0" target="_blank">Add-AzureKeyVaultKey</a> cmdlet.</p>
+<ul>
+<li><p><code>osFamily: windows</code> tells Apache Brooklyn to consider it as a Windows machine</p>
+</li>
+<li><p><code>useJcloudsSshInit: false</code> tells jclouds to not try to connect to the VM</p>
+</li>
+<li><p><code>vmNameMaxLength: 15</code> tells the cloud client to strip the VM name to maximum 15 characters.
+This is the maximum size supported by Azure Windows VMs.</p>
+</li>
+<li><p><code>winrm.useHttps</code> tells Apache Brooklyn to configure the WinRM client to use HTTPS.</p>
+</li>
+<li><p><code>secrets</code> Specifies the KeyVault configuration</p>
+<p><code>sourceVault</code> Resource <code>id</code> of the KeyVault</p>
+<p> <code>vaultCertificates</code> <code>certificateStore</code> has to use <code>My</code> as a value.
+  KeyVault&apos;s <code>certificateUrl</code>. An URI to the <a href="https://docs.microsoft.com/en-us/rest/api/keyvault/about-keys--secrets-and-certificates#BKMK_DataTypes" target="_blank">Secret Identifier</a></p>
+</li>
+<li><p><code>windowsConfiguration</code></p>
+<p> <code>provisionVMAgent</code> whether Azure to install an agent on the VM. It must be set to <code>true</code></p>
+<p> <code>winRM</code> It defines the <code>listeners</code> section. If <code>listeners</code> is <code>https</code> then <code>certificateUrl</code> needs to be set. Its value must match the one of <code>secrets</code>&apos;s <code>certificateUrl</code>.</p>
+</li>
+<li><p><code>additionalUnattendContent</code> Additional content. Normally it can be defined as <code>null</code></p>
+</li>
+<li><p><code>enableAutomaticUpdates</code> whether to enable the automatic windows updates. It can be set to <code>false</code>, if automatic updates are not desired</p>
+</li>
+</ul>
+<h6 id="sample-windows-blueprint">Sample Windows Blueprint</h6>
+<p>Placeholders surrounded with <code>&lt;&gt;</code> have to be replcaced with their respective values.</p>
+<pre><code class="lang-yaml">brooklyn.catalog:
+<span class="hljs-attr">  id:</span> my-azure-arm-location
+<span class="hljs-attr">  name:</span> <span class="hljs-string">&quot;My Azure ARM location&quot;</span>
+<span class="hljs-attr">  itemType:</span> location
+<span class="hljs-attr">  item:</span>
+<span class="hljs-attr">    type:</span> jclouds:azurecompute-arm
+    brooklyn.config:
+<span class="hljs-attr">      identity:</span> &lt;Application-id<span class="hljs-string">&gt;
+</span><span class="hljs-attr">      credential:</span> &lt;Password<span class="hljs-string">&gt;
+</span><span class="hljs-attr">      endpoint:</span> https://management.azure.com/subscriptions/&lt;Subscription-id<span class="hljs-string">&gt;
+      oauth.endpoint: https://login.microsoftonline.com/&lt;Tenant-id&gt;/oauth2/token
+      jclouds.azurecompute.arm.publishers: MicrosoftWindowsServer
+      jclouds.azurecompute.operation.timeout: 120000
+
+      winrm.useHttps: true
+</span><span class="hljs-attr">      osFamily:</span> windows
+<span class="hljs-attr">      imageId:</span> &lt;Azure_location&gt;/MicrosoftWindowsServer/WindowsServer/<span class="hljs-number">2012</span>-R2-Datacenter
+<span class="hljs-attr">      region:</span> &lt;Azure_location<span class="hljs-string">&gt;
+</span><span class="hljs-attr">      vmNameMaxLength:</span> <span class="hljs-number">15</span>
+<span class="hljs-attr">      useJcloudsSshInit:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">      destroyOnFailure:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-attr">      templateOptions:</span>
+<span class="hljs-attr">        overrideLoginUser:</span> brooklyn
+<span class="hljs-attr">        overrideLoginPassword:</span> <span class="hljs-string">&quot;secretPass1!&quot;</span>
+<span class="hljs-attr">        secrets:</span>
+<span class="hljs-attr">        - sourceVault:</span>
+<span class="hljs-attr">            id:</span> <span class="hljs-string">&quot;/subscriptions/&lt;Subscription-id&gt;/resourceGroups/&lt;ResourceGroup&gt;/providers/Microsoft.KeyVault/vaults/&lt;KeyVault-name&gt;&quot;</span>
+<span class="hljs-attr">          vaultCertificates:</span>
+<span class="hljs-attr">          - certificateUrl:</span> <span class="hljs-string">&quot;&lt;KeyVault-uri&gt;&quot;</span>
+<span class="hljs-attr">            certificateStore:</span> My
+<span class="hljs-attr">        windowsConfiguration:</span>
+<span class="hljs-attr">          provisionVMAgent:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">          winRM:</span>
+<span class="hljs-attr">            listeners:</span>
+<span class="hljs-attr">            - protocol:</span> https
+<span class="hljs-attr">              certificateUrl:</span> <span class="hljs-string">&quot;&lt;KeyVault-uri&gt;&quot;</span>
+<span class="hljs-attr">          additionalUnattendContent:</span> <span class="hljs-literal">null</span>
+<span class="hljs-attr">          enableAutomaticUpdates:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<h4 id="known-issues">Known issues</h4>
+<p>There are currently two known issues with Azure ARM:</p>
+<ul>
+<li>It can take a long time for VMs to be provisioned</li>
+<li>The Azure ARM APIs appear to have some fairly strict rate limiting that can result in AzureComputeRateLimitExceededException</li>
+</ul>
+<hr>
+<p>section: Azure Compute Classic
+section_type: inline</p>
+<h2 id="sectionposition-3">section_position: 3</h2>
+<h3 id="azure-compute-classic">Azure Compute Classic</h3>
+<p>Azure is a cloud computing platform and infrastructure created by Microsoft. Apache Brooklyn includes support for both Azure Classic and Azure ARM, as
+one of the <a href="http://jclouds.org" target="_blank">Apache jclouds</a> supported clouds <code>Microsoft Azure Compute</code>.</p>
+<p>The two modes of using Azure are the &quot;classic deployment&quot; model and the newer &quot;Azure Resource Manager&quot; (ARM)
+model. See <a href="https://azure.microsoft.com/en-gb/documentation/articles/resource-manager-deployment-model/" target="_blank">https://azure.microsoft.com/en-gb/documentation/articles/resource-manager-deployment-model/</a>
+for details.</p>
+<h4 id="setup-the-azure-credentials">Setup the Azure credentials</h4>
+<p>Microsoft Azure requests are signed by SSL certificate. You need to upload one into your account in order to use an Azure
+location.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># create the certificate request</span>
+mkdir -m 700 <span class="hljs-variable">$HOME</span>/.brooklyn
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout <span class="hljs-variable">$HOME</span>/.brooklyn/azure.pem -out <span class="hljs-variable">$HOME</span>/.brooklyn/azure.pem
+<span class="hljs-comment"># create the p12 file, and note your export password. This will be your test credentials.</span>
+openssl pkcs12 -export -out <span class="hljs-variable">$HOME</span>/.brooklyn/azure.p12 -in <span class="hljs-variable">$HOME</span>/.brooklyn/azure.pem -name <span class="hljs-string">&quot;brooklyn :: <span class="hljs-variable">$USER</span>&quot;</span>
+<span class="hljs-comment"># create a cer file</span>
+openssl x509 -inform pem -in <span class="hljs-variable">$HOME</span>/.brooklyn/azure.pem -outform der -out <span class="hljs-variable">$HOME</span>/.brooklyn/azure.cer
+</code></pre>
+<p>Finally, upload .cer file to the management console at <a href="https://manage.windowsazure.com/@myId#Workspaces/AdminTasks/ListManagementCertificates" target="_blank">https://manage.windowsazure.com/@myId#Workspaces/AdminTasks/ListManagementCertificates</a> to authorize this certificate.</p>
+<p>Please note, you can find the &quot;myId&quot; value for this link by looking at the URL when logged into the Azure management portal.</p>
+<p><strong>Note</strong>, you will need to use <code>.p12</code> format in the <code>brooklyn.properties</code>.</p>
+<h4 id="how-to-configure-apache-brooklyn-to-use-azure-compute">How to configure Apache Brooklyn to use Azure Compute</h4>
+<p>First, in your <code>brooklyn.properties</code> define a location as follows:</p>
+<pre><code class="lang-properties">brooklyn.location.jclouds.azurecompute.identity=$HOME/.brooklyn/azure.p12
+brooklyn.location.jclouds.azurecompute.credential=&lt;P12_EXPORT_PASSWORD&gt;
+brooklyn.location.jclouds.azurecompute.endpoint=https://management.core.windows.net/&lt;YOUR_SUBSCRIPTION_ID&gt;
+brooklyn.location.jclouds.azurecompute.vmNameMaxLength=45
+brooklyn.location.jclouds.azurecompute.jclouds.azurecompute.operation.timeout=120000
+brooklyn.location.jclouds.azurecompute.user=&lt;USER_NAME&gt;
+brooklyn.location.jclouds.azurecompute.password=&lt;PASSWORD&gt;
+</code></pre>
+<p>During the VM provisioning, Azure will set up the account with <code>&lt;USER_NAME&gt;</code> and <code>&lt;PASSWORD&gt;</code> automatically.
+Notice, <code>&lt;PASSWORD&gt;</code> must be a minimum of 8 characters and must contain 3 of the following: a lowercase character, an uppercase
+character, a number, a special character.</p>
+<p>To force Apache Brooklyn to use a particular image in Azure, say Ubuntu 14.04.1 64bit, one can add:</p>
+<pre><code>brooklyn.location.jclouds.azurecompute.imageId=b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_1-LTS-amd64-server-20150123-en-us-30GB
+</code></pre><p>From $BROOKLYN_HOME, you can list the image IDs available using the following command:</p>
+<pre><code>./bin/client &quot;list-images --location azure-west-europe&quot;
+</code></pre><p>To force Brooklyn to use a particular hardwareSpec in Azure, one can add something like:</p>
+<pre><code>brooklyn.location.jclouds.azurecompute.hardwareId=BASIC_A2
+</code></pre><p>From $BROOKLYN_HOME, you can list the hardware profile IDs available using the following command:</p>
+<pre><code>./bin/client &quot;list-hardware-profiles --location azure-west-europe&quot;
+</code></pre><p>At the time of writing, the classic deployment model has the possible values shown below.
+See <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/" target="_blank">https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/</a>
+for further details, though that description focuses on the new &quot;resource manager deployment&quot;
+rather than &quot;classic&quot;.</p>
+<ul>
+<li><code>Basic_A0</code> to <code>Basic_A4</code></li>
+<li><code>Standard_D1</code> to <code>Standard_D4</code></li>
+<li><code>Standard_G1</code> to <code>Standard_G5</code></li>
+<li><code>ExtraSmall</code>, <code>Small</code>, <code>Medium</code>, <code>Large</code>, <code>ExtraLarge</code></li>
+</ul>
+<h5 id="named-location">Named location</h5>
+<p>For convenience, you can define a named location, like:</p>
+<pre><code class="lang-properties">brooklyn.location.named.azure-west-europe=jclouds:azurecompute:West Europe
+brooklyn.location.named.azure-west-europe.displayName=Azure West Europe
+brooklyn.location.named.azure-west-europe.imageId=b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_1-LTS-amd64-server-20150123-en-us-30GB
+brooklyn.location.named.azure-west-europe.hardwareId=BASIC_A2
+brooklyn.location.named.azure-west-europe.user=test
+brooklyn.location.named.azure-west-europe.password=MyPassword1!
+</code></pre>
+<p>This will create a location named <code>azure-west-europe</code>. It will inherit all the configuration
+defined on <code>brooklyn.location.jclouds.azurecompute</code>. It will also augment and override this
+configuration (e.g. setting the display name, image id and hardware id).</p>
+<p>On Linux VMs, The <code>user</code> and <code>password</code> will create a user with that name and set its password,
+disabling the normal login user and password defined on the <code>azurecompute</code> location.</p>
+<h4 id="windows-vms-on-azure">Windows VMs on Azure</h4>
+<p>The following configuration options are important for provisioning Windows VMs in Azure:</p>
+<ul>
+<li><p><code>osFamily: windows</code> tells Apache Brooklyn to consider it as a Windows machine</p>
+</li>
+<li><p><code>useJcloudsSshInit: false</code> tells jclouds to not try to connect to the VM</p>
+</li>
+<li><p><code>vmNameMaxLength: 15</code> tells the cloud client to strip the VM name to maximum 15 characters. 
+This is the maximum size supported by Azure Windows VMs.</p>
+</li>
+<li><p><code>winrm.useHttps</code> tells Apache Brooklyn to configure the WinRM client to use HTTPS.</p>
+<p>This is currently not supported in the default configuration for other clouds, where
+Apache Brooklyn is deploying Windows VMs.</p>
+<p>If the parameter value is <code>false</code> the default WinRM port is 5985; if <code>true</code> the default port 
+for WinRM will be 5986. Use of default ports is stongly recommended.</p>
+</li>
+<li><p><code>winrm.useNtlm</code> tells Apache Brooklyn to configure the WinRM client to use NTLM protocol.</p>
+<p>For Azure, this is mandatory.</p>
+<p>For other clouds, this value is used in the cloud init script to configure WinRM on the VM.<br>If the value is <code>true</code> then Basic Authentication will be disabled and the WinRM client will only use Negotiate plus NTLM.<br>If the value is <code>false</code> then Basic Authentication will be enabled and the WinRM client will use Basic Authentication.</p>
+<p>NTLM is the default Authentication Protocol.</p>
+<p>The format of this configuration option is subject to change: WinRM supports several 
+authentication mechanisms, so this may be changed to a prioritised list so as to
+provide fallback options.</p>
+</li>
+<li><p><code>user</code> tells Apache Brooklyn which user to login as. The value should match that supplied 
+in the <code>overrideLoginUser</code> of the <code>templateOptions</code>.</p>
+</li>
+<li><p><code>password</code>: tells Apache Brooklyn the password to use when connecting. The value should
+match that supplied in the <code>overrideLoginPassword</code> of the <code>templateOptions</code>.</p>
+</li>
+<li><p><code>templateOptions: { overrideLoginUser: adminuser, overrideLoginPassword: Pa55w0rd! }</code><br>tells the Azure Cloud to provision a VM with the given admin username and password. Note that
+no &quot;Administrator&quot; user will be created.</p>
+<p>If this config is not set then the VM will have a default user named &quot;jclouds&quot; with password 
+&quot;Azur3Compute!&quot;. It is <strong>Strongly Recommended</strong> that these template options are set.</p>
+<p><strong>Notice</strong>: one cannot use <code>Administrator</code> as the user in Azure.</p>
+<p>This configuration is subject to change in future releases.</p>
+</li>
+</ul>
+<h6 id="sample-windows-blueprint">Sample Windows Blueprint</h6>
+<p>Below is an example for provisioning a Windows-based entity on Azure. Note the placeholder values 
+for the identity, credential and password.</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">name:</span> Windows Test @ Azure
+<span class="hljs-attr">location:</span>
+<span class="hljs-attr">  jclouds:</span>azurecompute:West Europe:
+<span class="hljs-attr">    identity:</span> /home/users/brooklyn/.brooklyn/azure.p12
+<span class="hljs-attr">    credential:</span> xxxxxxxp12
+<span class="hljs-attr">    endpoint:</span> https://management.core.windows.net/<span class="hljs-number">12345678</span><span class="hljs-bullet">-1234</span><span class="hljs-bullet">-1234</span><span class="hljs-bullet">-1234</span><span class="hljs-bullet">-123456789</span>abc
+<span class="hljs-attr">    imageId:</span> <span class="hljs-number">3</span>a50f22b388a4ff7ab41029918570fa6__Windows-Server<span class="hljs-bullet">-2012</span>-Essentials<span class="hljs-bullet">-20141204</span>-enus
+<span class="hljs-attr">    hardwareId:</span> BASIC_A2
+<span class="hljs-attr">    osFamily:</span> windows
+<span class="hljs-attr">    useJcloudsSshInit:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    vmNameMaxLength:</span> <span class="hljs-number">15</span>
+    winrm.useHttps: <span class="hljs-literal">true</span>
+<span class="hljs-attr">    user:</span> brooklyn
+<span class="hljs-attr">    password:</span> secretPass1!
+<span class="hljs-attr">    templateOptions:</span>
+<span class="hljs-attr">      overrideLoginUser:</span> brooklyn
+<span class="hljs-attr">      overrideLoginPassword:</span> secretPass1!
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">- type:</span> org.apache.brooklyn.entity.software.base.VanillaWindowsProcess
+  brooklyn.config:
+    install.command: echo install phase
+    launch.command: echo launch phase
+    checkRunning.command: echo launch phase
+</code></pre>
+<p>Below is an example named location for Azure, configured in <code>brooklyn.properties</code>. Note the 
+placeholder values for the identity, credential and password.</p>
+<pre><code class="lang-properties">brooklyn.location.named.myazure=jclouds:azurecompute:West Europe
+brooklyn.location.named.myazure.displayName=Azure West Europe (windows)
+brooklyn.location.named.myazure.identity=$HOME/.brooklyn/azure.p12
+brooklyn.location.named.myazure.credential=&lt;P12_EXPORT_PASSWORD&gt;
+brooklyn.location.named.myazure.endpoint=https://management.core.windows.net/&lt;YOUR_SUBSCRIPTION_ID&gt;
+brooklyn.location.named.myazure.vmNameMaxLength=15
+brooklyn.location.named.myazure.jclouds.azurecompute.operation.timeout=120000
+brooklyn.location.named.myazure.imageId=3a50f22b388a4ff7ab41029918570fa6__Windows-Server-2012-Essentials-20141204-enus
+brooklyn.location.named.myazure.hardwareId=BASIC_A2
+brooklyn.location.named.myazure.osFamily=windows
+brooklyn.location.named.myazure.useJcloudsSshInit=false
+brooklyn.location.named.myazure.winrm.useHttps=true
+brooklyn.location.named.myazure.user=brooklyn
+brooklyn.location.named.myazure.password=secretPass1!
+brooklyn.location.named.myazure.templateOptions={ overrideLoginUser: amp, overrideLoginPassword: secretPass1! }
+</code></pre>
+<h6 id="user-and-password-configuration">User and Password Configuration</h6>
+<p>As described under the configuration options, the username and password must be explicitly supplied
+in the configuration.</p>
+<p>This is passed to the Azure Cloud during provisioning, to create the required user. These values 
+correspond to the options <code>AdminUsername</code> and <code>AdminPassword</code> in the Azure API.</p>
+<p>If a hard-coded password is not desired, then within Java code a random password could be 
+auto-generated and passed into the call to <code>location.obtain(Map&lt;?,?&gt;)</code> to override these values.</p>
+<p>This approach differs from the behaviour of clouds like AWS, where the password is auto-generated 
+by the cloud provider and is then retrieved via the cloud provider&apos;s API after provisioning the VM.</p>
+<h6 id="winrm-configuration">WinRM Configuration</h6>
+<p>The WinRM initialization in Azure is achieved through configuration options in the VM provisioning request.
+The required configuration is to enabled HTTPS (if Azure is told to use http, the VM comes pre-configured 
+with WinRM encrypted over HTTP). The default is then to support NTLM protocol.</p>
+<p>The setup of Windows VMs on Azure differs from that on other clouds, such as AWS. In contrast, on AWS an 
+init script is passed to the cloud API to configure WinRM appropriately.</p>
+<p><em>Windows initialization scripts in Azure are unfortunately not supported in &quot;classic deployment&quot;<br>model, but are available in the newer &quot;resource manager deployment&quot; model as an &quot;Azure VM Extension&quot;.</em></p>
+<hr>
+<p>section: CloudStack
+title: Apache CloudStack
+section_type: inline</p>
+<h2 id="sectionposition-4">section_position: 4</h2>
+<h2 id="apache-cloudstack">Apache CloudStack</h2>
+<h3 id="connection-details">Connection Details</h3>
+<p>The endpoint URI will normally have the suffix <code>/client/api/</code>.</p>
+<p>The identity is the &quot;api key&quot; and the credential is the &quot;secret key&quot;. These can be generated in 
+the CloudStack gui: under accounts, select &quot;view users&quot;, then &quot;generate key&quot;.</p>
+<pre><code>location:
+  jclouds:cloudstack:
+    endpoint: https://cloud.acme.com/client/api
+    identity: abcdefghijklmnopqrstuvwxyz01234567890-abcdefghijklmnopqrstuvwxyz01234567890-abcdefghij
+    credential: mycred-abcdefghijklmnopqrstuvwxyz01234567890-abcdefghijklmnopqrstuvwxyz01234567890-abc
+</code></pre><p>Users are strongly recommended to use 
+<a href="../guide/ops/externalized-configuration.html">externalized configuration</a> for better
+credential management, for example using <a href="https://www.vaultproject.io/" target="_blank">Vault</a>.</p>
+<h3 id="common-configuration-options">Common Configuration Options</h3>
+<p>Below are examples of configuration options that use values specific to CloudStack environments:</p>
+<ul>
+<li><p>The <code>imageId</code> is the template id. For example,
+<code>imageId: db0bcce3-9e9e-4a87-a953-2f46b603498f</code>.</p>
+</li>
+<li><p>The <code>region</code> is CloudStack zone id.
+For example <code>region: 84539b9c-078e-458a-ae26-c3ffc5bb1ec9</code>..</p>
+</li>
+<li><p><code>networkName</code> is the network id (within the given zone) to be used. For example, 
+<code>networkName: 961c03d4-9828-4037-9f4d-3dd597f60c4f</code>.</p>
+</li>
+</ul>
+<p>For further configuration options, consult 
+<a href="https://jclouds.apache.org/reference/javadoc/1.9.x/org/jclouds/cloudstack/compute/options/CloudStackTemplateOptions.html" target="_blank">jclouds CloudStack template options</a>.
+These can be used with the <strong><a href="#custom-template-options">templateOptions</a></strong> configuration option.</p>
+<h3 id="using-a-pre-existing-key-pair">Using a Pre-existing Key Pair</h3>
+<p>The configuration below uses a pre-existing key pair:</p>
+<pre><code>location:
+  jclouds:cloudstack:
+    ...
+    loginUser: root
+    loginUser.privateKeyFile: /path/to/keypair.pem
+    keyPair: my-keypair
+</code></pre><h3 id="using-pre-existing-security-groups">Using Pre-existing Security Groups</h3>
+<p>To specify existing security groups, their IDs must be used rather than their names (note this
+differs from the configuration on other clouds!).</p>
+<p>The configuration below uses a pre-existing security group:</p>
+<pre><code>location:
+  jclouds:cloudstack:
+    ...
+    templateOptions:
+      generateSecurityGroup: false
+      securityGroupIds:
+      - 12345678-90ab-def0-1234-567890abcdef
+</code></pre><h3 id="using-static-nat">Using Static NAT</h3>
+<p>Assigning a public IP to a VM at provision-time is referred to as &quot;static NAT&quot; in CloudStack
+parlance. To give some consistency across different clouds, the configuration option is named
+<code>autoAssignFloatingIp</code>. For example, <code>autoAssignFloatingIp: false</code>.</p>
+<h3 id="cloudmonkey-cli">CloudMonkey CLI</h3>
+<p>The <a href="https://cwiki.apache.org/confluence/display/CLOUDSTACK/CloudStack+cloudmonkey+CLI" target="_blank">CloudStack CloudMonkey CLI</a>
+is a very useful tool. It gives is an easy way to validate that credentials are correct, and to query<br>the API to find the correct zone IDs etc.</p>
+<p>Useful commands include:</p>
+<pre><code># for finding the ids of the zones:
+cloudmonkey api listZones
+
+# for finding the ids of the networks.
+cloudmonkey api listNetworks | grep -E &quot;id =|name =|=========&quot;
+</code></pre><h3 id="cloudstack-troubleshooting">CloudStack Troubleshooting</h3>
+<p>These troubleshooting tips are more geared towards problems encountered in old test/dev 
+CloudStack environment.</p>
+<h4 id="resource-garbage-collection-issues">Resource Garbage Collection Issues</h4>
+<p>The environment may run out of resources, due to GC issues, preventing the user from creating new 
+VMs or allocating IP addresses (May respond with this error message: 
+<code>errorCode=INTERNAL_ERROR, errorText=Job failed due to exception Unable to create a deployment for VM</code>). 
+There are two options worth checking it to enforce clearing up the zombie resources:</p>
+<ul>
+<li>Go to the Accounts tab in the webconsole and tap on the Update Resource Count button.</li>
+<li>Restart the VPC in question from the Network tab.</li>
+</ul>
+<h4 id="releasing-allocated-public-ip-addresses">Releasing Allocated Public IP Addresses</h4>
+<p>Releasing an allocated Public IP from the web console did not free up the resources. Instead 
+CloudMonkey can be used to dissociate IPs and expunge VMs.</p>
+<p>Here is a CloudMonkey script to dissociate any zombie IPs:</p>
+<pre><code>cloudmonkey set display json;
+cloudmonkey api listPublicIpAddresses | grep &apos;&quot;id&quot;:&apos; &gt; ips.txt; 
+sed -i -e s/&apos;      &quot;id&quot;: &quot;&apos;/&apos;&apos;/g ips.txt;
+sed -i -e s/&apos;&quot;,&apos;/&apos;&apos;/g ips.txt
+for line in $(cat ips.txt); do cloudmonkey api disassociateIpAddress id=&quot;$line&quot;; done
+rm ips.txt;
+cloudmonkey set display default;
+</code></pre><h4 id="restarting-vpcs">Restarting VPCs</h4>
+<p>Errors have been encountered when a zone failed to provision new VMs, with messages like:</p>
+<pre><code>Job failed due to exception Resource [Host:15] is unreachable: Host 15: Unable to start instance due to null
+</code></pre><p>The workaround was to restart the VPC networks:</p>
+<ul>
+<li>Log into the CloudStack web-console.</li>
+<li>Go to Network -&gt; VPC (from the &quot;select view&quot;)</li>
+<li>For each of the VPCs, click on the &quot;+&quot; in the &quot;quickview&quot; column, and invoke &quot;restart VPC&quot;.</li>
+</ul>
+<p>Other symptoms of this issue were that: 1) an administrator could still provision VMs using 
+the admin account, which used a different network; and 2) the host number was very low, so it 
+was likely to be a system host/VM that was faulty.</p>
+<hr>
+<p>section: Google Compute Engine (GCE)
+title: Google Compute Engine
+section_type: inline</p>
+<h2 id="sectionposition-5">section_position: 5</h2>
+<h2 id="google-compute-engine-gce">Google Compute Engine (GCE)</h2>
+<h3 id="credentials">Credentials</h3>
+<p>GCE uses a service account e-mail address for the identity and a private key as the credential.</p>
+<p>To obtain credentials for GCE, use the GCE web page&apos;s &quot;APIs &amp; auth -&gt; Credentials&quot; page,
+creating a &quot;Service Account&quot; of type JSON, then extracting the client_email as the identity and 
+private_key as the credential. For more information, see the 
+<a href="https://jclouds.apache.org/guides/google" target="_blank">jclouds instructions</a>.</p>
+<p>An example of the expected format is shown below. Note that when supplying the credential in a 
+properties file, it can either be one long line with <code>\n</code> representing the new line characters, 
+or in YAML it can be split over multiple lines as below:</p>
+<pre><code>location:
+  jclouds:google-compute-engine:
+    region: us-central1-a
+    identity: 1234567890-somet1mesArand0mU1Dhere@developer.gserviceaccount.com
+    credential: |
+      -----BEGIN RSA PRIVATE KEY-----
+      abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz
+      0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmn
+      opqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+ab
+      cdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz01
+      23456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnop
+      qrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcd
+      efghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123
+      456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqr
+      stuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdef
+      ghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz012345
+      6789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrst
+      uvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefgh
+      ijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz01234567
+      89/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuv
+      wxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghij
+      klmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789
+      /+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwx
+      yz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijkl
+      mnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+
+      abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz
+      0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+abcdefghijklmn
+      opqrstuvwxyz0123456789/+abcdefghijklmnopqrstuvwxyz0123456789/+ab
+      cdefghijklmnopqrstuvwxyz
+      -----END RSA PRIVATE KEY-----
+</code></pre><p>It is also possible to have the credential be the path of a local file that contains the key.
+However, this can make it harder to setup and manage multiple Brooklyn servers (particularly
+when using high availability mode).</p>
+<p>Users are strongly recommended to use 
+<a href="../guide/ops/externalized-configuration.html">externalized configuration</a> for better
+credential management, for example using <a href="https://www.vaultproject.io/" target="_blank">Vault</a>.</p>
+<h3 id="quotas">Quotas</h3>
+<p>GCE accounts can have low default <a href="https://cloud.google.com/compute/docs/resource-quotas" target="_blank">quotas</a>.</p>
+<p>It is easy to request a quota increase by submitting a <a href="https://support.google.com/cloud/answer/6075746?hl=en" target="_blank">quota increase form</a>.</p>
+<h3 id="networks">Networks</h3>
+<p>GCE accounts often have a limit to the number of networks that can be created. One work around
+is to manually create a network with the required open ports, and to refer to that named network
+in Brooklyn&apos;s location configuration.</p>
+<p>To create a network, see <a href="https://cloud.google.com/compute/docs/networking#networks_1" target="_blank">GCE network instructions</a>.</p>
+<p>For example, for dev/demo purposes an &quot;everything&quot; network could be created that opens all ports.</p>
+<p>|| Name                        || everything                  |
+|| Description                 || opens all tcp ports         |
+|| Source IP Ranges            || 0.0.0.0/0                   |
+|| Allowed protocols and ports || tcp:0-65535 and udp:0-65535 |</p>
+<p>To configure the location to use this, you can include a location configuration option like:</p>
+<pre><code>templateOptions:
+  network: https://www.googleapis.com/compute/v1/projects/&lt;project name&gt;/global/networks/everything
+</code></pre><hr>
+<p>section: IBM Softlayer
+title: IBM Softlayer
+section_type: inline</p>
+<h2 id="sectionposition-6">section_position: 6</h2>
+<h2 id="ibm-softlayer">IBM SoftLayer</h2>
+<h3 id="credentials">Credentials</h3>
+<p>Credentials can be obtained from the Softlayer API, under &quot;administrative -&gt; user administration -&gt; api-access&quot;.</p>
+<p>For example:</p>
+<pre><code>location:
+  jclouds:softlayer:
+    region: ams01
+    identity: my-user-name
+    credential: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+</code></pre><p>Users are strongly recommended to use 
+<a href="../guide/ops/externalized-configuration.html">externalized configuration</a> for better
+credential management, for example using <a href="https://www.vaultproject.io/" target="_blank">Vault</a>.</p>
+<h3 id="common-configuration-options">Common Configuration Options</h3>
+<p>Below are examples of configuration options that use values specific to Softlayer:</p>
+<ul>
+<li><p>The <code>region</code> is the <a href="http://www.softlayer.com/data-centers" target="_blank">Softlayer datacenter</a>.
+For example, <code>region: dal05</code>.</p>
+</li>
+<li><p>The <code>hardwareId</code> is an auto-generated combination of the hardware configuration options.
+This is because there is no concept of hardwareId or hardware profile names in Softlayer. 
+An example value is <code>hardwareId: &quot;cpu=1,memory=1024,disk=25,type=LOCAL&quot;</code>.</p>
+</li>
+<li><p>The <code>imageId</code> is the <a href="https://knowledgelayer.softlayer.com/learning/introduction-image-templates" target="_blank">Image template</a>.
+For example, <code>imageId: CENTOS_6_64</code>.</p>
+</li>
+</ul>
+<h3 id="vlan-selection">VLAN Selection</h3>
+<p>SoftLayer may provision VMs in different VLANs, even within the same region.
+Some applications require VMs to be on the <em>same</em> internal subnet; blueprints
+for these can specify this behaviour in SoftLayer in one of two ways.</p>
+<p>The VLAN ID can be set explicitly using the fields
+<code>primaryNetworkComponentNetworkVlanId</code> and
+<code>primaryBackendNetworkComponentNetworkVlanId</code> of <code>SoftLayerTemplateOptions</code>
+when specifying the location being used in the blueprint, as follows:</p>
+<pre><code>location:
+  jclouds:softlayer:
+    region: ams01
+    templateOptions:
+      # Enter your preferred network IDs
+      primaryNetworkComponentNetworkVlanId: 1153481
+      primaryBackendNetworkComponentNetworkVlanId: 1153483
+</code></pre><p>This method requires that a VM already exist and you look up the IDs of its
+VLANs, for example in the SoftLayer console UI, and that subsequently at least
+one VM in that VLAN is kept around.  If all VMs on a VLAN are destroyed
+SoftLayer may destroy the VLAN.  Creating VLANs directly and then specifying
+them as IDs here may not work.  Add a line note</p>
+<p>The second method tells Brooklyn to discover VLAN information automatically: it
+will provision one VM first, and use the VLAN information from it when
+provisioning subsequent machines. This ensures that all VMs are on the same
+subnet without requiring any manual VLAN referencing, making it very easy for
+end-users.</p>
+<p>To use this method, we tell brooklyn to use <code>SoftLayerSameVlanLocationCustomizer</code>
+as a location customizer.  This can be done on a location as follows:</p>
+<pre><code>location:
+  jclouds:softlayer:
+    region: lon02
+    customizers:
+    - $brooklyn:object:
+        type: org.apache.brooklyn.location.jclouds.softlayer.SoftLayerSameVlanLocationCustomizer
+    softlayer.vlan.scopeUid: &quot;my-custom-scope&quot;
+    softlayer.vlan.timeout: 10m
+</code></pre><p>Usually you will want the scope to be unique to a single application, but if you
+need multiple applications to share the same VLAN, simply configure them with
+the same scope identifier.</p>
+<p>It is also possible with many blueprints to specify this as one of the
+<code>provisioning.properties</code> on an <em>application</em>:</p>
+<pre><code>services:
+- type: org.apache.brooklyn.entity.stock.BasicApplication
+  id: same-vlan-application
+  brooklyn.config:
+    provisioning.properties:
+      customizers:
+      - $brooklyn:object:
+          type: org.apache.brooklyn.location.jclouds.softlayer.SoftLayerSameVlanLocationCustomizer
+    softlayer.vlan.scopeUid: &quot;my-custom-scope&quot;
+    softlayer.vlan.timeout: 10m
+</code></pre><p>If you are writing an entity in Java, you can also use the helper
+method <code>forScope(String)</code> to create the customizer. Configure the
+provisioning flags as follows:</p>
+<pre><code>JcloudsLocationCustomizer vlans = SoftLayerSameVlanLocationCustomizer.forScope(&quot;my-custom-scope&quot;);
+flags.put(JcloudsLocationConfig.JCLOUDS_LOCATION_CUSTOMIZERS.getName(), ImmutableList.of(vlans));
+</code></pre><h3 id="configuration-options">Configuration Options</h3>
+<p>The allowed configuration keys for the <code>SoftLayerSameVlanLocationCustomizer</code>
+are:</p>
+<ul>
+<li><p><strong>softlayer.vlan.scopeUid</strong> The scope identifier for locations whose
+VMs will have the same VLAN.</p>
+</li>
+<li><p><strong>softlayer.vlan.timeout</strong> The amount of time to wait for a VM to
+be configured before timing out without setting the VLAN ids.</p>
+</li>
+<li><p><strong>softlayer.vlan.publicId</strong> A specific public VLAN ID to use for
+the specified scope.</p>
+</li>
+<li><p><strong>softlayer.vlan.privateId</strong> A specific private VLAN ID to use for
+the specified scope.</p>
+</li>
+</ul>
+<p>An entity being deployed to a customized location will have the VLAN ids set as
+sensors, with the same names as the last two configuration keys.</p>
+<p><strong><em>NOTE</em></strong> If the SoftLayer location is already configured with specific VLANs
+then this customizer will have no effect.</p>
+<hr>
+<p>section: OpenStack
+title: OpenStack
+section_type: inline</p>
+<h2 id="sectionposition-7">section_position: 7</h2>
+<h2 id="openstack">OpenStack</h2>
+<h3 id="apache-jclouds">Apache jclouds</h3>
+<p>Support for OpenStack is provided by Apache jclouds. For more information, see their guide
+<a href="https://jclouds.apache.org/guides/openstack/" target="_blank">here</a>.</p>
+<h3 id="connection-details">Connection Details</h3>
+<p>The endpoint URI is that of keystone (normally on port 5000).</p>
+<p>The identity normally consists of a colon-separated tenant and username. The credential is 
+the password. For example:</p>
+<pre><code>location:
+  jclouds:openstack-nova:
+    endpoint: http://x.x.x.x:5000/v2.0/
+    identity: &quot;your-tenant:your-username&quot;
+    credential: your-password
+</code></pre><p>OpenStack Nova access information can be downloaded from the openstack web interface, for example 
+as an openrc.sh file. It is usually available from API Access tab in &quot;Access &amp; Security&quot; section.
+This file will normally contain the identity and credential.</p>
+<p>Users are strongly recommended to use 
+<a href="../guide/ops/externalized-configuration.html">externalized configuration</a> for better
+credential management, for example using <a href="https://www.vaultproject.io/" target="_blank">Vault</a>.</p>
+<h3 id="common-configuration-options">Common Configuration Options</h3>
+<p>Below are examples of configuration options that use values specific to OpenStack environments:</p>
+<ul>
+<li><p>The <code>imageId</code> is the id of an image. For example,
+<code>imageId: RegionOne/08086159-8b0b-4970-b332-a7a929ee601f</code>.
+These ids can be found from the the CLI or the web-console, for example in IBM Blue Box London, 
+the URL is <a href="https://tenant-region.openstack.blueboxgrid.com/project/images/" target="_blank">https://tenant-region.openstack.blueboxgrid.com/project/images/</a>.</p>
+</li>
+<li><p>The <code>hardwareId</code> is the <a href="http://docs.openstack.org/admin-guide/compute-flavors.html" target="_blank">flavor id</a>.
+For example <code>hardwareId: RegionOne/1</code>. These ids can be found from the the CLI or the web-console,
+for example in IBM Blue Box, the URL is <a href="https://tenant-region.openstack.blueboxgrid.com/admin/flavors/" target="_blank">https://tenant-region.openstack.blueboxgrid.com/admin/flavors/</a>.</p>
+</li>
+</ul>
+<p>The default flavors are shown below (though the set of flavors can be 
+<a href="http://docs.openstack.org/admin-guide/cli_manage_flavors.html" target="_blank">managed by the admin</a>):</p>
+<pre><code>+-----+-----------+-----------+------+
+| ID  | Name      | Memory_MB | Disk |
++-----+-----------+-----------+------+
+| 1   | m1.tiny   | 512       | 1    |
+| 2   | m1.small  | 2048      | 20   |
+| 3   | m1.medium | 4096      | 40   |
+| 4   | m1.large  | 8192      | 80   |
+| 5   | m1.xlarge | 16384     | 160  |
++-----+-----------+-----------+------+
+</code></pre><p>For further configuration options, consult 
+<a href="https://jclouds.apache.org/reference/javadoc/2.0.x/org/jclouds/openstack/nova/v2_0/compute/options/NovaTemplateOptions.html" target="_blank">jclouds Nova template options</a>.
+These can be used with the <strong><a href="#custom-template-options">templateOptions</a></strong> configuration option.</p>
+<h3 id="networks">Networks</h3>
+<p>When multiple networks are available you should indicate which ones machines should join.
+Do this by setting the desired values id as an option in the
+<strong><a href="#custom-template-options">templateOptions</a></strong> configuration:</p>
+<pre><code>location:
+  jclouds:openstack-nova:
+    ...
+    templateOptions:
+      # Assign the node to all networks in the list.
+      networks:
+      - network-one-id
+      - network-two-id
+      - ...
+</code></pre><h3 id="floating-ips">Floating IPs</h3>
+<p>The <code>autoAssignFloatingIp</code> option means that a <a href="https://www.mirantis.com/blog/configuring-floating-ip-addresses-networking-openstack-public-private-clouds/" target="_blank">floating ip</a>
+will be assigned to the VM at provision-time.</p>
+<p>A floating IP pool name can also be specified. If not set, a floating IP from any available pool will be chosen.
+This is set using the <a href="#custom-template-options">template option</a>. For example:</p>
+<pre><code>location:
+  jclouds:openstack-nova:
+    ...
+    autoAssignFloatingIp: true
+    templateOptions:
+      # Pool names to use when allocating a floating IP
+      floatingIpPoolNames:
+      - &quot;pool name&quot;
+</code></pre><h3 id="basic-location-structure">Basic Location Structure</h3>
+<p>This is a basic inline YAML template for an OpenStack location:</p>
+<pre><code>location:
+    jclouds:openstack-nova:
+        endpoint: http://x.x.x.x:5000/v2.0/
+        identity: &quot;your-tenant:your-username&quot;
+        credential: your-password
+
+        # imageId, hardwareId, and loginUser* are optional
+        imageId: your-region-name/your-image-id
+        hardwareId: your-region-name/your-flavor-id
+        loginUser: &apos;ubuntu&apos;
+        loginUser.privateKeyFile: /path/to/your/privatekey
+
+        jclouds.openstack-nova.auto-generate-keypairs: false
+        jclouds.openstack-nova.auto-create-floating-ips: true
+
+        templateOptions:
+            networks: [ &quot;your-network-id&quot; ]
+            floatingIpPoolNames: [ &quot;your-floatingIp-pool&quot; ]
+            securityGroups: [&apos;your-security-group&apos;]
+
+            # Optional if &apos;jclouds.openstack-nova.auto-generate-keypairs&apos; is assigned to &apos;true&apos;
+            keyPairName: &quot;your-keypair&quot;
+</code></pre><p>This is the same OpenStack location in a format that can be added to your
+<code>brooklyn.properties</code> file:</p>
+<pre><code>brooklyn.location.named.My\ OpenStack=jclouds:openstack-nova:http://x.x.x.x:5000/v2.0/
+brooklyn.location.named.My\ OpenStack.identity=your-tenant:your-username
+brooklyn.location.named.My\ OpenStack.credential=your-password
+brooklyn.location.named.My\ OpenStack.endpoint=http://x.x.x.x:5000/v2.0/
+
+brooklyn.location.named.My\ OpenStack.imageId=your-region-name/your-image-id
+brooklyn.location.named.My\ OpenStack.hardwareId=your-region-name/your-flavor-id
+brooklyn.location.named.My\ OpenStack.loginUser=ubuntu
+brooklyn.location.named.My\ OpenStack.loginUser.privateKeyFile=/path/to/your/privatekey
+brooklyn.location.named.My\ OpenStack.openstack-nova.auto-generate-keypairs=false
+brooklyn.location.named.My\ OpenStack.openstack-nova.auto-create-floating-ips=true
+
+brooklyn.location.named.My\ OpenStack.networks=your-network-id
+brooklyn.location.named.My\ OpenStack.floatingIpPoolNames=your-floatingIp-pool
+brooklyn.location.named.My\ OpenStack.securityGroups=your-security-group
+brooklyn.location.named.My\ OpenStack.keyPair=your-keypair
+</code></pre><h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="cloud-credentials-failing">Cloud Credentials Failing</h4>
+<p>If the cloud API calls return <code>401 Unauthorized</code> (e.g. in a <code>org.jclouds.rest.AuthorizationException</code>),
+then this could be because the credentials are incorrect.</p>
+<p>A good way to check this is to try the same credentials with the 
+<a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html" target="_blank">OpenStack nova command line client</a>.</p>
+<h4 id="unable-to-ssh-wrong-user">Unable to SSH: Wrong User</h4>
+<p>If SSH authentication fails, it could be that the login user is incorrect. For most clouds, this 
+is inferred from the image metadata, but if no (or the wrong) login user is specified then it will<br>default to root. The correct login user can be specified using the configuration option <code>loginUser</code>.
+For example, <code>loginUser: ubuntu</code>.</p>
+<p>The use of the wrong login user can also result in the obscure message, caused by 
+an unexpected response saying to use a different user. For more technical information, see 
+this <a href="https://github.com/hierynomus/sshj/issues/75" target="_blank">sshj github issue</a>. The message is:</p>
+<pre><code>Received message too long 1349281121
+</code></pre><h4 id="i-want-to-use-my-own-keypair">I Want to Use My Own KeyPair</h4>
+<p>By default, jclouds will auto-generate a new <a href="http://docs.openstack.org/user-guide/cli_nova_configure_access_security_for_instances.html" target="_blank">key pair</a>
+for the VM. This key pair will be deleted automatically when the VM is deleted.</p>
+<p>Alternatively, you can use a pre-existing key pair. If so, you must also specify the corresponding
+private key (pem file, or data) to be used for the initial login. The name used in the <code>keyPair</code> 
+configuration must match the name of a key pair that has already been added in OpenStack.
+For example:</p>
+<pre><code>location:
+  jclouds:clouds:openstack-nova:
+    ...
+    jclouds.openstack-nova.auto-generate-keypairs: false
+    keyPair: &quot;my-keypair&quot;
+    loginUser: ubuntu
+    loginUser.privateKeyFile: /path/to/my/privatekey.pem
+</code></pre><h4 id="error-doesnt-contain-------begin">Error &quot;doesn&apos;t contain ... -----BEGIN&quot;</h4>
+<p>If using <code>loginUser.privateKeyFile</code> (or <code>loginUser.privateKeyData</code>), this is expected to be a .pem
+file. If a different format is used (e.g. a .ppk file), it will give an error like that below:</p>
+<pre><code>Error invoking start at EmptySoftwareProcessImpl{id=TrmhitVc}: chars
+PuTTY-User-Key-File-2: ssh-rsa
+...
+doesn&apos;t contain % line [-----BEGIN ]
+</code></pre><h4 id="warning-message-ignoring-request-to-set">Warning Message: &quot;Ignoring request to set...&quot;</h4>
+<p>If you see a warning log message like that below:</p>
+<pre><code>2016-06-23 06:05:12,297 WARN  o.a.b.l.j.JcloudsLocation [brooklyn-execmanager-XlwkWB3k-312]: 
+Ignoring request to set template option loginUser because this is not supported by 
+org.jclouds.openstack.nova.v2_0.compute.options.NovaTemplateOptions
+</code></pre><p>It can mean that the location configuration option is in the wrong place. The configuration under 
+<code>templateOptions</code> must correspond to those options on the
+<a href="https://jclouds.apache.org/reference/javadoc/1.9.x/org/jclouds/openstack/nova/v2_0/compute/options/NovaTemplateOptions.html" target="_blank">jclouds Nova template options</a>.
+However, template options such as <code>loginUser</code> are top-level configuration options that should not
+be inside the <code>templateOptions</code> section.</p>
+<h4 id="httpresponseexception-accessing-compute-endpoint">HttpResponseException Accessing Compute Endpoint</h4>
+<p>The Keystone endpoint is first queried to get the API access endpoints for the appropriate services.</p>
+<p>Some private OpenStack installs are (mis)configured such that the returned addresses are not always 
+directly accessible. It could be that the service is behind a VPN, or that they rely on hostnames
+that are only in a private DNS.</p>
+<p>You can find the service endpoints in OpenStack, either using the CLI or the web-console. For 
+example, in Blue Box the URL is <a href="https://tenant-region.openstack.blueboxgrid.com/project/access_and_security/" target="_blank">https://tenant-region.openstack.blueboxgrid.com/project/access_and_security/</a>.
+You can then check if the Compute service endpoint is directly reachable.</p>
+<h4 id="vm-failing-to-provision">VM Failing to Provision</h4>
+<p>It can be useful to drop down to the OpenStack nova CLI, or to jclouds, to confirm that VM
+provisioning is working and to check which options are required.</p>
+<p>For example, try following <a href="https://github.com/jclouds/jclouds-examples/tree/master/compute-basics#your-own-openstack-nova" target="_blank">these jclouds instructions</a>.</p>
+<h4 id="jclouds-namespace-issue">jclouds Namespace Issue</h4>
+<p>A change to Nova&apos;s API (in the Mitaka release) resulted in all extensions having the same &quot;fake&quot; 
+namespace which the current version of jclouds does not yet support.</p>
+<p>If you are having problems deploying to OpenStack, consult your Brooklyn debug log and
+look for the following:</p>
+<pre><code>&quot;namespace&quot;: &quot;http://docs.openstack.org/compute/ext/fake_xml&quot;
+</code></pre><p>If you already have <code>jclouds:openstack-mitaka-nova</code>, then try using this instead of the vanilla
+<code>jclouds:openstack-nova</code>. For example:</p>
+<pre><code>location:
+    jclouds:openstack-mitaka-nova:
+        endpoint: http://x.x.x.x:5000/v2.0/
+        identity: &quot;your-tenant:your-username&quot;
+        credential: your-password
+        templateOptions:
+            networks: [ &quot;your-network-id&quot; ]
+            floatingIpPoolNames: [ &quot;your-floatingIp-pool&quot; ]
+</code></pre><p>Note that the following values will be set by default when omitted above:</p>
+<pre><code>jclouds.keystone.credential-type=passwordCredentials
+jclouds.openstack-nova.auto-generate-keypairs: true
+jclouds.openstack-nova.auto-create-floating-ips: true
+</code></pre><hr>
+<p>section: Inheritance and Named Locations
+title: Named Locations
+section_type: inline</p>
+<h2 id="sectionposition-7">section_position: 7</h2>
+<h3 id="inheritance-and-named-locations">Inheritance and Named Locations</h3>
+<p>Named locations can be defined for commonly used groups of properties, 
+with the syntax <code>brooklyn.location.named.your-group-name.</code>
+followed by the relevant properties.
+These can be accessed at runtime using the syntax <code>named:your-group-name</code> as the deployment location.</p>
+<p>Some illustrative examples using named locations and
+showing the syntax and properties above are as follows:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Production pool of machines for my application (deploy to named:prod1)</span>
+brooklyn.location.named.prod1=byon:(hosts=<span class="hljs-string">&quot;10.9.1.1,10.9.1.2,produser2@10.9.2.{10,11,20-29}&quot;</span>)
+brooklyn.location.named.prod1.user=produser1
+brooklyn.location.named.prod1.privateKeyFile=~/.ssh/produser_id_rsa
+brooklyn.location.named.prod1.privateKeyPassphrase=s3cr3tCOMPANYpassphrase
+
+<span class="hljs-comment"># AWS using my company&apos;s credentials and image standard, then labelling images so others know they&apos;re mine</span>
+brooklyn.location.named.company-jungle=jclouds:aws-ec2:us-west-1
+brooklyn.location.named.company-jungle.identity=BCDEFGHIJKLMNOPQRSTU  
+brooklyn.location.named.company-jungle.privateKeyFile=~/.ssh/public_clouds/company_aws_id_rsa
+brooklyn.location.named.company-jungle.imageId=ami-12345
+brooklyn.location.named.company-jungle.minRam=2048
+brooklyn.location.named.company-jungle.userMetadata=application=my-jungle-app,owner=<span class="hljs-string">&quot;Bob Johnson&quot;</span>
+brooklyn.location.named.company-jungle.machineCreateAttempts=2
+
+brooklyn.location.named.AWS\ Virginia\ Large\ Centos = jclouds:aws-ec2
+brooklyn.location.named.AWS\ Virginia\ Large\ Centos.region = us-east-1
+brooklyn.location.named.AWS\ Virginia\ Large\ Centos.imageId=us-east-1/ami-7d7bfc14
+brooklyn.location.named.AWS\ Virginia\ Large\ Centos.user=root
+brooklyn.location.named.AWS\ Virginia\ Large\ Centos.minRam=4096
+</code></pre>
+<p>Named locations can refer to other named locations using <code>named:xxx</code> as their value.
+These will inherit the configuration and can override selected keys.
+Properties set in the namespace of the provider (e.g. <code>b.l.jclouds.aws-ec2.KEY=VALUE</code>)
+will be inherited by everything which extends AWS
+Sub-prefix strings are also inherited up to <code>brooklyn.location.*</code>, 
+except that they are filtered for single-word and other
+known keys 
+(so that we exclude provider-scoped properties when looking at sub-prefix keys).
+The precedence for configuration defined at different levels is that the value
+defined in the most specific context will apply.</p>
+<p>This is rather straightforward and powerful to use,
+although it sounds rather more complicated than it is!
+The examples below should make it clear.
+You could use the following to install
+a public key on all provisioned machines,
+an additional public key in all AWS machines, 
+and no extra public key in <code>prod1</code>: </p>
+<!-- tested in JcloudsLocationResolverTest -->
+<pre><code class="lang-bash">brooklyn.location.extraSshPublicKeyUrls=http://me.com/public_key
+brooklyn.location.jclouds.aws-ec2.extraSshPublicKeyUrls=<span class="hljs-string">&quot;[ \&quot;http://me.com/public_key\&quot;, \&quot;http://me.com/aws_public_key\&quot; ]&quot;</span>
+brooklyn.location.named.prod1.extraSshPublicKeyUrls=
+</code></pre>
+<p>And in the example below, a config key is repeatedly overridden. 
+Deploying <code>location: named:my-extended-aws</code> will result in an <code>aws-ec2</code> machine in <code>us-west-1</code> (by inheritance)
+with <code>VAL6</code> for <code>KEY</code>:</p>
+<pre><code class="lang-bash">brooklyn.location.KEY=VAL1
+brooklyn.location.jclouds.KEY=VAL2
+brooklyn.location.jclouds.aws-ec2.KEY=VAL3
+brooklyn.location.jclouds.aws-ec2@us-west-1.KEY=VAL4
+brooklyn.location.named.my-aws=jclouds:aws-ec2:us-west-1
+brooklyn.location.named.my-aws.KEY=VAL5
+brooklyn.location.named.my-extended-aws=named:my-aws
+brooklyn.location.named.my-extended-aws.KEY=VAL6
+</code></pre>
+<hr>
+<p>section: BYON
+section_position: 8</p>
+<h2 id="sectiontype-inline">section_type: inline</h2>
+<h3 id="byon">BYON</h3>
+<p>&quot;Bring-your-own-nodes&quot; mode is useful in production, where machines have been provisioned by someone else,
+and during testing, to cut down provisioning time.</p>
+<p>Your nodes must meet the following prerequisites:</p>
+<ul>
+<li>A suitable OS must have been installed on all nodes</li>
+<li>The node must be running sshd (or similar)</li>
+<li>the brooklyn user must be able to ssh to each node as root or as a user with passwordless sudo permission. (For more information on SSH keys, see <a href="#ssh-keys">here</a>.) </li>
+</ul>
+<p>To deploy to machines with known IP&apos;s in a blueprint, use the following syntax:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span>
+<span class="hljs-attr">  byon:</span>
+<span class="hljs-attr">    user:</span> brooklyn
+<span class="hljs-attr">    privateKeyFile:</span> ~/.ssh/brooklyn.pem
+<span class="hljs-attr">    hosts:</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.18</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.19</span>
+</code></pre>
+<p>Some of the login properties as described above for jclouds are supported,
+but not <code>loginUser</code> (as no users are created), and not any of the
+VM creation parameters such as <code>minRam</code> and <code>imageId</code>.
+(These clearly do not apply in the same way, and they are <em>not</em> 
+by default treated as constraints, although an entity can confirm these
+where needed.)
+As before, if the brooklyn user and its default key are authorized for the hosts,
+those fields can be omitted.</p>
+<p>Named locations can also be configured in your <code>brooklyn.properties</code>,
+using the format <code>byon:(key=value,key2=value2)</code>.
+For convenience, for hosts wildcard globs are supported.</p>
+<pre><code class="lang-bash">brooklyn.location.named.On-Prem\ Iron\ Example=byon:(hosts=<span class="hljs-string">&quot;10.9.1.1,10.9.1.2,produser2@10.9.2.{10,11,20-29}&quot;</span>)
+brooklyn.location.named.On-Prem\ Iron\ Example.user=produser1
+brooklyn.location.named.On-Prem\ Iron\ Example.privateKeyFile=~/.ssh/produser_id_rsa
+brooklyn.location.named.On-Prem\ Iron\ Example.privateKeyPassphrase=s3cr3tpassphrase
+</code></pre>
+<p>Alternatively, you can create a specific BYON location through the location wizard tool available within the web console.
+This location will be saved as a <a href="../guide/blueprints/catalog/index.html#locations-in-catalog">catalog entry</a> for easy reusability.</p>
+<p>For more complex host configuration, one can define custom config values per machine. In the example 
+below, there will be two machines. The first will be a machine reachable on
+<code>ssh -i ~/.ssh/brooklyn.pem -p 8022 myuser@50.51.52.53</code>. The second is a windows machine, reachable 
+over WinRM. Each machine has also has a private address (e.g. for within a private network).</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span>
+<span class="hljs-attr">  byon:</span>
+<span class="hljs-attr">    hosts:</span>
+<span class="hljs-attr">    - ssh:</span> <span class="hljs-number">50.51</span><span class="hljs-number">.52</span><span class="hljs-number">.53</span>:<span class="hljs-number">8022</span>
+<span class="hljs-attr">      privateAddresses:</span> [<span class="hljs-number">10.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>]
+<span class="hljs-attr">      privateKeyFile:</span> ~/.ssh/brooklyn.pem
+<span class="hljs-attr">      user:</span> myuser
+<span class="hljs-attr">    - winrm:</span> <span class="hljs-number">50.51</span><span class="hljs-number">.52</span><span class="hljs-number">.54</span>:<span class="hljs-number">8985</span>
+<span class="hljs-attr">      privateAddresses:</span> [<span class="hljs-number">10.0</span><span class="hljs-number">.0</span><span class="hljs-number">.2</span>]
+<span class="hljs-attr">      password:</span> mypassword
+<span class="hljs-attr">      user:</span> myuser
+<span class="hljs-attr">      osFamily:</span> windows
+</code></pre>
+<p>The BYON location also supports a machine chooser, using the config key <code>byon.machineChooser</code>. 
+This allows one to plugin logic to choose from the set of available machines in the pool. For
+example, additional config could be supplied for each machine. This could be used (during the call
+to <code>location.obtain()</code>) to find the config that matches the requirements of the entity being</p>
+<h2 id="provisioned-see-fixedlistmachineprovisioninglocationmachinechooser">provisioned. See <code>FixedListMachineProvisioningLocation.MACHINE_CHOOSER</code>.</h2>
+<p>section: SSH Keys
+section_position: 9</p>
+<h2 id="sectiontype-inline">section_type: inline</h2>
+<h3 id="ssh-keys">SSH Keys</h3>
+<p>SSH keys are one of the simplest and most secure ways to access remote servers.
+They consist of two parts:</p>
+<ul>
+<li><p>A private key (e.g. <code>id_rsa</code>) which is known only to one party or group</p>
+</li>
+<li><p>A public key (e.g. <code>id_rsa.pub</code>) which can be given to anyone and everyone,
+and which can be used to confirm that a party has a private key
+(or has signed a communication with the private key)</p>
+</li>
+</ul>
+<p>In this way, someone -- such as you -- can have a private key,
+and can install a public key on a remote machine (in an <code>authorized_keys</code> file)
+for secure automated access.
+Commands such as <code>ssh</code> (and Brooklyn) can log in without
+revealing the private key to the remote machine,
+the remote machine can confirm it is you accessing it (if no one else has the private key),
+and no one snooping on the network can decrypt of any of the traffic.</p>
+<h4 id="creating-an-ssh-key">Creating an SSH Key</h4>
+<p>If you don&apos;t have an SSH key, create one with:</p>
+<pre><code class="lang-bash">$ ssh-keygen -t rsa -N <span class="hljs-string">&quot;&quot;</span> <span class="hljs-_">-f</span> ~/.ssh/id_rsa
+</code></pre>
+<h4 id="localhost-setup">Localhost Setup</h4>
+<p>If you want to deploy to <code>localhost</code>, ensure that you have a public and private key,
+and that your key is authorized for ssh access:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># _Appends_ id_rsa.pub to authorized_keys. Other keys are unaffected.</span>
+$ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre>
+<p>Now verify that your setup by running the command: <code>ssh localhost echo hello world</code></p>
+<p>If your setup is correct, you should see <code>hello world</code> printed back at you.</p>
+<p>On the first connection, you may see a message similar to this:</p>
+<pre>
+The authenticity of host &apos;localhost (::1)&apos; can&apos;t be established.
+RSA key fingerprint is 7b:e3:8e:c6:5b:2a:05:a1:7c:8a:cf:d1:6a:83:c2:ad.
+Are you sure you want to continue connecting (yes/no)?
+</pre>
+
+<p>Simply answer &apos;yes&apos; and then repeat the command again.</p>
+<p>If this isn&apos;t the case, see below. </p>
+<h4 id="potential-problems">Potential Problems</h4>
+<ul>
+<li><p><strong>MacOS user?</strong> In addition to the above, enable &quot;Remote Login&quot; in &quot;System Preferences &gt; Sharing&quot;.</p>
+</li>
+<li><p><strong>Got a passphrase?</strong> Set <code>brooklyn.location.localhost.privateKeyPassphrase</code>
+as described <a href="index.html#os-setup">here</a>.
+If you&apos;re not sure, or you don&apos;t know what a passphrase is, you can test this by executing <code>ssh-keygen -y</code>.
+If it does <em>not</em> ask for a passphrase, then your key has no passphrase.
+If your key does have a passphrase, you can remove it by running <code>ssh-keygen -p</code>.</p>
+</li>
+<li><p>Check that you have an <code>~/.ssh/id_rsa</code> file (or <code>id_dsa</code>) and a corresponding public key with a <code>.pub</code> extension;
+if not, create one as described above</p>
+</li>
+<li><p><code>~/.ssh/</code> or files in that directory may have permissions they shouldn&apos;t: 
+they should be visible only to the user (apart from public keys),
+both on the source machine and the target machine.
+You can verify this with <code>ls -l ~/.ssh/</code>:  lines should start with <code>-rw-------</code> or <code>-r--------</code> (or <code>-rwx------</code> for directories). 
+If it does not, execute <code>chmod go-rwx ~/.ssh ~/.ssh/*</code>.</p>
+</li>
+<li><p>Sometimes machines are configured with different sets of support SSL/TLS versions and ciphers;
+if command-line <code>ssh</code> and <code>scp</code> work, but Brooklyn/java does not, check the versions enabled in Java and on both servers.</p>
+</li>
+<li><p>Missing entropy: creating and using ssh keys requires randomness available on the servers,
+usually in <code>/dev/random</code>; see <a href="../guide/ops/troubleshooting/increase-entropy.html">here</a> for more information</p>
+</li>
+</ul>
+<hr>
+<p>section: Localhost
+section_position: 10</p>
+<h2 id="sectiontype-inline">section_type: inline</h2>
+<h3 id="localhost">Localhost</h3>
+<p>If passwordless ssh login to <code>localhost</code> and passwordless <code>sudo</code> is enabled on your 
+machine, you should be able to deploy some blueprints with no special configuration,
+just by specifying <code>location: localhost</code> in YAML.</p>
+<p>If you use a passphrase or prefer a different key, these can be configured as follows:</p>
+<pre><code>location:
+  localhost:
+    privateKeyFile=~/.ssh/brooklyn_key
+    privateKeyPassphrase=s3cr3tPASSPHRASE
+</code></pre><p>Alternatively, you can create a specific localhost location through the location wizard tool available within the web console.
+This location will be saved as a <a href="../guide/blueprints/catalog/index.html#locations-in-the-catalog">catalog entry</a> 
+for easy reusability.</p>
+<h4 id="passwordless-sudo">Passwordless Sudo</h4>
+<p>If you encounter issues or for more information, see <a href="#localhost-setup">SSH Keys Localhost Setup</a>. </p>
+<p>For some blueprints, passwordless sudo is required. (Try executing <code>sudo whoami</code> to see if it prompts for a password. 
+To enable passwordless <code>sudo</code> for your account, a line must be added to the system <code>/etc/sudoers</code> file.<br>To edit the file, use the <code>visudo</code> command:</p>
+<pre><code class="lang-bash">sudo visudo
+</code></pre>
+<p>Add this line at the bottom of the file, replacing <code>username</code> with your own user:</p>
+<pre><code class="lang-bash">username ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+<p>If executing the following command does not ask for your password, then <code>sudo</code> has been setup correctly:</p>
+<pre><code class="lang-bash">sudo whoami
+</code></pre>
+<hr>
+<p>section: Location Customizers
+section_type: inline</p>
+<h2 id="sectionposition-11">section_position: 11</h2>
+<h3 id="location-customizers">Location Customizers</h3>
+<p>Apache Brooklyn supports a number of ways to configure and customize locations. These include
+the <code>JcloudsLocationCustomizer</code>, which is for advanced customization of VM provisioning through jclouds.
+There is also a <code>MachineLocationCustomizer</code>, which allows customization of machines being obtained 
+from any kind of location (including <a href="index.html#byon">Bring Your Own Nodes</a>).</p>
+<h4 id="usage-guidelines">Usage Guidelines</h4>
+<p>Clearly there is an overlap for where things can be done. This section describes the recommended<br>separation of responsibilities.</p>
+<p>These are guidelines only - users are obviously free to make alternative usage decisions based on 
+their particular use-cases.</p>
+<h4 id="responsibilities-of-entity-versus-location">Responsibilities of Entity versus Location</h4>
+<p>From an entity&apos;s perspective, it calls <code>location.obtain(options)</code> and gets back a usable 
+<code>MachineLocation</code> that has a standard base operating system that gives remote access
+(e.g. for Linux it expects credentials for a user with <code>sudo</code> rights, and ssh access).</p>
+<p>However, there are special cases - for example the <code>location.obtain(options)</code> could return
+a Docker container with the software pre-installed, and no remote access (see the 
+<a href="http://clocker.io" target="_blank">Clocker project</a> for more information on use of Docker with Brooklyn).</p>
+<p>The entity is then responsible for configuring that machine according to the needs of the software 
+to be installed.</p>
+<p>For example, the entity may install software packages, upload/update configuration files, launch
+processes, etc.</p>
+<p>The entity may also configure <code>iptables</code>. This is also possible through the <code>JcloudsLocation</code> 
+configuration. However, it is preferable to do this in the entity because it is part of 
+configuring the machine in the way required for the given software component.</p>
+<p>The entity may also perform custom OS setup, such as installing security patches. However, whether 
+this is appropriate depends on the nature of the security patch: if the security patch is specific 
+to the entity type, then it should be done within the entity; but if it is to harden the base OS 
+to make it comply with an organisation&apos;s standards (e.g. to overcome shortcomings of the base 
+image, or to install security patches) then a <code>MachineLocationCustomizer</code> is more appropriate.</p>
+<h4 id="location-configuration-options">Location Configuration Options</h4>
+<p>This refers to standard location configuration: explicit config keys, and explicit jclouds template 
+configuration that can be passed through.</p>
+<p>This kind of configuration is simplest to use. It is the favoured mechanism when it comes to VM 
+provisioning, and should be used wherever possible.</p>
+<p>Note that a jclouds <code>TemplateBuilder</code> and cloud-specific <code>TemplateOptions</code> are the generic mechanisms 
+within jclouds for specifying the details of the compute resource to be provisioned.</p>
+<h4 id="jclouds-location-customizer">Jclouds Location Customizer</h4>
+<p>A <code>JcloudsLocationCustomizer</code> has customization hooks to execute code at the various points of building 
+up the jclouds template and provisioning the machine. Where jclouds is being used and where the required 
+use of jclouds goes beyond simple configuration, this is an appropriate solution.</p>
+<p>For example, there is a <code>org.apache.brooklyn.location.jclouds.networking.JcloudsLocationSecurityGroupCustomizer</code>
+which gives more advanced support for setting up security groups (e.g. in AWS-EC2).</p>
+<h4 id="machine-customizer">Machine Customizer</h4>
+<p>The <code>MachineLocationCustomizer</code> allows customization of machines being obtained from any kind of location.
+For example, this includes for jclouds and for Bring Your Own Nodes (BYON).</p>
+<p>It provides customization hooks for when the machine has been provisioned (before it is returned by the location)
+and when the machine is about to be released by the location.</p>
+<p>An example use would be to register (and de-register) the machine in a CMDB.</p>
+<h3 id="jclouds-location-customizers">Jclouds Location Customizers</h3>
+<p><em>Warning: additional methods (i.e. customization hooks) may be added to the <code>JcloudsLocationCustomizer</code> 
+interface in future releases. Users are therefore strongly encouraged to sub-class 
+<code>BasicJcloudsLocationCustomizer</code>, rather than implementing JcloudsLocationCustomizer directly.</em></p>
+<p>The <code>JcloudsLocationCustomizer</code> provides customization hooks at various points of the Brooklyn&apos;s
+use of jclouds. These can be used to adjust the configuration, to do additional setup, to do
+custom logging, etc.</p>
+<ul>
+<li><p>Customize the <code>org.jclouds.compute.domain.TemplateBuilder</code>, before it is used to build the template.
+This is used to influence the choice of VM image, hardware profile, etc. This hook is not normally
+required as the location configuration options can be used in instead.</p>
+</li>
+<li><p>Customize the <code>org.jclouds.compute.domain.Template</code>, to be used when creating the machine. This<br>hook is most often used for performing custom actions - for example to create or modify a security 
+group or volume, and to update the template&apos;s options to use that.</p>
+</li>
+<li><p>Customize the <code>org.jclouds.compute.options.TemplateOptions</code> to be used when creating the machine.
+The <code>TemplateOptions</code> could be cast to a cloud-specific sub-type (if this does not have to work
+across different clouds). Where the use-case is to just set simple configuration on the 
+<code>TemplateOptions</code>, consider instead using the config key <code>templateOptions</code>, which takes a map
+of type String to Object - the strings should match the method names in the <code>TemplateOptions</code>.</p>
+</li>
+<li><p>Customize the <code>org.apache.brooklyn.location.jclouds.JcloudsMachineLocation</code> that has been 
+created. For Linux-based VMs, if the config <code>waitForSshable</code> was not false, then this machine
+is guaranteed to be ssh&apos;able. Similarly for WinRM access to Windows machines, if 
+<code>waitForWinRmAvailable</code> was not false.</p>
+</li>
+<li><p>Pre-release of the machine. If the actions required are specific to jclouds (e.g. using jclouds 
+to make calls to the cloud provider) then this should be used; otherwise one should use the more
+generic <code>MachineLocationCustomizer</code>.</p>
+</li>
+<li><p>Post-release of the machine (i.e. after asking jclouds to destroying the machine).</p>
+</li>
+</ul>
+<p>To register a <code>JcloudsLocationCustomizer</code> in YAML, the config key <code>customizers</code> can be used to 
+provide a list of instances. Each instance can be defined using <code>$brooklyn:object</code> to indicate 
+the type and its configuration. For example:</p>
+<pre><code>location:
+  jclouds:aws-ec2:us-east-1:
+    customizers:
+    - $brooklyn:object:
+        type: com.acme.brooklyn.MyJcloudsLocationCustomizer
+</code></pre><p>To register <code>JcloudsLocationCustomizer</code> instances programmatically, set the config key
+<code>JcloudsLocationConfig.JCLOUDS_LOCATION_CUSTOMIZERS</code> on the location, or pass this 
+config option when calling <code>location.obtain(options)</code>.</p>
+<p>The <code>SharedLocationSecurityGroupCustomizer</code> configures a shared security group on Jclouds locations.
+It only works on AWS and Azure ARM.</p>
+<p>To register a <code>SharedLocationSecurityGroupCustomizer</code> in YAML, you can use the config key <code>customizers</code>
+and configure it with <code>$brooklyn:object</code> and <code>object.fields</code>. For example:</p>
+<pre><code>location:
+  jclouds:aws-ec2:us-east-1:
+    customizers:
+    - $brooklyn:object:
+        type: org.apache.brooklyn.location.jclouds.networking.SharedLocationSecurityGroupCustomizer
+        object.fields: {locationName: &quot;myloc&quot;, tcpPortRanges: [&quot;22&quot;, &quot;8080&quot;, &quot;9443&quot;], udpPortRanges: [&quot;2001&quot;, &quot;4013&quot;], cidr: &quot;82.40.153.101/24&quot;}
+</code></pre><p>where <code>cidr</code> can be optionally set to restrict the range that the ports that are to be opened can be accessed from.</p>
+<h4 id="machine-location-customizers">Machine Location Customizers</h4>
+<p><em>Warning: additional methods (i.e. customization hooks) may be added to the <code>MachineLocationCustomizer</code> 
+interface in future releases. Users are therefore strongly encouraged to sub-class 
+<code>BasicMachineLocationCustomizer</code>, rather than implementing <code>MachineLocationCustomizer</code> directly.</em></p>
+<p>The <code>MachineLocationCustomizer</code> provides customization hooks for when a machine is obtained/released 
+from a <code>MachineProvisioningLocation</code>. The following hooks are supported: </p>
+<ul>
+<li><p>After the machine has been provisioned/allocated, but before it has been returned.</p>
+</li>
+<li><p>When the machine is about to be released, but prior to actually destroying/unallocating the
+machine.</p>
+</li>
+</ul>
+<p>To register a <code>MachineLocationCustomizer</code> in YAML, the config key <code>machineCustomizers</code> can be used<br>to provide a list of instances. Each instance can be defined using <code>$brooklyn:object</code> to indicate 
+the type and its configuration. For example:</p>
+<pre><code>location:
+  jclouds:aws-ec2:us-east-1:
+    machineCustomizers:
+    - $brooklyn:object:
+        type: com.acme.brooklyn.MyMachineLocationCustomizer
+</code></pre><p>To register <code>MachineLocationCustomizer</code> instances programmatically, set the config key
+<code>CloudLocationConfig.MACHINE_LOCATION_CUSTOMIZERS</code> on the location, or pass this 
+config option when calling <code>location.obtain(options)</code>.</p>
+<h4 id="hostname-customizer">Hostname Customizer</h4>
+<p><a href="https://github.com/apache/brooklyn-server/blob/master/software/base/src/main/java/org/apache/brooklyn/entity/machine/SetHostnameCustomizer.java" target="_blank">org.apache.brooklyn.entity.machine.SetHostnameCustomizer</a>
+Sets the hostname on an ssh&apos;able machine. Currently only CentOS and RHEL are supported.
+The customizer can be configured with a hard-coded hostname, or with a freemarker template whose value (after substitutions) will be used for the hostname.</p>
+<hr>
+<p>section: Customizing Cloud Security Groups
+section_position: 12</p>
+<h2 id="sectiontype-inline">section_type: inline</h2>
+<h2 id="customizing-cloud-security-groups">Customizing Cloud Security Groups</h2>
+<p>Before using SharedLocationSecurityGroupCustomizer, please first refer to <a href="../../blueprints/custom-entities.html#port-inferencing">Port Inferencing</a>.</p>
+<p>A security group is a named collection of network access rules that are use to limit the types of traffic that have access to instances.<br>
+Security group is the standard way to set firewall restrictions on the AWS-EC2 environment.
+<a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html" target="_blank">docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html</a></p>
+<p>When deploying to AWS EC2 target, by default Apache Brooklyn creates security group attached to the VM.
+It is easy to add additional rules to the initial security group using <code>org.apache.brooklyn SharedLocationSecurityGroupCustomizer</code>.</p>
+<p>YAML Example:</p>
+<pre><code>name: ports @ AWS
+location: jclouds:aws-ec2:us-west-2:
+services:
+- type: org.apache.brooklyn.entity.software.base.EmptySoftwareProcess
+  brooklyn.config:
+    provisioning.properties:
+      customizers:
+      - $brooklyn:object:
+          type: org.apache.brooklyn.location.jclouds.networking.SharedLocationSecurityGroupCustomizer
+          object.fields: {tcpPortRanges: [&quot;900-910&quot;, &quot;915&quot;, &quot;22&quot;], udpPortRanges: [&quot;100&quot;,&quot;200-300&quot;], cidr: &quot;82.40.153.101/24&quot;}
+</code></pre><p>Make sure that you have rule which makes port 22 accessible from Apache Brooklyn.</p>
+<h3 id="opening-ports-during-runtime">Opening ports during runtime.</h3>
+<p>Apache Brooklyn exposes the SharedLocationSecurityGroupCustomizer functionality after entity is deployed <br>
+just by supplying <code>effector.add.openInboundPorts: true</code> &quot;brooklyn.config&quot;.
+Example configuration in effector</p>
+<pre><code>location: jclouds:aws-ec2:us-west-2
+services:
+- type: org.apache.brooklyn.entity.software.base.EmptySoftwareProcess
+  brooklyn.config:
+    effector.add.openInboundPorts: true
+</code></pre><h3 id="known-limitations">Known limitations</h3>
+<p>Not all cloud providers support Security Group abstraction.
+<code>SharedLocationSecurityGroupCustomizer</code> is known to work well with Amazon EC2.<br>
+Other clouds which support Security Groups:</p>
+<ul>
+<li>Openstack</li>
+<li>Azure - jclouds-labs azurecompute implementation uses endpoints rules when creating a VM instance.
+jclouds:azurecompute based location do not have security groups so SharedLocationSecurityGroupCustomizer is used it will fail to find a security group.</li>
+</ul>
+<hr>
+<p>section: Specialized Locations
+section_position: 13</p>
+<h2 id="sectiontype-inline">section_type: inline</h2>
+<h3 id="specialized-locations">Specialized Locations</h3>
+<p>Some additional location types are supported for specialized situations:</p>
+<h4 id="single-host">Single Host</h4>
+<p>The spec <code>host</code>, taking a string argument (the address) or a map (<code>host</code>, <code>user</code>, <code>password</code>, etc.),
+provides a convenient syntax when specifying a single host.
+For example:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span> host:(<span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>)
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">- type:</span> org.apache.brooklyn.entity.webapp.jboss.JBoss7Server
+</code></pre>
+<p>Or, in <code>brooklyn.properties</code>, set <code>brooklyn.location.named.host1=host:(192.168.0.1)</code>.</p>
+<h4 id="the-multi-location">The Multi Location</h4>
+<p>The spec <code>multi</code> allows multiple locations, specified as <code>targets</code>,
+to be combined and treated as one location.</p>
+<h5 id="sequential-consumption">Sequential Consumption</h5>
+<p>In its simplest form, this will use the first target location where possible,
+and will then switch to the second and subsequent locations when there are no
+machines available.</p>
+<p>In the example below, it provisions the first node to <code>192.168.0.1</code>, then it provisions into AWS
+us-east-1 region (because the bring-your-own-nodes region will have run out of nodes).</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span>
+<span class="hljs-attr">  multi:</span>
+<span class="hljs-attr">    targets:</span>
+<span class="hljs-attr">    - byon:</span>(hosts=<span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>)
+<span class="hljs-attr">    - jclouds:</span>aws-ec2:us-east<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">- type:</span> org.apache.brooklyn.entity.group.DynamicCluster
+  brooklyn.config:
+    cluster.initial.size: <span class="hljs-number">3</span>
+    dynamiccluster.memberspec:
+      $brooklyn:entitySpec:
+<span class="hljs-attr">        type:</span> org.apache.brooklyn.entity.machine.MachineEntity
+</code></pre>
+<h5 id="round-robin-consumption-and-availability-zones-for-clustered-applications">Round-Robin Consumption and Availability Zones for Clustered Applications</h5>
+<p>A <code>DynamicCluster</code> can be configured to cycle through its deployment targets round-robin when
+provided with a location that supports the <code>AvailabilityZoneExtension</code> -- the <code>multi</code> location
+supports this extension.</p>
+<p>The configuration option <code>dynamiccluster.zone.enable</code> on <code>DynamicCluster</code> tells it to query the
+given location for <code>AvailabilityZoneExtension</code> support. If the location supports it, then the
+cluster will query for the list of availability zones (which in this case is simply the list of
+targets) and deploy to them round-robin.</p>
+<p>In the example below, the cluster will request VMs round-robin across three different
+locations (in this case, the locations were already added to the catalog, or defined in
+<code>brooklyn.properties</code>).</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span>
+<span class="hljs-attr">  multi:</span>
+<span class="hljs-attr">    targets:</span>
+<span class="hljs-bullet">    -</span> my-location<span class="hljs-bullet">-1</span>
+<span class="hljs-bullet">    -</span> my-location<span class="hljs-bullet">-2</span>
+<span class="hljs-bullet">    -</span> my-location<span class="hljs-bullet">-3</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">- type:</span> org.apache.brooklyn.entity.group.DynamicCluster
+  brooklyn.config:
+    dynamiccluster.zone.enable: <span class="hljs-literal">true</span>
+    cluster.initial.size: <span class="hljs-number">3</span>
+    dynamiccluster.memberspec:
+      $brooklyn:entitySpec:
+<span class="hljs-attr">        type:</span> org.apache.brooklyn.entity.machine.MachineEntity
+</code></pre>
+<p>Of course, clusters can also be deployed round-robin to real availability zones offered by
+cloud providers, as long as their locations support <code>AvailabilityZoneExtension</code>. Currently, only
+AWS EC2 locations support this feature.</p>
+<p>In the example below, the cluster will request VMs round-robin across the availability zones
+provided by AWS EC2 in the &quot;us-east-1&quot; region.</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">location:</span> jclouds:aws-ec2:us-east<span class="hljs-bullet">-1</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">- type:</span> org.apache.brooklyn.entity.group.DynamicCluster
+  brooklyn.config:
+    dynamiccluster.zone.enable: <span class="hljs-literal">true</span>
+    cluster.initial.size: <span class="hljs-number">3</span>
+    dynamiccluster.memberspec:
+      $brooklyn:entitySpec:
+<span class="hljs-attr">        type:</span> org.apache.brooklyn.entity.machine.MachineEntity
+</code></pre>
+<p>For more information about AWS EC2 availability zones, see
+<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html" target="_blank">this guide</a>.</p>
+<p>Custom alternatives to round-robin are also possible using the configuration option
+<code>dynamiccluster.zone.placementStrategy</code> on <code>DynamicCluster</code>.</p>
+<h4 id="the-server-pool">The Server Pool</h4>
+<p>The <a href="https://brooklyn.apache.org/v/latest/misc/javadoc/org/apache/brooklyn/entity/machine/pool/ServerPool.html" target="_blank">ServerPool</a>
+entity type allows defining an entity which becomes available as a location.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deploying Blueprint","layout":"website-normal","children":[{"path":"provisioned-machine-requirements.md","section_position":8}],"check_directory_for_children":true,"level":"1.6","depth":1,"next":{"title":"Clouds","level":"1.6.1","depth":2,"anchor":"#clouds","path":"locations/index.md","ref":"locations/index.md#clouds","articles":[]},"previous":{"title":"YAML Blueprint Reference","level":"1.5.21","depth":2,"path":"blueprint/yaml-reference.md","ref":"blueprint/yaml-reference.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-highlight","theme-api"],"root":"./guide","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"include-highlight":{"extensionToLanguage":{"yml":"yaml","yaml":"yaml","bom":"yaml","java":"java"}},"theme-api":{"languages":[{"lang":"vagrant","name":"Vagrant","default":true},{"lang":"centos","name":"CentOS / RHEL 7"},{"lang":"ubuntu","name":"Ubuntu / Debian"},{"lang":"osx","name":"OSX / Linux"},{"lang":"windows","name":"Windows"}],"split":false,"theme":"light"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"path":{"style":"/style","guide":"/guide","website":"/website","v":"/v"},"pdf-default-versioned-url-subpath":"/v/0.11.0","brooklyn-stable-version":"0.11.0","sass":{"sass_dir":"style/css"},"markdown":"kramdown","brooklyn-version":"0.13.0-SNAPSHOT","url_root":"http://0.0.0.0:4000","root_menu_page":"/website/index.md","encoding":"utf-8","dependency_mode":"local","dependency_urls":{"bootstrap.css":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css","bootstrap.js":"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js","jquery.js":"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"},"exclude":["/Gemfile*","/README.md"],"pdf-default-base-url":"http://brooklyn.apache.org","pdf-rewrite-prefixes":{"/guide":"/v/0.11.0","/website":""},"brooklyn-snapshot-git-branch":"master"},"gitbook":"*"},"file":{"path":"locations/index.md","mtime":"2017-10-06T11:31:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-06T11:32:19.198Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
