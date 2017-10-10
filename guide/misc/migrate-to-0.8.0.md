@@ -3,7 +3,7 @@ layout: website-normal
 title: Migrating to 0.8.0
 ---
 
-As noted in the [release notes](release-notes.html),
+As noted in the [release notes](release-notes.md),
 this version introduces major package renames.
 
 However migrating your code should not be hard:
