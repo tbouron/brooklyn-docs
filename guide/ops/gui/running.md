@@ -23,10 +23,8 @@ you may wish to set up some other configuration options first,
 
 Now start Brooklyn with the following command:
 
-```bash
-$ cd apache-brooklyn-{{ book.brooklyn.version }}
-$ bin/brooklyn launch
-```
+<pre><code class="lang-sh">$ cd apache-brooklyn-{{ book.brooklyn_version }}
+$ bin/brooklyn launch</code></pre>
 
 Please refer to the [Server CLI Reference](../server-cli-reference.md) for details of other possible command line options.
 
@@ -50,6 +48,7 @@ No applications have been deployed yet, so the "Create Application" dialog opens
 
 [![Brooklyn web console, showing the YAML tab of the Add Application dialog.](images/add-application-catalog-web-cluster-with-db.png)](images/add-application-catalog-web-cluster-with-db-large.png)
 
-
+{% if output.name == 'website' %}
 ## Next
 The next section will show how to **[deploy a blueprint](blueprints.md)**.
+{% endif %}
