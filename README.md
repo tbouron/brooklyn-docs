@@ -156,9 +156,9 @@ you've done that these commands might be useful:
 
 ```bash
 cd ${BROOKLYN_SITE_DIR-../../brooklyn-site-public}
+# Check if the right files have been added
 svn add * --force
-export DELETIONS=$( svn status | sed -e '/^!/!d' -e 's/^!//' )
-if [ ! -z "${DELETIONS}" ] ; then svn rm ${DELETIONS} ; fi
+svn status | sed -e '/^!/!d' -e 's/^!//' | xargs svn rm
 ```
 
 Then check in the changes (probably picking a better message than shown here):
